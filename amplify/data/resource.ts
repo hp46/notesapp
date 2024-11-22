@@ -13,6 +13,8 @@ const schema = a.schema({
       name:a.string(),
       description: a.string(),
       image: a.string(),
+      firstName: a.string(),
+      lastName: a.string()
     })
     .authorization((allow) => [allow.owner()]),
 });

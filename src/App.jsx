@@ -123,6 +123,22 @@ export default function App() {
                 variation="quiet"
                 required
               />
+              <TextField
+                name="firstName"
+                placeholder="Insert first name"
+                label="Note Description"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="lastName"
+                placeholder="Insert last name"
+                label="Note Description"
+                labelHidden
+                variation="quiet"
+                required
+              />
               <View
                 name="image"
                 as="input"
