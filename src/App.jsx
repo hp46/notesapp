@@ -60,6 +60,8 @@ export default function App() {
       name: form.get("name"),
       description: form.get("description"),
       image: form.get("image").name,
+      firstName: form.get("firstName"),
+      lastName: form.get("lastName"),
     });
 
     console.log(newNote);
