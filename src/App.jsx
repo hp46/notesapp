@@ -126,7 +126,7 @@ export default function App() {
               <TextField
                 name="firstName"
                 placeholder="Insert first name"
-                label="Note Description"
+                label="First name"
                 labelHidden
                 variation="quiet"
                 required
@@ -134,7 +134,7 @@ export default function App() {
               <TextField
                 name="lastName"
                 placeholder="Insert last name"
-                label="Note Description"
+                label="Last name"
                 labelHidden
                 variation="quiet"
                 required
@@ -174,7 +174,8 @@ export default function App() {
                 className="box"
               >
                 <View>
-                  <Heading level="3">{note.name}</Heading>
+                  <Heading level="3">{note.firstName}</Heading>
+                  <Heading level="3">{note.lastName}</Heading>
                 </View>
                 <Text fontStyle="italic">{note.description}</Text>
                 {note.image && (
