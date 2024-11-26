@@ -28,6 +28,7 @@ const client = generateClient({
 
 export default function App() {
   const [notes, setNotes] = useState([]);
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetchNotes();
@@ -166,6 +167,22 @@ export default function App() {
           </View>
           <Divider />
           <Heading level={2}>Current Notes</Heading>
+          <Heading level={2}>Search</Heading>
+          <div className='block w-screen'>
+            {notes.filter((value)=>{
+              if(search===""){
+                return value
+              }
+              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+                return value
+              }
+            })
+            .map((value, key) => {
+            return(
+              <Text key={key} fontStyle="italic">{value.firstName}</Text>
+            )
+            })}
+          </div>
           <Grid
             margin="3rem 0"
             autoFlow="column"
