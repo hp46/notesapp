@@ -168,6 +168,7 @@ export default function App() {
           <Divider />
           <Heading level={2}>Current Notes</Heading>
           <Heading level={2}>Search</Heading>
+          <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} />
           <div className='block w-screen'>
             {notes.filter((value)=>{
               if(search===""){
