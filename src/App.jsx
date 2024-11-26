@@ -64,6 +64,8 @@ export default function App() {
       lastName: form.get("lastName"),
     });
 
+
+
     console.log(newNote);
     if (newNote.image)
       if (newNote.image)
@@ -135,6 +137,14 @@ export default function App() {
               />
               <TextField
                 name="lastName"
+                placeholder="Insert last name"
+                label="Last name"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="number"
                 placeholder="Insert last name"
                 label="Last name"
                 labelHidden
