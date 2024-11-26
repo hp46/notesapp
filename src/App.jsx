@@ -174,7 +174,7 @@ export default function App() {
               if(search===""){
                 return value
               }
-              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+              else if(value.name.toLowerCase().includes(search.toLowerCase())){
                 return value
               }
             })
