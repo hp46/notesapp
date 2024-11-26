@@ -196,10 +196,11 @@ export default function App() {
                 className="box"
               >
                 <View>
-                  <Heading level="3">{note.firstName}</Heading>
-                  <Heading level="3">{note.lastName}</Heading>
+                  <Heading level="3">{note.name}</Heading>
                 </View>
                 <Text fontStyle="italic">{note.description}</Text>
+                <Text fontStyle="italic">{note.firstName}</Text>
+                <Text fontStyle="italic">{note.lastName}</Text>
                 {note.image && (
                   <Image
                     src={note.image}
