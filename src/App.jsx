@@ -144,14 +144,6 @@ export default function App() {
                 variation="quiet"
                 required
               />
-              <TextField
-                name="number"
-                placeholder="Insert last name"
-                label="Last name"
-                labelHidden
-                variation="quiet"
-                required
-              />
               <View
                 name="image"
                 as="input"
