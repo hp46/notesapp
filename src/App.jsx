@@ -110,7 +110,7 @@ export default function App() {
           justifyContent="center"
           alignItems="center"
           direction="column"
-          width="70%"
+          width="100%"
           margin="0 auto"
         >
           <Heading level={1}>Add Patients</Heading>
@@ -245,12 +245,6 @@ export default function App() {
                 variation="quiet"
                 required
               />
-          <Flex
-            direction="row"
-            justifyContent="center"
-            gap="2rem"
-            padding="2rem"
-          >
               <View
                 name="image"
                 as="input"
@@ -259,7 +253,12 @@ export default function App() {
                 accept="image/png, image/jpeg"
               />
           </Flex>
-
+          <Flex
+            direction="row"
+            justifyContent="center"
+            gap="2rem"
+            padding="2rem"
+          >
             <Button type="submit" variation="primary">
                 Create Note
             </Button>
