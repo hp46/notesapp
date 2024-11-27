@@ -106,8 +106,8 @@ export default function App() {
     <Authenticator>
       {({ signOut }) => (
         <Flex
-          className="App"
-          justifyContent="center"
+          className="flex flex-row"
+          // justifyContent="center"
           alignItems="center"
           direction="column"
           width="70%"
