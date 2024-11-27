@@ -58,11 +58,20 @@ export default function App() {
     console.log(form.get("image").name);
 
     const { data: newNote } = await client.models.Note.create({
-      name: form.get("name"),
       description: form.get("description"),
       image: form.get("image").name,
       firstName: form.get("firstName"),
       lastName: form.get("lastName"),
+      sex: form.get("sex"),
+      location: form.get("location"),
+      phoneNumber: form.get("phoneNumber"),
+      bloodSugarLevel: form.get("bloodSugarLevel"),
+      hba1c: form.get("hba1c"),
+      weight: form.get("weight"),
+      cholesterol: form.get("cholesterol"),
+      hemoglobin: form.get("hemoglobin"),
+      systolicBloodPressure: form.get("systolicBloodPressure"),
+      diastolicBloodPressure: form.get("diastolicBloodPressure"),
     });
 
 
@@ -113,14 +122,6 @@ export default function App() {
               padding="2rem"
             >
               <TextField
-                name="name"
-                placeholder="Note Name"
-                label="Note Name"
-                labelHidden
-                variation="quiet"
-                required
-              />
-              <TextField
                 name="description"
                 placeholder="Note Description"
                 label="Note Description"
@@ -140,6 +141,86 @@ export default function App() {
                 name="lastName"
                 placeholder="Insert last name"
                 label="Last name"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="sex"
+                placeholder="Male or Female"
+                label="Male or Female"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="location"
+                placeholder="Insert location"
+                label="location"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="phoneNumber"
+                placeholder="XXX-XX-XXXX"
+                label="Phone Number"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="bloodSugarLevel"
+                placeholder="Enter Blood Sugar level"
+                label="Enter Blood Sugar level"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="hba1c"
+                placeholder="Insert hba1c"
+                label="hba1c"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="weight"
+                placeholder="weight"
+                label="weight"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="cholesterol"
+                placeholder="Insert cholesterol"
+                label="cholesterol"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="hemoglobin"
+                placeholder="Insert Hemoglobin level"
+                label="Last name"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="systolicBloodPressure"
+                placeholder="Insert Systolic Blood Pressure"
+                label="Systolic Blood Pressure"
+                labelHidden
+                variation="quiet"
+                required
+              />
+              <TextField
+                name="diastolicBloodPressure"
+                placeholder="Insert Diastolic Blood Pressure"
+                label="Diastolic Blood Pressure"
                 labelHidden
                 variation="quiet"
                 required
@@ -196,11 +277,12 @@ export default function App() {
                 className="box"
               >
                 <View>
-                  <Heading level="3">{note.name}</Heading>
+                  <Heading level="3">{note.firstName} {note.lastName}</Heading>
                 </View>
                 <Text fontStyle="italic">{note.description}</Text>
-                <Text fontStyle="italic">{note.firstName}</Text>
-                <Text fontStyle="italic">{note.lastName}</Text>
+                <Text fontStyle="italic">{note.sex} {note.location} {note.phoneNumber}</Text>
+                <Text fontStyle="italic">{note.bloodSugarLevel} {note.hba1c} {note.weight} {note.cholesterol}</Text>
+                <Text fontStyle="italic">{note.hemoglobin} {note.systolicBloodPressure} {note.diastolicBloodPressure}</Text>
                 {note.image && (
                   <Image
                     src={note.image}
