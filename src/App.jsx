@@ -253,52 +253,52 @@ export default function App() {
             })
             .map((value, key) => {
             return(
-              <Text key={key} fontStyle="italic">{value.firstName}</Text>
+                <Grid
+                  key={key}
+                  margin="3rem 0"
+                  autoFlow="column"
+                  justifyContent="center"
+                  gap="2rem"
+                  alignContent="center"
+                >
+              {notes.map((note) => (
+                <Flex
+                  key={note.id || note.name}
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  gap="2rem"
+                  border="1px solid #ccc"
+                  padding="2rem"
+                  borderRadius="5%"
+                  className="box"
+                >
+                  <View>
+                    <Heading level="3">{note.firstName} {note.lastName}</Heading>
+                  </View>
+                  <Text fontStyle="italic">{note.description}</Text>
+                  <Text fontStyle="italic">{note.sex} {note.location} {note.phoneNumber}</Text>
+                  <Text fontStyle="italic">{note.bloodSugarLevel} {note.hba1c} {note.weight} {note.cholesterol}</Text>
+                  <Text fontStyle="italic">{note.hemoglobin} {note.systolicBloodPressure} {note.diastolicBloodPressure}</Text>
+                  {note.image && (
+                    <Image
+                      src={note.image}
+                      alt={`visual aid for ${notes.name}`}
+                      style={{ width: 400 }}
+                    />
+                  )}
+                  <Button
+                    variation="destructive"
+                    onClick={() => deleteNote(note)}
+                  >
+                    Delete note
+                  </Button>
+                </Flex>
+              ))}
+              </Grid>
             )
             })}
           </div>
-          <Grid
-            margin="3rem 0"
-            autoFlow="column"
-            justifyContent="center"
-            gap="2rem"
-            alignContent="center"
-          >
-            {notes.map((note) => (
-              <Flex
-                key={note.id || note.name}
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-                gap="2rem"
-                border="1px solid #ccc"
-                padding="2rem"
-                borderRadius="5%"
-                className="box"
-              >
-                <View>
-                  <Heading level="3">{note.firstName} {note.lastName}</Heading>
-                </View>
-                <Text fontStyle="italic">{note.description}</Text>
-                <Text fontStyle="italic">{note.sex} {note.location} {note.phoneNumber}</Text>
-                <Text fontStyle="italic">{note.bloodSugarLevel} {note.hba1c} {note.weight} {note.cholesterol}</Text>
-                <Text fontStyle="italic">{note.hemoglobin} {note.systolicBloodPressure} {note.diastolicBloodPressure}</Text>
-                {note.image && (
-                  <Image
-                    src={note.image}
-                    alt={`visual aid for ${notes.name}`}
-                    style={{ width: 400 }}
-                  />
-                )}
-                <Button
-                  variation="destructive"
-                  onClick={() => deleteNote(note)}
-                >
-                  Delete note
-                </Button>
-              </Flex>
-            ))}
-          </Grid>
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
       )}
