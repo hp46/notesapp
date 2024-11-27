@@ -245,13 +245,7 @@ export default function App() {
                 variation="quiet"
                 required
               />
-              <View
-                name="image"
-                as="input"
-                type="file"
-                alignSelf={"end"}
-                accept="image/png, image/jpeg"
-              />
+            
           </Flex>
           <Flex
             direction="row"
@@ -259,6 +253,13 @@ export default function App() {
             gap="2rem"
             padding="2rem"
           >
+             <View
+                name="image"
+                as="input"
+                type="file"
+                alignSelf={"end"}
+                accept="image/png, image/jpeg"
+              />
             <Button type="submit" variation="primary">
                 Create Note
             </Button>
@@ -290,7 +291,7 @@ export default function App() {
               {notes.map((note) => (
                 <Flex
                   key={note.id || note.name}
-                  direction="column"
+                  direction="row"
                   justifyContent="center"
                   alignItems="center"
                   gap="2rem"
