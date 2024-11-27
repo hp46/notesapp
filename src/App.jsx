@@ -252,11 +252,10 @@ export default function App() {
                 alignSelf={"end"}
                 accept="image/png, image/jpeg"
               />
-
-              <Button type="submit" variation="primary">
-                Create Note
-              </Button>
             </Flex>
+            <Button type="submit" variation="primary">
+                Create Note
+            </Button>
           </View>
           <Divider />
           <Heading level={2}>Current Notes</Heading>
