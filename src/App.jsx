@@ -113,7 +113,7 @@ export default function App() {
           width="70%"
           margin="0 auto"
         >
-          <Heading level={1}>My Notes App</Heading>
+          <Heading level={1}>Add Patients</Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
             <Flex
               direction="row"
@@ -122,7 +122,7 @@ export default function App() {
               padding="2rem"
             >
               <TextField
-                width="100px"
+                width="800px"
                 name="description"
                 placeholder="Note Description"
                 label="Note Description"
@@ -131,6 +131,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="firstName"
                 placeholder="Insert first name"
                 label="First name"
@@ -139,6 +140,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="lastName"
                 placeholder="Insert last name"
                 label="Last name"
@@ -147,6 +149,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="sex"
                 placeholder="Male or Female"
                 label="Male or Female"
@@ -155,6 +158,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="location"
                 placeholder="Insert location"
                 label="location"
@@ -163,6 +167,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="phoneNumber"
                 placeholder="XXX-XX-XXXX"
                 label="Phone Number"
@@ -170,7 +175,15 @@ export default function App() {
                 variation="quiet"
                 required
               />
+            </Flex>
+            <Flex
+              direction="row"
+              justifyContent="center"
+              gap="2rem"
+              padding="2rem"
+            >
               <TextField
+                width="800px"
                 name="bloodSugarLevel"
                 placeholder="Enter Blood Sugar level"
                 label="Enter Blood Sugar level"
@@ -179,6 +192,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="hba1c"
                 placeholder="Insert hba1c"
                 label="hba1c"
@@ -187,6 +201,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="weight"
                 placeholder="weight"
                 label="weight"
@@ -195,6 +210,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="cholesterol"
                 placeholder="Insert cholesterol"
                 label="cholesterol"
@@ -203,6 +219,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="hemoglobin"
                 placeholder="Insert Hemoglobin level"
                 label="Last name"
@@ -211,6 +228,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="systolicBloodPressure"
                 placeholder="Insert Systolic Blood Pressure"
                 label="Systolic Blood Pressure"
@@ -219,6 +237,7 @@ export default function App() {
                 required
               />
               <TextField
+                width="800px"
                 name="diastolicBloodPressure"
                 placeholder="Insert Diastolic Blood Pressure"
                 label="Diastolic Blood Pressure"
