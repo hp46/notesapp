@@ -122,7 +122,7 @@ export default function App() {
               padding="2rem"
             >
               <TextField
-                width="800px"
+                width="200px"
                 name="description"
                 placeholder="Note Description"
                 label="Note Description"
@@ -131,7 +131,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="firstName"
                 placeholder="Insert first name"
                 label="First name"
@@ -140,7 +140,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="lastName"
                 placeholder="Insert last name"
                 label="Last name"
@@ -149,7 +149,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="sex"
                 placeholder="Male or Female"
                 label="Male or Female"
@@ -158,7 +158,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="location"
                 placeholder="Insert location"
                 label="location"
@@ -167,7 +167,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="phoneNumber"
                 placeholder="XXX-XX-XXXX"
                 label="Phone Number"
@@ -183,7 +183,7 @@ export default function App() {
               padding="2rem"
             >
               <TextField
-                width="800px"
+                width="200px"
                 name="bloodSugarLevel"
                 placeholder="Enter Blood Sugar level"
                 label="Enter Blood Sugar level"
@@ -192,7 +192,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="hba1c"
                 placeholder="Insert hba1c"
                 label="hba1c"
@@ -201,7 +201,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="weight"
                 placeholder="weight"
                 label="weight"
@@ -210,7 +210,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="cholesterol"
                 placeholder="Insert cholesterol"
                 label="cholesterol"
@@ -219,7 +219,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="hemoglobin"
                 placeholder="Insert Hemoglobin level"
                 label="Last name"
@@ -228,7 +228,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="systolicBloodPressure"
                 placeholder="Insert Systolic Blood Pressure"
                 label="Systolic Blood Pressure"
@@ -237,7 +237,7 @@ export default function App() {
                 required
               />
               <TextField
-                width="800px"
+                width="200px"
                 name="diastolicBloodPressure"
                 placeholder="Insert Diastolic Blood Pressure"
                 label="Diastolic Blood Pressure"
