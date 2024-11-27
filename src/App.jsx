@@ -245,6 +245,12 @@ export default function App() {
                 variation="quiet"
                 required
               />
+          <Flex
+            direction="row"
+            justifyContent="center"
+            gap="2rem"
+            padding="2rem"
+          >
               <View
                 name="image"
                 as="input"
@@ -252,10 +258,12 @@ export default function App() {
                 alignSelf={"end"}
                 accept="image/png, image/jpeg"
               />
-            </Flex>
+          </Flex>
+
             <Button type="submit" variation="primary">
                 Create Note
             </Button>
+            </Flex>
           </View>
           <Divider />
           <Heading level={2}>Current Notes</Heading>
