@@ -106,8 +106,8 @@ export default function App() {
     <Authenticator>
       {({ signOut }) => (
         <Flex
-          className="flex flex-row"
-          // justifyContent="center"
+          className="App"
+          justifyContent="center"
           alignItems="center"
           direction="column"
           width="70%"
@@ -116,12 +116,13 @@ export default function App() {
           <Heading level={1}>My Notes App</Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
             <Flex
-              direction="column"
+              direction="row"
               justifyContent="center"
               gap="2rem"
               padding="2rem"
             >
               <TextField
+                width="100px"
                 name="description"
                 placeholder="Note Description"
                 label="Note Description"
