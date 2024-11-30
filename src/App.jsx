@@ -270,7 +270,7 @@ export default function App() {
           <Heading level={2}>Search</Heading>
           <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} />
           <div className='block w-screen'>
-            {notes.filter((value)=>{
+            {/* {notes.filter((value)=>{
               if(search===""){
                 return value
               }
@@ -279,9 +279,9 @@ export default function App() {
               }
             })
             .map((value, key) => {
-            return(
+            return( */}
                 <Grid
-                  key={key}
+                  // key={key}
                   margin="3rem 0"
                   autoFlow="column"
                   justifyContent="center"
@@ -324,7 +324,7 @@ export default function App() {
               ))}
               </Grid>
             )
-            })}
+            {/* })} */}
           </div>
           
           
