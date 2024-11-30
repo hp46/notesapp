@@ -270,7 +270,7 @@ export default function App() {
           <Heading level={2}>Search</Heading>
           <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} />
           <div className='block w-screen'>
-            {/* {notes.filter((value)=>{
+            {notes.filter((value)=>{
               if(search===""){
                 return value
               }
@@ -279,18 +279,18 @@ export default function App() {
               }
             })
             .map((value, key) => {
-            return( */}
+            return(
                 <Grid
-                  // key={key}
+                  key={key}
                   margin="3rem 0"
                   autoFlow="column"
                   justifyContent="center"
                   gap="2rem"
                   alignContent="center"
                 >
-              {notes.map((note) => (
+              {/* {notes.map((note) => ( */}
                 <Flex
-                  key={note.id || note.firstName}
+                  key={value.id}
                   direction="column"
                   justifyContent="center"
                   alignItems="center"
@@ -301,32 +301,31 @@ export default function App() {
                   className="box"
                 >
                   <View>
-                    <Heading level="3">{note.firstName} {note.lastName}</Heading>
+                    <Heading level="3">{value.firstName} {value.lastName}</Heading>
                   </View>
-                  <Text fontStyle="italic">{note.description}</Text>
-                  <Text fontStyle="italic">{note.sex} {note.location} {note.phoneNumber}</Text>
-                  <Text fontStyle="italic">{note.bloodSugarLevel} {note.hba1c} {note.weight} {note.cholesterol}</Text>
-                  <Text fontStyle="italic">{note.hemoglobin} {note.systolicBloodPressure} {note.diastolicBloodPressure}</Text>
-                  {note.image && (
+                  <Text fontStyle="italic">{value.description}</Text>
+                  <Text fontStyle="italic">{value.sex} {value.location} {value.phoneNumber}</Text>
+                  <Text fontStyle="italic">{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.cholesterol}</Text>
+                  <Text fontStyle="italic">{value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</Text>
+                  {value.image && (
                     <Image
-                      src={note.image}
-                      alt={`visual aid for ${notes.name}`}
+                      src={value.image}
+                      alt={`visual aid for ${value.name}`}
                       style={{ width: 400 }}
                     />
                   )}
                   <Button
                     variation="destructive"
-                    onClick={() => deleteNote(note)}
+                    onClick={() => deleteNote(value)}
                   >
                     Delete note
                   </Button>
                 </Flex>
-              ))}
+              {/* ))} */}
               </Grid>
             )
-            {/* })} */}
+            })}
           </div>
-          
           
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
