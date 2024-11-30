@@ -28,11 +28,6 @@ const schema = a.schema({
     })
     .authorization((allow) => [allow.owner()]),
 
-    Detail: a
-    .model({
-      number:a.float(),
-    })
-    .authorization((allow) => [allow.owner()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

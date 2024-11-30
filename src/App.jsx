@@ -283,7 +283,7 @@ export default function App() {
                 <Grid
                   key={key}
                   margin="3rem 0"
-                  autoFlow="column"
+                  autoFlow="row"
                   justifyContent="center"
                   gap="2rem"
                   alignContent="center"
@@ -291,7 +291,7 @@ export default function App() {
               {/* {notes.map((note) => ( */}
                 <Flex
                   key={value.id}
-                  direction="column"
+                  direction="row"
                   justifyContent="center"
                   alignItems="center"
                   gap="2rem"
