@@ -290,7 +290,7 @@ export default function App() {
                 >
               {notes.map((note) => (
                 <Flex
-                  key={note.id || note.name}
+                  key={note.id || note.firstName}
                   direction="column"
                   justifyContent="center"
                   alignItems="center"
@@ -326,8 +326,11 @@ export default function App() {
             )
             })}
           </div>
+          
+          
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
+        
       )}
     </Authenticator>
   );
