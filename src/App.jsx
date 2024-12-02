@@ -128,7 +128,6 @@ export default function App() {
                 name="description"
                 placeholder="Note Description"
                 label="Note Description"
-                variation="quiet"
                 required
               />
               <TextField
@@ -136,7 +135,6 @@ export default function App() {
                 name="firstName"
                 placeholder="Insert first name"
                 label="First name"
-                variation="quiet"
                 required
               />
               <TextField
@@ -144,23 +142,19 @@ export default function App() {
                 name="lastName"
                 placeholder="Insert last name"
                 label="Last name"
-                variation="quiet"
                 required
               />
               <Fieldset
-                width="200px"
-                Legend="Gender/Sex"
+                legend="Gender / Sex"
                 variation="outlined"
-                direction="column"
-                required
-              >
+                direction="column">
                 <CheckboxField
-                name="sex"
-                label="Male"
+                  label="Male"
+                  name="sex"
                 />
                 <CheckboxField
-                name="sex"
-                label="Female"
+                  label="Female"
+                  name="sex"
                 />
               </Fieldset>
               <TextField
@@ -168,7 +162,6 @@ export default function App() {
                 name="location"
                 placeholder="Insert location"
                 label="location"
-                variation="quiet"
                 required
               />
               <TextField
@@ -176,7 +169,6 @@ export default function App() {
                 name="phoneNumber"
                 placeholder="XXX-XX-XXXX"
                 label="Phone Number"
-                variation="quiet"
                 required
               />
             </Flex>
@@ -191,7 +183,6 @@ export default function App() {
                 name="bloodSugarLevel"
                 placeholder="Enter Blood Sugar level"
                 label="Enter Blood Sugar level"
-                variation="quiet"
                 required
               />
               <TextField
@@ -199,7 +190,6 @@ export default function App() {
                 name="hba1c"
                 placeholder="Insert hba1c"
                 label="hba1c"
-                variation="quiet"
                 required
               />
               <TextField
@@ -207,7 +197,6 @@ export default function App() {
                 name="weight"
                 placeholder="weight"
                 label="weight"
-                variation="quiet"
                 required
               />
               <TextField
@@ -215,7 +204,6 @@ export default function App() {
                 name="cholesterol"
                 placeholder="Insert cholesterol"
                 label="cholesterol"
-                variation="quiet"
                 required
               />
               <TextField
@@ -223,7 +211,6 @@ export default function App() {
                 name="hemoglobin"
                 placeholder="Insert Hemoglobin level"
                 label="Last name"
-                variation="quiet"
                 required
               />
               <TextField
@@ -231,7 +218,6 @@ export default function App() {
                 name="systolicBloodPressure"
                 placeholder="Insert Systolic Blood Pressure"
                 label="Systolic Blood Pressure"
-                variation="quiet"
                 required
               />
               <TextField
@@ -239,7 +225,6 @@ export default function App() {
                 name="diastolicBloodPressure"
                 placeholder="Insert Diastolic Blood Pressure"
                 label="Diastolic Blood Pressure"
-                variation="quiet"
                 required
               />
             
