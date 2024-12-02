@@ -157,12 +157,9 @@ export default function App() {
                 width="200px"
                 label="Location"
                 name="location"
+                options={['Rabat', 'Tagier', 'Cassablanca']}
                 required
                 >
-                  <option value="Rabat">Rabat</option>
-                  <option value="Tagier">Tagier</option>
-                  <option value="Cassablanca">Cassablanca</option>
-
               </SelectField>
               <TextField
                 width="200px"
@@ -241,7 +238,6 @@ export default function App() {
                 placeholder="Note Description"
                 label="Note Description"
                 rows={3}
-                required
               />
              <View
                 name="image"
