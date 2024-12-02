@@ -154,7 +154,7 @@ export default function App() {
                 />
                 <CheckboxField
                   label="Female"
-                  name="sex"
+                  name=""
                 />
               </Fieldset>
               <TextField
@@ -210,7 +210,7 @@ export default function App() {
                 width="200px"
                 name="hemoglobin"
                 placeholder="Insert Hemoglobin level"
-                label="Last name"
+                label="Hemoglobin level"
                 required
               />
               <TextField
