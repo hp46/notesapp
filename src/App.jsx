@@ -6,10 +6,12 @@ import {
   TextField,
   Heading,
   Flex,
+  Fieldset,
   View,
   Image,
   Grid,
   Divider,
+  CheckboxField,
 } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
@@ -126,7 +128,6 @@ export default function App() {
                 name="description"
                 placeholder="Note Description"
                 label="Note Description"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -135,7 +136,6 @@ export default function App() {
                 name="firstName"
                 placeholder="Insert first name"
                 label="First name"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -144,25 +144,30 @@ export default function App() {
                 name="lastName"
                 placeholder="Insert last name"
                 label="Last name"
-                labelHidden
                 variation="quiet"
                 required
               />
-              <TextField
+              <Fieldset
                 width="200px"
-                name="sex"
-                placeholder="Male or Female"
-                label="Male or Female"
-                labelHidden
-                variation="quiet"
+                Legend="Gender/Sex"
+                variation="outlined"
+                direction="column"
                 required
-              />
+              >
+                <CheckboxField
+                name="sex"
+                label="Male"
+                />
+                <CheckboxField
+                name="sex"
+                label="Female"
+                />
+              </Fieldset>
               <TextField
                 width="200px"
                 name="location"
                 placeholder="Insert location"
                 label="location"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -171,7 +176,6 @@ export default function App() {
                 name="phoneNumber"
                 placeholder="XXX-XX-XXXX"
                 label="Phone Number"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -187,7 +191,6 @@ export default function App() {
                 name="bloodSugarLevel"
                 placeholder="Enter Blood Sugar level"
                 label="Enter Blood Sugar level"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -196,7 +199,6 @@ export default function App() {
                 name="hba1c"
                 placeholder="Insert hba1c"
                 label="hba1c"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -205,7 +207,6 @@ export default function App() {
                 name="weight"
                 placeholder="weight"
                 label="weight"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -214,7 +215,6 @@ export default function App() {
                 name="cholesterol"
                 placeholder="Insert cholesterol"
                 label="cholesterol"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -223,7 +223,6 @@ export default function App() {
                 name="hemoglobin"
                 placeholder="Insert Hemoglobin level"
                 label="Last name"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -232,7 +231,6 @@ export default function App() {
                 name="systolicBloodPressure"
                 placeholder="Insert Systolic Blood Pressure"
                 label="Systolic Blood Pressure"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -241,7 +239,6 @@ export default function App() {
                 name="diastolicBloodPressure"
                 placeholder="Insert Diastolic Blood Pressure"
                 label="Diastolic Blood Pressure"
-                labelHidden
                 variation="quiet"
                 required
               />
@@ -282,6 +279,7 @@ export default function App() {
             return(
                 <Grid
                   key={key}
+                  width="100%"
                   margin="3rem 0"
                   autoFlow="row"
                   justifyContent="center"
@@ -326,7 +324,6 @@ export default function App() {
             )
             })}
           </div>
-          
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
         
