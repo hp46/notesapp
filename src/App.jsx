@@ -7,14 +7,12 @@ import {
   TextField,
   Heading,
   Flex,
-  Fieldset,
   View,
   SelectField,
   Image,
   Grid,
   Divider,
   RadioGroupField,
-  CheckboxField,
   Radio,
 } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
@@ -35,7 +33,6 @@ const client = generateClient({
 export default function App() {
   const [notes, setNotes] = useState([]);
   const [search, setSearch] = useState("")
-  const [value, setValue] = useState('');
 
   useEffect(() => {
     fetchNotes();
@@ -146,8 +143,7 @@ export default function App() {
                 legend="Gender / Sex"
                 variation="outlined"
                 name="sex"
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
+                options={['Male', 'Female']}
                 direction="column">
                 <Radio value="Male">Male</Radio>
                 <Radio value="Female">Female</Radio>
