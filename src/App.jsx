@@ -13,7 +13,9 @@ import {
   Image,
   Grid,
   Divider,
+  RadioGroupField,
   CheckboxField,
+  Radio,
 } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
@@ -33,6 +35,7 @@ const client = generateClient({
 export default function App() {
   const [notes, setNotes] = useState([]);
   const [search, setSearch] = useState("")
+  const [value, setValue] = useState('');
 
   useEffect(() => {
     fetchNotes();
@@ -139,20 +142,16 @@ export default function App() {
                 label="Last name"
                 required
               />
-              <Fieldset
+              <RadioGroupField
                 legend="Gender / Sex"
                 variation="outlined"
                 name="sex"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
                 direction="column">
-                <CheckboxField
-                  label="Male"
-                  value="sex"
-                />
-                <CheckboxField
-                  label="Female"
-                  value="Female"
-                />
-              </Fieldset>
+                <Radio value="Male">Male</Radio>
+                <Radio value="Female">Female</Radio>
+              </RadioGroupField>
               <SelectField
                 width="200px"
                 label="Location"
