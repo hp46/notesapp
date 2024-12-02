@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {
   Authenticator,
+  TextAreaField,
   Button,
   Text,
   TextField,
@@ -8,6 +9,7 @@ import {
   Flex,
   Fieldset,
   View,
+  SelectField,
   Image,
   Grid,
   Divider,
@@ -125,13 +127,6 @@ export default function App() {
             >
               <TextField
                 width="200px"
-                name="description"
-                placeholder="Note Description"
-                label="Note Description"
-                required
-              />
-              <TextField
-                width="200px"
                 name="firstName"
                 placeholder="Insert first name"
                 label="First name"
@@ -147,23 +142,28 @@ export default function App() {
               <Fieldset
                 legend="Gender / Sex"
                 variation="outlined"
+                name="sex"
                 direction="column">
                 <CheckboxField
                   label="Male"
-                  name="sex"
+                  value="sex"
                 />
                 <CheckboxField
                   label="Female"
-                  name=""
+                  value="Female"
                 />
               </Fieldset>
-              <TextField
+              <SelectField
                 width="200px"
+                label="Location"
                 name="location"
-                placeholder="Insert location"
-                label="location"
                 required
-              />
+                >
+                  <option value="Rabat">Rabat</option>
+                  <option value="Tagier">Tagier</option>
+                  <option value="Cassablanca">Cassablanca</option>
+
+              </SelectField>
               <TextField
                 width="200px"
                 name="phoneNumber"
@@ -235,6 +235,14 @@ export default function App() {
             gap="2rem"
             padding="2rem"
           >
+              <TextAreaField
+                width="200px"
+                name="description"
+                placeholder="Note Description"
+                label="Note Description"
+                rows={3}
+                required
+              />
              <View
                 name="image"
                 as="input"
