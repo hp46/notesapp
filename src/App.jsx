@@ -34,15 +34,15 @@ const client = generateClient({
 
 export default function App() {
   const [notes, setNotes] = useState([]);
-  // const [search, setSearch] = useState("");
-  const [value, setValue] = useState('');
+  const [search, setSearch] = useState("");
+  // const [value, setValue] = useState('');
 
   const onChange = (event) => {
-    setValue(event.target.value);
+    setSearch(event.target.value);
   };
 
   const onClear = () => {
-    setValue('');
+    setSearch('');
   };
 
   useEffect(() => {
@@ -272,7 +272,7 @@ export default function App() {
               if(value===""){
                 return value
               }
-              else if(value.firstName.toLowerCase().includes(value.toLowerCase())){
+              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
                 return value
               }
             })
