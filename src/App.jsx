@@ -34,7 +34,7 @@ const client = generateClient({
 
 export default function App() {
   const [notes, setNotes] = useState([]);
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
   const [value, setValue] = useState('');
 
   const onChange = (event) => {
@@ -44,7 +44,7 @@ export default function App() {
   const onClear = () => {
     setValue('');
   };
-  
+
   useEffect(() => {
     fetchNotes();
   }, []);
@@ -266,13 +266,13 @@ export default function App() {
           onClear={onClear}
           value={value}
         />
-          <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} />
+          {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
           <div className='block w-screen'>
             {notes.filter((value)=>{
-              if(search===""){
+              if(value===""){
                 return value
               }
-              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+              else if(value.firstName.toLowerCase().includes(value.toLowerCase())){
                 return value
               }
             })
