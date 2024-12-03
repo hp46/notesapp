@@ -264,7 +264,7 @@ export default function App() {
           placeholder="Search here..."
           onChange={onChange}
           onClear={onClear}
-          value={value}
+          value={search}
         />
           {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
           <div className='block w-screen'>
