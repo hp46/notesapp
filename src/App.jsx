@@ -267,7 +267,7 @@ export default function App() {
           value={search}
         />
           {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-          <div className="w-full">
+          <div className="w-96">
             {notes.filter((value)=>{
               if(value===""){
                 return value
@@ -303,9 +303,9 @@ export default function App() {
                     <Heading level="3">{value.firstName} {value.lastName}</Heading>
                   </View>
                   <Text fontStyle="italic">{value.description}</Text>
-                  <Text fontStyle="italic">{value.sex} {value.location} {value.phoneNumber}</Text>
-                  <Text fontStyle="italic">{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.cholesterol}</Text>
-                  <Text fontStyle="italic">{value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</Text>
+                  <Text fontStyle="italic">{value.sex} <br></br> Public Health Center Location: {value.location} <br></br> Phone Number:{value.phoneNumber}</Text>
+                  <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel} <br/> HBA1C:{value.hba1c} <br/> Weight:{value.weight}  <br/> Cholesterol:{value.cholesterol}</Text>
+                  <Text fontStyle="italic"> Hemoglobin{value.hemoglobin} <br/> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure}</Text>
                   {value.image && (
                     <Image
                       src={value.image}
@@ -314,6 +314,7 @@ export default function App() {
                     />
                   )}
                   <Button
+                    width="100px"
                     variation="destructive"
                     onClick={() => deleteNote(value)}
                   >
