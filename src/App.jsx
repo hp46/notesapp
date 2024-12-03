@@ -10,7 +10,9 @@ import {
   View,
   SelectField,
   Image,
+  SearchField,
   Grid,
+  PhoneNumberField,
   Divider,
   RadioGroupField,
   Radio,
@@ -32,8 +34,17 @@ const client = generateClient({
 
 export default function App() {
   const [notes, setNotes] = useState([]);
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
+  const [value, setValue] = useState('');
 
+  const onChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  const onClear = () => {
+    setValue('');
+  };
+  
   useEffect(() => {
     fetchNotes();
   }, []);
@@ -156,12 +167,11 @@ export default function App() {
                 required
                 >
               </SelectField>
-              <TextField
-                width="200px"
+              <PhoneNumberField
+                defaultDialCode="+212"
+                label="Phone number"
+                placeholder="xxx-xxx-xxx"
                 name="phoneNumber"
-                placeholder="XXX-XX-XXXX"
-                label="Phone Number"
-                required
               />
             </Flex>
             <Flex
@@ -247,8 +257,15 @@ export default function App() {
             </Flex>
           </View>
           <Divider />
-          <Heading level={2}>Current Notes</Heading>
           <Heading level={2}>Search</Heading>
+          label
+        <SearchField
+          label="Search"
+          placeholder="Search here..."
+          onChange={onChange}
+          onClear={onClear}
+          value={value}
+        />
           <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} />
           <div className='block w-screen'>
             {notes.filter((value)=>{
