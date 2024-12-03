@@ -267,7 +267,7 @@ export default function App() {
           value={search}
         />
           {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-          <div className='block w-screen'>
+          <div className="w-full">
             {notes.filter((value)=>{
               if(value===""){
                 return value
