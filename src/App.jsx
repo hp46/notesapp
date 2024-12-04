@@ -135,7 +135,10 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
+<<<<<<< HEAD
               backgroundColor="#4a80c7"
+=======
+>>>>>>> parent of da803a0 (smmoking)
             >
               <Heading level={1}>Add Patients</Heading>
               <TextField
@@ -179,8 +182,8 @@ export default function App() {
                 name="smoking"
                 options={['Yes', 'No']}
                 direction="column">
-                <Radio value="Yes">Yes</Radio>
-                <Radio value="Yes">No</Radio>
+                <Radio value={true}>Yes</Radio>
+                <Radio value={false}>No</Radio>
               </RadioGroupField>
             </Flex>
             <Flex
@@ -278,7 +281,7 @@ export default function App() {
           value={search}
         />
         {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-        <div className="w-full bg-black">
+        <div className="w-full">
           {notes.filter((value)=>{
             if(value===""){
               return value
