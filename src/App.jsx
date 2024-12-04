@@ -125,6 +125,8 @@ export default function App() {
           justifyContent="center"
           alignItems="center"
           direction="column"
+          width="100%"
+          margin="0 auto"
         >
           <Heading level={1}>Add Patients</Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
@@ -150,7 +152,6 @@ export default function App() {
               />
               <RadioGroupField
                 legend="Gender / Sex"
-                variation="outlined"
                 name="sex"
                 options={['Male', 'Female']}
                 direction="row">
@@ -265,7 +266,7 @@ export default function App() {
           value={search}
         />
         {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-        <div className="w-96">
+        <div className="w-full">
           {notes.filter((value)=>{
             if(value===""){
               return value
@@ -279,7 +280,6 @@ export default function App() {
               <Grid
                 key={key}
                 width="100%"
-                margin="2rem 0"
                 autoFlow="row"
                 justifyContent="center"
                 gap="2rem"
