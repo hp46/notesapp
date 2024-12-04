@@ -145,64 +145,68 @@ export default function App() {
             <Heading level={2}>Add Patients</Heading>
             </View>
             <View
-              direction="row"
-              justifyContent="center"
-              gap="2rem"
-              padding="2rem"
-              
             >
-              <TextField
-                width="200px"
-                name="firstName"
-                placeholder="Insert first name"
-                label="First name"
-                required
-              />
-              <TextField
-                width="200px"
-                name="lastName"
-                placeholder="Insert last name"
-                label="Last name"
-                required
-              />
-              <RadioGroupField
-                legend="Gender / Sex"
-                name="sex"
-                options={['Male', 'Female']}
-                direction="column">
-                <Radio value="Male">Male</Radio>
-                <Radio value="Female">Female</Radio>
-              </RadioGroupField>
-              <SelectField
-                width="200px"
-                label="Location"
-                name="location"
-                options={['Rabat', 'Tagier', 'Cassablanca']}
-                required
-                >
-              </SelectField>
-              <PhoneNumberField
-                defaultDialCode="+212"
-                label="Phone number"
-                placeholder="xxx-xxx-xxx"
-                name="phoneNumber"
-              />
-              <RadioGroupField
-                legend="Smoking"
-                name="smoking"
-                options={['Yes', 'No']}
-                direction="column">
-                <Radio value="Yes">Yes</Radio>
-                <Radio value="No">No</Radio>
-              </RadioGroupField>
+              <Flex
+                direction="row"
+                justifyContent="center"
+                gap="2rem"
+                padding="2rem"
+                            
+              >
+                <TextField
+                  width="200px"
+                  name="firstName"
+                  placeholder="Insert first name"
+                  label="First name"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="lastName"
+                  placeholder="Insert last name"
+                  label="Last name"
+                  required
+                />
+                <RadioGroupField
+                  legend="Gender / Sex"
+                  name="sex"
+                  options={['Male', 'Female']}
+                  direction="column">
+                  <Radio value="Male">Male</Radio>
+                  <Radio value="Female">Female</Radio>
+                </RadioGroupField>
+                <SelectField
+                  width="200px"
+                  label="Location"
+                  name="location"
+                  options={['Rabat', 'Tagier', 'Cassablanca']}
+                  required
+                  >
+                </SelectField>
+                <PhoneNumberField
+                  defaultDialCode="+212"
+                  label="Phone number"
+                  placeholder="xxx-xxx-xxx"
+                  name="phoneNumber"
+                />
+                <RadioGroupField
+                  legend="Smoking"
+                  name="smoking"
+                  options={['Yes', 'No']}
+                  direction="column">
+                  <Radio value="Yes">Yes</Radio>
+                  <Radio value="No">No</Radio>
+                </RadioGroupField>
+              </Flex>
             </View>
             <View
-              direction="row"
-              justifyContent="center"
-              gap="2rem"
-              padding="2rem"
-              
             >
+              <Flex
+                direction="row"
+                justifyContent="center"
+                gap="2rem"
+                padding="2rem"                            
+              >
               <TextField
                 width="200px"
                 name="bloodSugarLevel"
@@ -252,8 +256,9 @@ export default function App() {
                 label="Diastolic Blood Pressure"
                 required
               />
-              </View>
-
+              </Flex>
+            </View>
+              
             
           <Flex
             direction="row"
