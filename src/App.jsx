@@ -134,7 +134,7 @@ export default function App() {
           <Grid
             columnGap="0.5rem"
             rowGap="0.5rem"
-            templateColumns="1fr 2fr"
+            templateColumns=".1fr 2fr"
             templateRows="2fr 2fr 1fr"
           >
             <View
@@ -149,7 +149,6 @@ export default function App() {
               <Flex
                 rap
                 direction="row"
-                justifyContent="center"
                 gap="2rem"
                 padding="2rem"
                 wrap="wrap"
@@ -204,7 +203,6 @@ export default function App() {
             >
               <Flex
                 direction="row"
-                justifyContent="center"
                 gap="2rem"
                 padding="2rem"        
                 wrap="wrap"                    
@@ -259,12 +257,9 @@ export default function App() {
                 required
               />
               </Flex>
-            </View>
-              
-            
+            </View>            
           <Flex
             direction="row"
-            justifyContent="center"
             gap="2rem"
             padding="2rem"
               wrap="wrap"
