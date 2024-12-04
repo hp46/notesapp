@@ -158,14 +158,6 @@ export default function App() {
                 <Radio value="Male">Male</Radio>
                 <Radio value="Female">Female</Radio>
               </RadioGroupField>
-              <RadioGroupField
-                legend="Smoking"
-                name="smoking"
-                options={['Yes', 'No']}
-                direction="column">
-                <Radio value="Yes">Yes</Radio>
-                <Radio value="No">No</Radio>
-              </RadioGroupField>
               <SelectField
                 width="200px"
                 label="Location"
@@ -180,6 +172,14 @@ export default function App() {
                 placeholder="xxx-xxx-xxx"
                 name="phoneNumber"
               />
+              <RadioGroupField
+                legend="Smoking"
+                name="smoking"
+                options={['Yes', 'No']}
+                direction="column">
+                <Radio value={true}>Yes</Radio>
+                <Radio value={false}>No</Radio>
+              </RadioGroupField>
             </Flex>
             <Flex
               direction="row"
@@ -309,7 +309,7 @@ export default function App() {
                   <Heading level="3">{value.firstName} {value.lastName}</Heading>
                 </View>
                 <Text fontStyle="italic">{value.description}</Text>
-                <Text fontStyle="italic">{value.sex} <br></br> Center Location: {value.location} <br></br> Phone Number:{value.phoneNumber}</Text>
+                <Text fontStyle="italic">{value.sex} {value.smoking} <br></br> Center Location: {value.location} <br></br> Phone Number:{value.phoneNumber}</Text>
                 <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel} <br/> HBA1C:{value.hba1c} <br/> Weight:{value.weight}</Text>
                 <Text fontStyle="italic"> Hemoglobin:{value.hemoglobin} <br/> Cholesterol:{value.cholesterol}  <br/> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure}</Text>
                 {value.image && (
