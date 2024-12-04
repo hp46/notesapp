@@ -317,12 +317,13 @@ export default function App() {
                 width="100%"
                 autoFlow="row"
                 justifyContent="center"
-                gap="2rem"
+                rowGap="1rem"
                 alignContent="center"
               >
             {/* {notes.map((note) => ( */}
               <Flex
                 key={value.id}
+                width="100%"
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
