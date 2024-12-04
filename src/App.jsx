@@ -135,7 +135,7 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
-              backgroundColor="#4a80c7"
+              backgroundColor="black"
             >
               <TextField
                 width="200px"
@@ -187,7 +187,6 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
-              backgroundColor="#4a80c7"
             >
               <TextField
                 width="200px"
@@ -245,7 +244,6 @@ export default function App() {
             justifyContent="center"
             gap="2rem"
             padding="2rem"
-            backgroundColor="#4a80c7"
           >
               <TextAreaField
                 width="200px"
