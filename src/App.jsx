@@ -135,6 +135,7 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
+              backgroundColor="black"
             >
               <TextField
                 width="200px"
@@ -177,8 +178,8 @@ export default function App() {
                 name="smoking"
                 options={['Yes', 'No']}
                 direction="column">
-                <Radio value={true}>Yes</Radio>
-                <Radio value={false}>No</Radio>
+                <Radio value="Yes">Yes</Radio>
+                <Radio value="Yes">No</Radio>
               </RadioGroupField>
             </Flex>
             <Flex
@@ -274,7 +275,7 @@ export default function App() {
           value={search}
         />
         {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-        <div className="w-full">
+        <div className="w-full bg-black">
           {notes.filter((value)=>{
             if(value===""){
               return value

@@ -15,7 +15,7 @@ const schema = a.schema({
       firstName: a.string(),
       lastName: a.string(),
       sex: a.string(),
-      smoking: a.boolean(),
+      smoking: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
