@@ -128,7 +128,6 @@ export default function App() {
           alignItems="center"
           direction="column"
           width="100vw"
-          overflow="hidden"
           margin="0 auto"
         >
           <View as="form" margin="3rem 0" onSubmit={createNote}>
@@ -288,7 +287,7 @@ export default function App() {
           value={search}
         />
         {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-        <div className="w-full bg-slate-400">
+        <div className="w-full p-10 border-2">
           {notes.filter((value)=>{
             if(value===""){
               return value
