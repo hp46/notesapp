@@ -130,152 +130,159 @@ export default function App() {
           width="100vw"
           margin="0 auto"
         >
-          <View as="form" margin="3rem 0" onSubmit={createNote}>
-            <Flex
-              direction="row"
-              justifyContent="center"
-              gap="2rem"
-              padding="2rem"
-              backgroundColor="#4a80c7"
-            >
-              <Heading level={1}>Add Patients</Heading>
-              <TextField
-                width="200px"
-                name="firstName"
-                placeholder="Insert first name"
-                label="First name"
-                required
-              />
-              <TextField
-                width="200px"
-                name="lastName"
-                placeholder="Insert last name"
-                label="Last name"
-                required
-              />
-              <RadioGroupField
-                legend="Gender / Sex"
-                name="sex"
-                options={['Male', 'Female']}
-                direction="column">
-                <Radio value="Male">Male</Radio>
-                <Radio value="Female">Female</Radio>
-              </RadioGroupField>
-              <SelectField
-                width="200px"
-                label="Location"
-                name="location"
-                options={['Rabat', 'Tagier', 'Cassablanca']}
-                required
-                >
-              </SelectField>
-              <PhoneNumberField
-                defaultDialCode="+212"
-                label="Phone number"
-                placeholder="xxx-xxx-xxx"
-                name="phoneNumber"
-              />
-              <RadioGroupField
-                legend="Smoking"
-                name="smoking"
-                options={['Yes', 'No']}
-                direction="column">
-                <Radio value="Yes">Yes</Radio>
-                <Radio value="No">No</Radio>
-              </RadioGroupField>
-            </Flex>
-            <Flex
-              direction="row"
-              justifyContent="center"
-              gap="2rem"
-              padding="2rem"
-              backgroundColor="#4a80c7"
-            >
-              <TextField
-                width="200px"
-                name="bloodSugarLevel"
-                placeholder="Enter Blood Sugar level"
-                label="Enter Blood Sugar level"
-                required
-              />
-              <TextField
-                width="200px"
-                name="hba1c"
-                placeholder="Insert hba1c"
-                label="hba1c"
-                required
-              />
-              <TextField
-                width="200px"
-                name="weight"
-                placeholder="weight"
-                label="weight"
-                required
-              />
-              <TextField
-                width="200px"
-                name="cholesterol"
-                placeholder="Insert cholesterol"
-                label="cholesterol"
-                required
-              />
+          <Grid
+            columnGap="0.5rem"
+            rowGap="0.5rem"
+            templateColumns="1fr 5fr"
+            templateRows="3fr 3fr"
+          >
+            <Heading level={1}>Add Patients</Heading>
+            <View as="form" margin="3rem 0" onSubmit={createNote}>
+              <Flex
+                direction="row"
+                justifyContent="center"
+                gap="2rem"
+                padding="2rem"
+                backgroundColor="#4a80c7"
+              >
+                <TextField
+                  width="200px"
+                  name="firstName"
+                  placeholder="Insert first name"
+                  label="First name"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="lastName"
+                  placeholder="Insert last name"
+                  label="Last name"
+                  required
+                />
+                <RadioGroupField
+                  legend="Gender / Sex"
+                  name="sex"
+                  options={['Male', 'Female']}
+                  direction="column">
+                  <Radio value="Male">Male</Radio>
+                  <Radio value="Female">Female</Radio>
+                </RadioGroupField>
+                <SelectField
+                  width="200px"
+                  label="Location"
+                  name="location"
+                  options={['Rabat', 'Tagier', 'Cassablanca']}
+                  required
+                  >
+                </SelectField>
+                <PhoneNumberField
+                  defaultDialCode="+212"
+                  label="Phone number"
+                  placeholder="xxx-xxx-xxx"
+                  name="phoneNumber"
+                />
+                <RadioGroupField
+                  legend="Smoking"
+                  name="smoking"
+                  options={['Yes', 'No']}
+                  direction="column">
+                  <Radio value="Yes">Yes</Radio>
+                  <Radio value="No">No</Radio>
+                </RadioGroupField>
               </Flex>
               <Flex
+                direction="row"
+                justifyContent="center"
+                gap="2rem"
+                padding="2rem"
+                backgroundColor="#4a80c7"
+              >
+                <TextField
+                  width="200px"
+                  name="bloodSugarLevel"
+                  placeholder="Enter Blood Sugar level"
+                  label="Enter Blood Sugar level"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="hba1c"
+                  placeholder="Insert hba1c"
+                  label="hba1c"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="weight"
+                  placeholder="weight"
+                  label="weight"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="cholesterol"
+                  placeholder="Insert cholesterol"
+                  label="cholesterol"
+                  required
+                />
+                </Flex>
+                <Flex
+                direction="row"
+                justifyContent="center"
+                gap="2rem"
+                padding="2rem"
+                backgroundColor="#4a80c7"
+              >
+                <TextField
+                  width="200px"
+                  name="hemoglobin"
+                  placeholder="Insert Hemoglobin level"
+                  label="Hemoglobin level"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="systolicBloodPressure"
+                  placeholder="Insert Systolic Blood Pressure"
+                  label="Systolic Blood Pressure"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="diastolicBloodPressure"
+                  placeholder="Insert Diastolic Blood Pressure"
+                  label="Diastolic Blood Pressure"
+                  required
+                />
+              
+            </Flex>
+            <Flex
               direction="row"
               justifyContent="center"
               gap="2rem"
               padding="2rem"
               backgroundColor="#4a80c7"
             >
-              <TextField
-                width="200px"
-                name="hemoglobin"
-                placeholder="Insert Hemoglobin level"
-                label="Hemoglobin level"
-                required
-              />
-              <TextField
-                width="200px"
-                name="systolicBloodPressure"
-                placeholder="Insert Systolic Blood Pressure"
-                label="Systolic Blood Pressure"
-                required
-              />
-              <TextField
-                width="200px"
-                name="diastolicBloodPressure"
-                placeholder="Insert Diastolic Blood Pressure"
-                label="Diastolic Blood Pressure"
-                required
-              />
-            
-          </Flex>
-          <Flex
-            direction="row"
-            justifyContent="center"
-            gap="2rem"
-            padding="2rem"
-            backgroundColor="#4a80c7"
-          >
-              <TextAreaField
-                width="200px"
-                name="description"
-                placeholder="Note Description"
-                label="Note Description"
-                rows={3}
-              />
-             <View
-                name="image"
-                as="input"
-                type="file"
-                alignSelf={"end"}
-                accept="image/png, image/jpeg"
-              />
-            <Button type="submit" variation="primary">
-                Create Note
-            </Button>
-            </Flex>
-          </View>
+                <TextAreaField
+                  width="200px"
+                  name="description"
+                  placeholder="Note Description"
+                  label="Note Description"
+                  rows={3}
+                />
+              <View
+                  name="image"
+                  as="input"
+                  type="file"
+                  alignSelf={"end"}
+                  accept="image/png, image/jpeg"
+                />
+              <Button type="submit" variation="primary">
+                  Create Note
+              </Button>
+              </Flex>
+            </View>
+          </Grid>
           <Divider />
           <Heading level={2}>Search</Heading>
           label
