@@ -134,13 +134,14 @@ export default function App() {
           <Grid
             columnGap="0.5rem"
             rowGap="0.5rem"
-            templateColumns="1fr 5fr"
-            templateRows="3fr 3fr"
+            templateColumns="1fr 2fr"
+            templateRows="3fr 3fr 3fr"
           >
             <View
-            rowSpan={2}
+            rowSpan={3}
             > 
-            Add Patients </View>
+            <Heading level={2}>Search</Heading>
+            </View>
             <View
               direction="row"
               justifyContent="center"
