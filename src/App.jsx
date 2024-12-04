@@ -81,6 +81,7 @@ export default function App() {
       sex: form.get("sex"),
       location: form.get("location"),
       phoneNumber: form.get("phoneNumber"),
+      smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
       hba1c: form.get("hba1c"),
       weight: form.get("weight"),
@@ -127,6 +128,8 @@ export default function App() {
           alignItems="center"
           direction="column"
           width="100vw"
+          backgroundColor="#4a80c7"
+          overflow="hidden"
           margin="0 auto"
         >
           <View as="form" margin="3rem 0" onSubmit={createNote}>
