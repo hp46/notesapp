@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './index.css'
 import {
   Authenticator,
   TextAreaField,
@@ -125,7 +126,7 @@ export default function App() {
           justifyContent="center"
           alignItems="center"
           direction="column"
-          width="100%"
+          width="100vw"
           margin="0 auto"
         >
           <Heading level={1}>Add Patients</Heading>
@@ -135,7 +136,7 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
-              backgroundColor="black"
+              backgroundColor="#4a80c7"
             >
               <TextField
                 width="200px"
@@ -187,6 +188,7 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
+              backgroundColor="#4a80c7"
             >
               <TextField
                 width="200px"
@@ -244,6 +246,7 @@ export default function App() {
             justifyContent="center"
             gap="2rem"
             padding="2rem"
+            backgroundColor="#4a80c7"
           >
               <TextAreaField
                 width="200px"
