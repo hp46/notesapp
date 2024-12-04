@@ -155,7 +155,7 @@ export default function App() {
                 variation="outlined"
                 name="sex"
                 options={['Male', 'Female']}
-                direction="column">
+                direction="row">
                 <Radio value="Male">Male</Radio>
                 <Radio value="Female">Female</Radio>
               </RadioGroupField>
@@ -266,63 +266,63 @@ export default function App() {
           onClear={onClear}
           value={search}
         />
-          {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-          <div className="w-96">
-            {notes.filter((value)=>{
-              if(value===""){
-                return value
-              }
-              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
-                return value
-              }
-            })
-            .map((value, key) => {
-            return(
-                <Grid
-                  key={key}
-                  width="100%"
-                  margin="3rem 0"
-                  autoFlow="row"
-                  justifyContent="center"
-                  gap="2rem"
-                  alignContent="center"
+        {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
+        <div className="w-96">
+          {notes.filter((value)=>{
+            if(value===""){
+              return value
+            }
+            else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+              return value
+            }
+          })
+          .map((value, key) => {
+          return(
+              <Grid
+                key={key}
+                width="100%"
+                margin="2rem 0"
+                autoFlow="row"
+                justifyContent="center"
+                gap="2rem"
+                alignContent="center"
+              >
+            {/* {notes.map((note) => ( */}
+              <Flex
+                key={value.id}
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                gap="2rem"
+                border="1px solid #ccc"
+                padding="2rem"
+                borderRadius="5%"
+                className="box"
+              >
+                <View>
+                  <Heading level="3">{value.firstName} {value.lastName}</Heading>
+                </View>
+                <Text fontStyle="italic">{value.description}</Text>
+                <Text fontStyle="italic">{value.sex} <br></br> Center Location: {value.location} <br></br> Phone Number:{value.phoneNumber}</Text>
+                <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel} <br/> HBA1C:{value.hba1c} <br/> Weight:{value.weight}</Text>
+                <Text fontStyle="italic"> Hemoglobin:{value.hemoglobin} <br/> Cholesterol:{value.cholesterol}  <br/> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure}</Text>
+                {value.image && (
+                  <Image
+                    src={value.image}
+                    alt={`visual aid for ${value.name}`}
+                    style={{ width: 400 }}
+                  />
+                )}
+                <Button
+                  width="100px"
+                  variation="destructive"
+                  onClick={() => deleteNote(value)}
                 >
-              {/* {notes.map((note) => ( */}
-                <Flex
-                  key={value.id}
-                  direction="row"
-                  justifyContent="center"
-                  alignItems="center"
-                  gap="2rem"
-                  border="1px solid #ccc"
-                  padding="2rem"
-                  borderRadius="5%"
-                  className="box"
-                >
-                  <View>
-                    <Heading level="3">{value.firstName} {value.lastName}</Heading>
-                  </View>
-                  <Text fontStyle="italic">{value.description}</Text>
-                  <Text fontStyle="italic">{value.sex} <br></br> Public Health Center Location: {value.location} <br></br> Phone Number:{value.phoneNumber}</Text>
-                  <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel} <br/> HBA1C:{value.hba1c} <br/> Weight:{value.weight}  <br/> Cholesterol:{value.cholesterol}</Text>
-                  <Text fontStyle="italic"> Hemoglobin{value.hemoglobin} <br/> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure}</Text>
-                  {value.image && (
-                    <Image
-                      src={value.image}
-                      alt={`visual aid for ${value.name}`}
-                      style={{ width: 400 }}
-                    />
-                  )}
-                  <Button
-                    width="100px"
-                    variation="destructive"
-                    onClick={() => deleteNote(value)}
-                  >
-                    Delete note
-                  </Button>
-                </Flex>
-              {/* ))} */}
-              </Grid>
+                  Delete note
+                </Button>
+              </Flex>
+            {/* ))} */}
+            </Grid>
             )
             })}
           </div>
