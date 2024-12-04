@@ -125,8 +125,6 @@ export default function App() {
           justifyContent="center"
           alignItems="center"
           direction="column"
-          width="100%"
-          margin="0 auto"
         >
           <Heading level={1}>Add Patients</Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
