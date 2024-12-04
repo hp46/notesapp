@@ -135,10 +135,6 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
-<<<<<<< HEAD
-              backgroundColor="#4a80c7"
-=======
->>>>>>> parent of da803a0 (smmoking)
             >
               <Heading level={1}>Add Patients</Heading>
               <TextField
@@ -182,8 +178,8 @@ export default function App() {
                 name="smoking"
                 options={['Yes', 'No']}
                 direction="column">
-                <Radio value={true}>Yes</Radio>
-                <Radio value={false}>No</Radio>
+                <Radio value="Yes">Yes</Radio>
+                <Radio value="No">No</Radio>
               </RadioGroupField>
             </Flex>
             <Flex
