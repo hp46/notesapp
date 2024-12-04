@@ -154,9 +154,17 @@ export default function App() {
                 legend="Gender / Sex"
                 name="sex"
                 options={['Male', 'Female']}
-                direction="row">
+                direction="column">
                 <Radio value="Male">Male</Radio>
                 <Radio value="Female">Female</Radio>
+              </RadioGroupField>
+              <RadioGroupField
+                legend="Smoking"
+                name="smoking"
+                options={['Yes', 'No']}
+                direction="column">
+                <Radio value="Yes">Yes</Radio>
+                <Radio value="No">No</Radio>
               </RadioGroupField>
               <SelectField
                 width="200px"
