@@ -129,7 +129,6 @@ export default function App() {
           width="100vw"
           margin="0 auto"
         >
-          <Heading level={1}>Add Patients</Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
             <Flex
               direction="row"
@@ -138,6 +137,7 @@ export default function App() {
               padding="2rem"
               backgroundColor="#4a80c7"
             >
+              <Heading level={1}>Add Patients</Heading>
               <TextField
                 width="200px"
                 name="firstName"
