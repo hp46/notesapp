@@ -128,7 +128,6 @@ export default function App() {
           alignItems="center"
           direction="column"
           width="100vw"
-          backgroundColor="#4a80c7"
           overflow="hidden"
           margin="0 auto"
         >
@@ -138,6 +137,7 @@ export default function App() {
               justifyContent="center"
               gap="2rem"
               padding="2rem"
+              backgroundColor="#4a80c7"
             >
               <Heading level={1}>Add Patients</Heading>
               <TextField
@@ -220,6 +220,14 @@ export default function App() {
                 label="cholesterol"
                 required
               />
+              </Flex>
+              <Flex
+              direction="row"
+              justifyContent="center"
+              gap="2rem"
+              padding="2rem"
+              backgroundColor="#4a80c7"
+            >
               <TextField
                 width="200px"
                 name="hemoglobin"
@@ -280,7 +288,7 @@ export default function App() {
           value={search}
         />
         {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-        <div className="w-full">
+        <div className="w-full bg-slate-400">
           {notes.filter((value)=>{
             if(value===""){
               return value
