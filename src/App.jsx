@@ -266,7 +266,10 @@ export default function App() {
               wrap="wrap"
         
           >
-            <div>
+            <Flex
+              direction="column"
+              gap="2rem"
+            >
               <TextAreaField
                   width="200px"
                   name="description"
@@ -280,7 +283,7 @@ export default function App() {
                   alignSelf={"end"}
                   accept="image/png, image/jpeg"
                 />
-            </div>
+            </Flex>
             <Button type="submit" variation="primary">
                 Create Note
             </Button>
