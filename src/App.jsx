@@ -15,6 +15,11 @@ import {
   Grid,
   PhoneNumberField,
   Divider,
+  Table,
+  TableCell,
+  TableBody,
+  TableHead,
+  TableRow,
   RadioGroupField,
   Radio,
 } from "@aws-amplify/ui-react";
@@ -300,6 +305,21 @@ export default function App() {
           onClear={onClear}
           value={search}
         />
+        <Table>
+          <TableHead>
+            <TableCell as="th">Name</TableCell>
+            <TableCell as="th">Sex</TableCell>
+            <TableCell as="th">Smoke</TableCell>
+            <TableCell as="th">Location</TableCell>
+            <TableCell as="th">Phone Number</TableCell>
+            <TableCell as="th">Weight</TableCell>
+            <TableCell as="th">Blood Sugar Level (Glucose)</TableCell>
+            <TableCell as="th">HBA1C</TableCell>
+            <TableCell as="th">Hemoglobin</TableCell>
+            <TableCell as="th">Cholesterol</TableCell>
+            <TableCell as="th">Blood Pressure</TableCell>
+          </TableHead>
+        </Table>
         {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
         <div className="w-full p-10 border-2">
           {notes.filter((value)=>{
@@ -310,11 +330,11 @@ export default function App() {
               return value
             }
           })
+          
           .map((value, key) => {
           return(
               <Grid
                 key={key}
-                width="90vw"
                 autoFlow="row"
                 justifyContent="center"
                 alignItems="center"
