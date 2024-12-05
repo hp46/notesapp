@@ -135,19 +135,21 @@ export default function App() {
             columnGap="0.5rem"
             rowGap="0.5rem"
             templateColumns=".1fr 2fr"
-            templateRows="2fr 2fr 1fr"
+            templateRows="1fr 1fr 1fr"
           >
-            <View
+            <View 
             rowSpan={3}
-            justifyContent="center"
-            alignItems="center"
             > 
-            <Heading level={2}>Add Patients</Heading>
+            <Flex
+              justifyContent="center"
+              alignItems="center">
+                            <Heading level={2}>Add Patients</Heading>
+            </Flex>
             </View>
             <View
             >
               <Flex
-                rap
+                height="auto"
                 direction="row"
                 gap="2rem"
                 padding="2rem"
@@ -313,6 +315,7 @@ export default function App() {
                 autoFlow="row"
                 justifyContent="center"
                 rowGap="1rem"
+                columnGap="1rem"
                 alignContent="center"
               >
             {/* {notes.map((note) => ( */}
