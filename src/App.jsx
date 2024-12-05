@@ -305,7 +305,11 @@ export default function App() {
           onClear={onClear}
           value={search}
         />
-        <Table>
+        <Table
+          highlightOnHover={true}
+          variation="striped"
+          width="90vw"
+        >
           <TableHead>
             <TableCell as="th">Name</TableCell>
             <TableCell as="th">Sex</TableCell>
