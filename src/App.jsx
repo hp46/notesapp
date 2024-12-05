@@ -264,7 +264,9 @@ export default function App() {
             direction="row"
             gap="2rem"
             padding="2rem"
-              wrap="wrap"
+            align-content= "center"
+            align-items= "center"
+            wrap="wrap"
         
           >
             <Flex
@@ -292,8 +294,6 @@ export default function App() {
             </Grid>
           </View>
           <Divider />
-          <Heading level={2}>Search</Heading>
-          label
         <SearchField
           label="Search"
           placeholder="Search here..."
@@ -315,12 +315,12 @@ export default function App() {
           return(
               <Grid
                 key={key}
-                width="100%"
+                width="90vw"
                 autoFlow="row"
                 justifyContent="center"
                 rowGap="1rem"
                 columnGap="1rem"
-                alignContent="center"
+                alignContent="space-between"
               >
             {/* {notes.map((note) => ( */}
               <Flex
@@ -336,12 +336,22 @@ export default function App() {
                 className="box"
               >
                 <View>
-                  <Heading level="3">{value.firstName} {value.lastName}</Heading>
+                  <Text fontWeight={900}>{value.firstName} {value.lastName}</Text>
                 </View>
+                <Text fontStyle="italic">{value.sex}</Text>
+                <Text fontStyle="italic"> Smoke: {value.smoking} </Text>
+                <Text fontStyle="italic"> Center Location: {value.location}  </Text>
+                <Text fontStyle="italic"> Phone Number:{value.phoneNumber}</Text>
+
+                <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel}mg/dL<br/> Weight:{value.weight}</Text>
+                <Text fontStyle="italic"> HBA1C:{value.hba1c}mmol/mol </Text>
+                <Text fontStyle="italic"> Weight:{value.weight}kg</Text>
+                <Text fontStyle="italic"> Hemoglobin:{value.hemoglobin}g/dL </Text>
+                <Text fontStyle="italic"> Cholesterol:{value.cholesterol}mg/dL</Text>
+                <Text fontStyle="italic"> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure} mmHg</Text>
+
+
                 <Text fontStyle="italic">{value.description}</Text>
-                <Text fontStyle="italic">{value.sex} {value.smoking} <br></br> Center Location: {value.location} <br></br> Phone Number:{value.phoneNumber}</Text>
-                <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel} <br/> HBA1C:{value.hba1c} <br/> Weight:{value.weight}</Text>
-                <Text fontStyle="italic"> Hemoglobin:{value.hemoglobin} <br/> Cholesterol:{value.cholesterol}  <br/> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure}</Text>
                 {value.image && (
                   <Image
                     src={value.image}
