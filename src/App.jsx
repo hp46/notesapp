@@ -135,7 +135,7 @@ export default function App() {
             columnGap="0.5rem"
             rowGap="0.5rem"
             width="100vw"
-            templateColumns=".1fr 2fr"
+            templateColumns=".5fr 2fr"
             templateRows="auto auto auto"
           >
             <Flex
@@ -264,8 +264,8 @@ export default function App() {
             direction="row"
             gap="2rem"
             padding="2rem"
-            align-content= "center"
-            align-items= "center"
+            justifyContent="center"
+            alignItems="center"
             wrap="wrap"
         
           >
@@ -325,7 +325,7 @@ export default function App() {
             {/* {notes.map((note) => ( */}
               <Flex
                 key={value.id}
-                width="100%"
+                width="90vw"
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
@@ -336,16 +336,16 @@ export default function App() {
                 className="box"
               >
                 <View>
-                  <Text fontWeight={900}>{value.firstName} {value.lastName}</Text>
+                  <Text fontWeight={900} fontSize="2em">{value.firstName} {value.lastName}</Text>
                 </View>
                 <Text fontStyle="italic">{value.sex}</Text>
                 <Text fontStyle="italic"> Smoke: {value.smoking} </Text>
                 <Text fontStyle="italic"> Center Location: {value.location}  </Text>
                 <Text fontStyle="italic"> Phone Number:{value.phoneNumber}</Text>
 
-                <Text fontStyle="italic">Blood Sugar Level:{value.bloodSugarLevel}mg/dL<br/> Weight:{value.weight}</Text>
-                <Text fontStyle="italic"> HBA1C:{value.hba1c}mmol/mol </Text>
                 <Text fontStyle="italic"> Weight:{value.weight}kg</Text>
+                <Text fontStyle="italic"> Blood Sugar Level:{value.bloodSugarLevel}mg/dL</Text>
+                <Text fontStyle="italic"> HBA1C:{value.hba1c}mmol/mol </Text>
                 <Text fontStyle="italic"> Hemoglobin:{value.hemoglobin}g/dL </Text>
                 <Text fontStyle="italic"> Cholesterol:{value.cholesterol}mg/dL</Text>
                 <Text fontStyle="italic"> BloodPressure: {value.systolicBloodPressure} / {value.diastolicBloodPressure} mmHg</Text>
