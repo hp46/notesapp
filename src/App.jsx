@@ -332,16 +332,25 @@ export default function App() {
             return(
               <TableRow key={key}>
                 <TableCell>{value.firstName} {value.lastName}</TableCell>
-                <TableCell>Sex</TableCell>
-                <TableCell>Smoke</TableCell>
-                <TableCell>Location</TableCell>
-                <TableCell>Phone Number</TableCell>
-                <TableCell>Weight</TableCell>
-                <TableCell>Blood Sugar Level (Glucose)</TableCell>
-                <TableCell>HBA1C</TableCell>
-                <TableCell>Hemoglobin</TableCell>
-                <TableCell>Cholesterol</TableCell>
-                <TableCell>Blood Pressure</TableCell>
+                <TableCell>{value.sex}</TableCell>
+                <TableCell>{value.smoking}</TableCell>
+                <TableCell>{value.location}</TableCell>
+                <TableCell>{value.phoneNumber}</TableCell>
+                <TableCell>{value.weight}</TableCell>
+                <TableCell>{value.bloodSugarLevel}</TableCell>
+                <TableCell>{value.hba1c}</TableCell>
+                <TableCell>{value.hemoglobin}</TableCell>
+                <TableCell>{value.cholesterol}</TableCell>
+                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</TableCell>
+                <TableCell>
+                  <Button
+                    width="100px"
+                    variation="destructive"
+                    onClick={() => deleteNote(value)}
+                  >
+                    Delete note
+                  </Button>
+                </TableCell>
               </TableRow>
             )
             })}
