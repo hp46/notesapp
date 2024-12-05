@@ -319,10 +319,35 @@ export default function App() {
             <TableCell as="th">Cholesterol</TableCell>
             <TableCell as="th">Blood Pressure</TableCell>
           </TableHead>
+          <TableBody>
+            {notes.filter((value)=>{
+              if(value===""){
+                return value
+              }
+              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+                return value
+              }
+            })
+            .map((value, key) => {
+            return(
+              <TableRow key={key}>
+                <TableCell>{value.firstName} {value.lastName}</TableCell>
+                <TableCell>Sex</TableCell>
+                <TableCell>Smoke</TableCell>
+                <TableCell>Location</TableCell>
+                <TableCell>Phone Number</TableCell>
+                <TableCell>Weight</TableCell>
+                <TableCell>Blood Sugar Level (Glucose)</TableCell>
+                <TableCell>HBA1C</TableCell>
+                <TableCell>Hemoglobin</TableCell>
+                <TableCell>Cholesterol</TableCell>
+                <TableCell>Blood Pressure</TableCell>
+              </TableRow>
+            )
+            })}
+          </TableBody>
         </Table>
-        {/* <input type="text" placeholder='search here' onChange={(e)=>setSearch(e.target.value)} /> */}
-        <div className="w-full p-10 border-2">
-          {notes.filter((value)=>{
+          {/* {notes.filter((value)=>{
             if(value===""){
               return value
             }
@@ -330,7 +355,6 @@ export default function App() {
               return value
             }
           })
-          
           .map((value, key) => {
           return(
               <Grid
@@ -342,7 +366,6 @@ export default function App() {
                 columnGap="1rem"
                 alignContent="space-between"
               >
-            {/* {notes.map((note) => ( */}
               <Flex
                 key={value.id}
                 width="90vw"
@@ -388,11 +411,9 @@ export default function App() {
                   Delete note
                 </Button>
               </Flex>
-            {/* ))} */}
             </Grid>
             )
-            })}
-          </div>
+            })} */}
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
         
