@@ -134,6 +134,7 @@ export default function App() {
           <Grid
             columnGap="0.5rem"
             rowGap="0.5rem"
+            width="100vw"
             templateColumns=".1fr 2fr"
             templateRows="auto auto auto"
           >
@@ -284,7 +285,7 @@ export default function App() {
                   accept="image/png, image/jpeg"
                 />
             </Flex>
-            <Button type="submit" variation="primary">
+            <Button type="submit" variation="primary" height="100px">
                 Create Note
             </Button>
             </Flex>
