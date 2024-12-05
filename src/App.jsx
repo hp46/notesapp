@@ -264,7 +264,6 @@ export default function App() {
             direction="row"
             gap="2rem"
             padding="2rem"
-            justifyContent="center"
             alignItems="center"
             wrap="wrap"
         
@@ -318,6 +317,7 @@ export default function App() {
                 width="90vw"
                 autoFlow="row"
                 justifyContent="center"
+                alignItems="center"
                 rowGap="1rem"
                 columnGap="1rem"
                 alignContent="space-between"
@@ -332,6 +332,7 @@ export default function App() {
                 gap="2rem"
                 border="1px solid #ccc"
                 padding="2rem"
+                margin="1rem"
                 borderRadius="5%"
                 className="box"
               >
