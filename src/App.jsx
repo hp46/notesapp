@@ -135,17 +135,16 @@ export default function App() {
             columnGap="0.5rem"
             rowGap="0.5rem"
             templateColumns=".1fr 2fr"
-            templateRows="1fr 1fr 1fr"
+            templateRows="auto auto auto"
           >
-            <View 
-            rowSpan={3}
-            > 
             <Flex
+              rowSpan={3}
+              direction="column"
               justifyContent="center"
-              alignItems="center">
-                            <Heading level={2}>Add Patients</Heading>
+              alignItems="center"
+            >
+              <Heading level={2}>Add Patients</Heading>
             </Flex>
-            </View>
             <View
             >
               <Flex
@@ -267,20 +266,21 @@ export default function App() {
               wrap="wrap"
         
           >
+            <div>
               <TextAreaField
-                width="200px"
-                name="description"
-                placeholder="Note Description"
-                label="Note Description"
-                rows={3}
-              />
-            <View
-                name="image"
-                as="input"
-                type="file"
-                alignSelf={"end"}
-                accept="image/png, image/jpeg"
-              />
+                  width="200px"
+                  name="description"
+                  placeholder="Note Description"
+                  label="Note Description"
+                />
+              <View
+                  name="image"
+                  as="input"
+                  type="file"
+                  alignSelf={"end"}
+                  accept="image/png, image/jpeg"
+                />
+            </div>
             <Button type="submit" variation="primary">
                 Create Note
             </Button>
