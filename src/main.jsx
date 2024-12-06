@@ -3,9 +3,16 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Rabat from './pages/Rabat.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+
+const router = createBrowserRouter([
+  {path: "/", element: <App />},
+  {path: "rabat", element: <Rabat />}
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Rabat/>
+    <RouterProvider router={router} />
   </StrictMode>,
 )
