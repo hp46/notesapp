@@ -335,24 +335,24 @@ export default function App() {
             .map((value, key) => {
             return(
               <TableRow key={key}>
-                <TableCell> <Text fontWeight={900} fontSize="2em">{value.firstName} {value.lastName}</Text></TableCell>
+                <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
                 <TableCell>{value.sex}</TableCell>
                 <TableCell>{value.smoking}</TableCell>
-                <TableCell>{value.location}</TableCell>
+                <TableCell>+{value.location}</TableCell>
                 <TableCell>{value.phoneNumber}</TableCell>
-                <TableCell>{value.weight}kg</TableCell>
-                <TableCell>{value.bloodSugarLevel}mg/dL</TableCell>
-                <TableCell>{value.hba1c}mmol/mol</TableCell>
-                <TableCell>{value.hemoglobin}g/dL</TableCell>
-                <TableCell>{value.cholesterol}mg/dL</TableCell>
-                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}mmHg</TableCell>
+                <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
+                <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
+                <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
+                <TableCell>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></TableCell>
+                <TableCell>{value.cholesterol}<Text fontStyle="italic"> mg/dL</Text></TableCell>
+                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<Text fontStyle="italic"> mmHg</Text></TableCell>
                 <TableCell>
                   <Button
                     width="100px"
                     variation="destructive"
                     onClick={() => deleteNote(value)}
                   >
-                    Delete note
+                    Delete 
                   </Button>
                 </TableCell>
               </TableRow>
