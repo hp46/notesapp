@@ -337,8 +337,8 @@ export default function App() {
                 <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
                 <TableCell>{value.sex}</TableCell>
                 <TableCell>{value.smoking}</TableCell>
-                <TableCell>+{value.location}</TableCell>
-                <TableCell>{value.phoneNumber}</TableCell>
+                <TableCell>{value.location}</TableCell>
+                <TableCell>+{value.phoneNumber}</TableCell>
                 <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
                 <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
                 <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
