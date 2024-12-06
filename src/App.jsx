@@ -29,6 +29,7 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../amplify_outputs.json";
+import Rabat from "./assets/pages/Rabat";
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -135,6 +136,7 @@ export default function App() {
           width="100vw"
           margin="0 auto"
         >
+          <Rabat/>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
           <Grid
             columnGap="0.5rem"
