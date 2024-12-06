@@ -136,7 +136,6 @@ export default function App() {
           width="100vw"
           margin="0 auto"
         >
-          <Rabat/>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
           <Grid
             columnGap="0.5rem"
