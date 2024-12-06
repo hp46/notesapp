@@ -304,7 +304,7 @@ export default function App() {
           onChange={onChange}
           onClear={onClear}
           value={search}
-        />
+        /> 
         <Table
           highlightOnHover={true}
           variation="striped"
@@ -340,12 +340,12 @@ export default function App() {
                 <TableCell>{value.smoking}</TableCell>
                 <TableCell>{value.location}</TableCell>
                 <TableCell>{value.phoneNumber}</TableCell>
-                <TableCell>{value.weight}</TableCell>
-                <TableCell>{value.bloodSugarLevel}</TableCell>
-                <TableCell>{value.hba1c}</TableCell>
-                <TableCell>{value.hemoglobin}</TableCell>
-                <TableCell>{value.cholesterol}</TableCell>
-                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</TableCell>
+                <TableCell>{value.weight}kg</TableCell>
+                <TableCell>{value.bloodSugarLevel}mg/dL</TableCell>
+                <TableCell>{value.hba1c}mmol/mol</TableCell>
+                <TableCell>{value.hemoglobin}g/dL</TableCell>
+                <TableCell>{value.cholesterol}mg/dL</TableCell>
+                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}mmHg</TableCell>
                 <TableCell>
                   <Button
                     width="100px"
