@@ -335,7 +335,7 @@ export default function App() {
             .map((value, key) => {
             return(
               <TableRow key={key}>
-                <TableCell>{value.firstName} {value.lastName}</TableCell>
+                <TableCell> <Text fontWeight={900} fontSize="2em">{value.firstName} {value.lastName}</Text></TableCell>
                 <TableCell>{value.sex}</TableCell>
                 <TableCell>{value.smoking}</TableCell>
                 <TableCell>{value.location}</TableCell>
