@@ -29,6 +29,27 @@ const schema = a.schema({
     })
     .authorization((allow) => [allow.owner()]),
 
+    Rabat: a
+    .model({
+      description: a.string(),
+      image: a.string(),
+      firstName: a.string(),
+      lastName: a.string(),
+      sex: a.string(),
+      smoking: a.string(),
+      location: a.string(),
+      phoneNumber: a.string(),
+      bloodSugarLevel: a.float(),
+      hba1c: a.float(),
+      weight: a.float(),
+      cholesterol: a.float(),
+      hemoglobin: a.float(),
+      systolicBloodPressure: a.float(),
+      diastolicBloodPressure: a.float(),
+      
+    })
+    .authorization((allow) => [allow.owner()]),
+
 });
 
 export type Schema = ClientSchema<typeof schema>;
