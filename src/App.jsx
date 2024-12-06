@@ -148,7 +148,7 @@ export default function App() {
               justifyContent="center"
               alignItems="center"
             >
-              <Heading level={2}>ADD <br> </br>PATIENTS</Heading>
+              <Heading level={2}>Add Patients</Heading>
             </Flex>
             <View
             >
@@ -337,14 +337,14 @@ export default function App() {
                 <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
                 <TableCell>{value.sex}</TableCell>
                 <TableCell>{value.smoking}</TableCell>
-                <TableCell>{value.location}</TableCell>
-                <TableCell>+ {value.phoneNumber}</TableCell>
-                <TableCell><Flex>{value.weight} <Text fontStyle="italic"> kg</Text></Flex></TableCell>
-                <TableCell><Flex>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></Flex></TableCell>
-                <TableCell><Flex>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></Flex></TableCell>
-                <TableCell><Flex>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></Flex></TableCell>
-                <TableCell><Flex>{value.cholesterol}<Text fontStyle="italic"> mg/dL</Text></Flex></TableCell>
-                <TableCell><Flex>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<Text fontStyle="italic"> mmHg</Text></Flex></TableCell>
+                <TableCell>+{value.location}</TableCell>
+                <TableCell>{value.phoneNumber}</TableCell>
+                <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
+                <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
+                <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
+                <TableCell>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></TableCell>
+                <TableCell>{value.cholesterol}<Text fontStyle="italic"> mg/dL</Text></TableCell>
+                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<Text fontStyle="italic"> mmHg</Text></TableCell>
                 <TableCell>
                   <Button
                     width="100px"
