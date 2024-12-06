@@ -10,7 +10,6 @@ import {
   Flex,
   View,
   SelectField,
-  Image,
   SearchField,
   Grid,
   PhoneNumberField,
@@ -29,7 +28,6 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../amplify_outputs.json";
-import Rabat from "./assets/pages/Rabat";
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
