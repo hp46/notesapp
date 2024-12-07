@@ -54,17 +54,17 @@ export default function Rabat() {
   }, []);
 
   async function fetchRabat() {
-    const { data: rabat } = await client.models.Note.list();
+    const { data: rabat } = await client.models.Rabat.list();
     await Promise.all(
-      rabat.map(async (note) => {
-        if (note.image) {
+      rabat.map(async (rabatinfo) => {
+        if (rabatinfo.image) {
           const linkToStorageFile = await getUrl({
-            path: ({ identityId }) => `media/${identityId}/${note.image}`,
+            path: ({ identityId }) => `media/${identityId}/${rabatinfo.image}`,
           });
           console.log(linkToStorageFile.url);
-          note.image = linkToStorageFile.url;
+          rabatinfo.image = linkToStorageFile.url;
         }
-        return note;
+        return rabatinfo;
       })
     );
     console.log(rabat);
