@@ -320,6 +320,7 @@ export default function Rabat() {
             <TableCell as="th">Hemoglobin</TableCell>
             <TableCell as="th">Cholesterol</TableCell>
             <TableCell as="th">Blood Pressure</TableCell>
+            <TableCell as="th"></TableCell>
           </TableHead>
           <TableBody>
             {rabat.filter((value)=>{
