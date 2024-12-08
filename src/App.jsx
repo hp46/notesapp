@@ -20,7 +20,7 @@ export default function App() {
         <Flex>
           <Image
           alt="Morocco Map"
-          src="../assets/morocco.png"
+          src="/assests/morocco.png"
           objectPosition="50% 50%"
           backgroundColor="initial"
           height="75%"
