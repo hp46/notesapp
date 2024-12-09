@@ -5,7 +5,7 @@ export default {
     extend: {
       spacing: {
         '10%': '10%',
-
+      }
     },
   },
   plugins: [],
