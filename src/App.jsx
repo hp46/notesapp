@@ -8,6 +8,7 @@ import {
 
 } from "@aws-amplify/ui-react";
   import "@aws-amplify/ui-react/styles.css";
+  import image from "./assets/react.svg"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -20,7 +21,7 @@ export default function App() {
         <Flex>
           <Image
           alt="Morocco Map"
-          src="/morocco.png"
+          src={image}
           objectPosition="50% 50%"
           backgroundColor="initial"
           height="75%"
