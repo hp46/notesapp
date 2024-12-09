@@ -48,10 +48,8 @@ export default function App() {
           </div>
           <div className="absolute top-[40%] left-[50%]">
           <ReactRouterLink to="/Rabat" component={Link}>
-            <Text fontWeight={500}>
-              Rabat 
-              <br></br>
-              O
+            <Text fontWeight={500} fontSize=".5em">
+              RABAT 
             </Text>
           </ReactRouterLink>
           </div>
