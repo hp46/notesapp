@@ -8,7 +8,7 @@ import {
 
 } from "@aws-amplify/ui-react";
   import "@aws-amplify/ui-react/styles.css";
-  import image from "./assets/react.svg"
+  import image from "./assets/morocco.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
