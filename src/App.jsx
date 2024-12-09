@@ -39,7 +39,12 @@ export default function App() {
           >
           </Image>
           <div className="absolute top-10 left-10">
-            <Button onClick={signOut}>Sign Out</Button>
+            <Button
+            colorTheme="overlay"
+            onClick={signOut}
+            >
+              Sign Out
+            </Button>
           </div>
           <div className="absolute top-[10%] left-[10%]">
           <ReactRouterLink to="/Rabat" component={Link}>Rabat</ReactRouterLink>
