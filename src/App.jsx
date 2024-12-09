@@ -46,8 +46,14 @@ export default function App() {
               Sign Out
             </Button>
           </div>
-          <div className="absolute top-[50%] left-[40%]">
-          <ReactRouterLink to="/Rabat" component={Link}>Rabat</ReactRouterLink>
+          <div className="absolute top-[40%] left-[50%]">
+          <ReactRouterLink to="/Rabat" component={Link}>
+            <Text fontWeight={500}>
+              Rabat 
+              <br></br>
+              O
+            </Text>
+          </ReactRouterLink>
           </div>
         </Flex>
         
