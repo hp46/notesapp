@@ -46,7 +46,7 @@ export default function App() {
               Sign Out
             </Button>
           </div>
-          <div className="absolute top-[10%] left-[10%]">
+          <div className="absolute top-[50%] left-[40%]">
           <ReactRouterLink to="/Rabat" component={Link}>Rabat</ReactRouterLink>
           </div>
         </Flex>

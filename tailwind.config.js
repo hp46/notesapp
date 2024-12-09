@@ -5,6 +5,7 @@ export default {
     extend: {
       spacing: {
         '40%': '40%',
+        '50%': '50%',
       }
     },
   },
