@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {  } from "react";
 import './index.css'
 import {
   Authenticator,
@@ -6,8 +6,14 @@ import {
   Image,
   Flex,
   Text,
-
+  Link,
 } from "@aws-amplify/ui-react";
+import {
+  BrowserRouter as Router,
+  Link as ReactRouterLink,
+  Routes,
+  Route,
+} from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
   import image from "./assets/morocco.png"
 /**
@@ -32,8 +38,8 @@ export default function App() {
           opacity="100%"
           >
           </Image>
-          <Text>Rabat</Text>
-          <div className="absolute">
+          <div className="absolute top-10 left-10">
+            <ReactRouterLink to="/Rabat" component={Link}>Rabat</ReactRouterLink>
             <Button onClick={signOut}>Sign Out</Button>
           </div>
         </Flex>
