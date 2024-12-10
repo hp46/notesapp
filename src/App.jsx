@@ -49,8 +49,8 @@ export default function App() {
             </div>
             <div className="absolute top-[40%] left-[50%] hover:font-light">
             <ReactRouterLink to="/Rabat" component={Link}>
-              <Text fontWeight={800} fontSize="2em">
-                R A B A T 
+              <Text fontWeight={800} fontSize="2em" fontStyle="italic" textDecoration="underline">
+                RABAT 
               </Text>
             </ReactRouterLink>
             </div>
