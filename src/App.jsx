@@ -25,36 +25,37 @@ export default function App() {
   return (
     <Authenticator>
       {({ signOut }) => (
-        <Flex
-          direction="column"
-        >
-          <Image
-          alt="Morocco Map"
-          src={image}
-          objectPosition="50% 50%"
-          backgroundColor="initial"
-          height="100%"
-          width="100%"
-          opacity="100%"
+        <div className="relative">
+          <Flex
+            direction="column"
           >
-          </Image>
-          <div className="absolute top-10 left-10">
-            <Button
-            colorTheme="overlay"
-            onClick={signOut}
+            <Image
+            alt="Morocco Map"
+            src={image}
+            objectPosition="50% 50%"
+            backgroundColor="initial"
+            height="100%"
+            width="100%"
+            opacity="100%"
             >
-              Sign Out
-            </Button>
-          </div>
-          <div className="absolute top-[40%] left-[50%]">
-          <ReactRouterLink to="/Rabat" component={Link}>
-            <Text fontWeight={500} fontSize="1em">
-              RABAT 
-            </Text>
-          </ReactRouterLink>
-          </div>
-        </Flex>
-        
+            </Image>
+            <div className="absolute top-10 left-10">
+              <Button
+              colorTheme="overlay"
+              onClick={signOut}
+              >
+                Sign Out
+              </Button>
+            </div>
+            <div className="absolute top-[40%] left-[50%]">
+            <ReactRouterLink to="/Rabat" component={Link}>
+              <Text fontWeight={500} fontSize="1em">
+                RABAT 
+              </Text>
+            </ReactRouterLink>
+            </div>
+          </Flex>
+        </div>
       )}
     </Authenticator>
   );
