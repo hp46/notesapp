@@ -15,7 +15,7 @@ import {
   Route,
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
-  import image from "./assets/morocco.png"
+  import image from "./assets/morocco1.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
