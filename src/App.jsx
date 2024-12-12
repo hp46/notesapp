@@ -55,12 +55,12 @@ export default function App() {
                 alt="pin"
                 src={pin}
                 backgroundColor="initial"
-                height="10%"
-                width="10%"
+                height="6%"
+                width="6%"
                 opacity="100%"
                 >
                 </Image>
-                <Text fontWeight={800} fontSize="2em" fontStyle="italic" textDecoration="underline">
+                <Text fontWeight={800} fontSize="3em" fontStyle="italic" textDecoration="underline">
                   RABAT 
                 </Text>
               </div>
