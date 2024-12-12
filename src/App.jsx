@@ -16,6 +16,7 @@ import {
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
   import image from "./assets/morocco1.png"
+  import pin from "./assets/pin.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -47,11 +48,22 @@ export default function App() {
                 Sign Out
               </Button>
             </div>
-            <div className="absolute top-[40%] left-[50%] hover:text-gray-600 p-10">
+            <div className="absolute top-[40%] left-[50%] text-black hover:text-gray-600 p-10">
             <ReactRouterLink to="/Rabat" component={Link}>
-              <Text fontWeight={800} fontSize="2em" fontStyle="italic" textDecoration="underline">
-                RABAT 
-              </Text>
+              <div>
+              <Image
+                alt="pin"
+                src={pin}
+                backgroundColor="initial"
+                height="100%"
+                width="100%"
+                opacity="100%"
+                >
+                </Image>
+                <Text fontWeight={800} fontSize="2em" fontStyle="italic" textDecoration="underline">
+                  RABAT 
+                </Text>
+              </div>
             </ReactRouterLink>
             </div>
           </Flex>
