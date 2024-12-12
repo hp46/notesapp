@@ -50,19 +50,19 @@ export default function App() {
                 Sign Out
               </Button>
             </div>
-            <div className="w-[80%] h-[80%] absolute top-[40%] left-[50%] text-black hover:text-gray-600 p-10">
+            <div className="flex w-[80%] h-[80%] absolute top-[40%] left-[50%] text-black hover:text-gray-600 p-10 ">
             <ReactRouterLink to="/Rabat" component={Link}>
               <div className="flex flex-row">
               <Image
                 alt="pin"
                 src={pin}
                 backgroundColor="initial"
-                height="70px"
-                width="45px"
+                height="5%"
+                width="5%"
                 opacity="100%"
                 >
                 </Image>
-                <Text fontWeight={800} fontSize="3em" fontStyle="italic" textDecoration="underline">
+                <Text fontWeight={800} fontSize="4vw" fontStyle="italic" textDecoration="underline">
                   RABAT 
                 </Text>
               </div>
