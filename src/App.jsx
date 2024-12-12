@@ -55,8 +55,8 @@ export default function App() {
                 alt="pin"
                 src={pin}
                 backgroundColor="initial"
-                height="6%"
-                width="6%"
+                height="70px"
+                width="45px"
                 opacity="100%"
                 >
                 </Image>
