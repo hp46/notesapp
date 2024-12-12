@@ -50,13 +50,13 @@ export default function App() {
             </div>
             <div className="absolute top-[40%] left-[50%] text-black hover:text-gray-600 p-10">
             <ReactRouterLink to="/Rabat" component={Link}>
-              <div>
+              <div className="flex flex-row">
               <Image
                 alt="pin"
                 src={pin}
                 backgroundColor="initial"
-                height="100%"
-                width="100%"
+                height="10%"
+                width="10%"
                 opacity="100%"
                 >
                 </Image>
