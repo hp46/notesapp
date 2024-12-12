@@ -47,7 +47,7 @@ export default function App() {
                 Sign Out
               </Button>
             </div>
-            <div className="absolute top-[40%] left-[50%] hover:font-light bg-white p-10">
+            <div className="absolute top-[40%] left-[50%] hover:text-gray-800 p-10">
             <ReactRouterLink to="/Rabat" component={Link}>
               <Text fontWeight={800} fontSize="2em" fontStyle="italic" textDecoration="underline">
                 RABAT 
