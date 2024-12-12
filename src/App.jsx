@@ -26,7 +26,7 @@ export default function App() {
   return (
     <Authenticator>
       {({ signOut }) => (
-        <div className="relative overflow-hidden">
+        <div className="relative w-1vw h-1vh overflow-hidden">
           <Flex
             direction="column"
           >
@@ -35,8 +35,8 @@ export default function App() {
             src={image}
             objectPosition="50% 50%"
             backgroundColor="initial"
-            height="100vh"
-            width="100vw"
+            height="100%"
+            width="100%"
             opacity="100%"
             >
             </Image>
