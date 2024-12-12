@@ -26,7 +26,7 @@ export default function App() {
   return (
     <Authenticator>
       {({ signOut }) => (
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <Flex
             direction="column"
           >
