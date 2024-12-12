@@ -44,6 +44,7 @@ export default function App() {
               <Button
               colorTheme="overlay"
               onClick={signOut}
+              objectFit="cover"
               >
                 Sign Out
               </Button>
