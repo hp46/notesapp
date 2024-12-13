@@ -52,7 +52,7 @@ export default function App() {
             </div>
             <div className="flex w-[30%] h-[20%] absolute top-[40%] left-[50%] text-black hover:text-gray-600 p-10 ">
             <ReactRouterLink to="/Rabat" component={Link}>
-              <div className="flex flex-row">
+              <div className="flex flex-row h-100%">
               <Image
                 alt="pin"
                 src={pin}
@@ -60,6 +60,7 @@ export default function App() {
                 height="100%"
                 width="100%"
                 opacity="100%"
+                objectFit="initial"
                 >
                 </Image>
                 <Text fontWeight={800} fontSize="4vw" fontStyle="italic" textDecoration="underline">
