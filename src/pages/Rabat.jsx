@@ -143,7 +143,7 @@ export default function Rabat() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
-            <div className="flex flex-row h-full">
+            <div className="absolute top-100 left-100">
             <Image
               alt="pin"
               src={pin}
@@ -154,6 +154,7 @@ export default function Rabat() {
               objectFit="cover"
               >
               </Image>
+              <Text>Home</Text>
             </div>
           </ReactRouterLink>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
