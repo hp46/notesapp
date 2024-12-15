@@ -143,7 +143,7 @@ export default function Rabat() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-100 left-100">
+            <div className="absolute top-10 left-10">
             <Image
               alt="pin"
               src={pin}
