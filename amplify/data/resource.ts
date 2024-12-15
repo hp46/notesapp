@@ -21,6 +21,8 @@ const schema = a.schema({
       bloodSugarLevel: a.float(),
       hba1c: a.float(),
       weight: a.float(),
+      height: a.float(),
+      bmi:  a.float(),
       cholesterol: a.float(),
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
