@@ -33,8 +33,8 @@ export default function App() {
             src={image}
             objectPosition="50% 50%"
             backgroundColor="initial"
-            height="100px"
-            width="100px"
+            height="100%"
+            width="100%"
             opacity="100%"
             objectFit="cover"
             >

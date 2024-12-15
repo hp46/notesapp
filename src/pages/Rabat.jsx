@@ -147,6 +147,8 @@ export default function Rabat() {
             <Image
               alt="pin"
               src={pin}
+              width="100px"
+              height="100px"
               backgroundColor="initial"
               opacity="100%"
               objectFit="cover"
