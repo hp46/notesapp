@@ -11,8 +11,6 @@ import {
 import {
   BrowserRouter as Router,
   Link as ReactRouterLink,
-  Routes,
-  Route,
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
   import image from "./assets/morocco1.png"
@@ -35,8 +33,8 @@ export default function App() {
             src={image}
             objectPosition="50% 50%"
             backgroundColor="initial"
-            height="100%"
-            width="100%"
+            height="100px"
+            width="100px"
             opacity="100%"
             objectFit="cover"
             >
@@ -50,17 +48,15 @@ export default function App() {
                 Sign Out
               </Button>
             </div>
-            <div className="flex w-[30%] h-[20%] absolute top-[40%] left-[50%] text-black hover:text-gray-600 p-10 ">
+            <div className="flex w-[30%] h-[20%] absolute top-[40%] left-[50%] text-black hover:text-gray-600">
             <ReactRouterLink to="/Rabat" component={Link}>
               <div className="flex flex-row h-full">
               <Image
                 alt="pin"
                 src={pin}
                 backgroundColor="initial"
-                height="100%"
-                width="100%"
                 opacity="100%"
-                objectFit="initial"
+                objectFit="cover"
                 >
                 </Image>
                 <Text fontWeight={800} fontSize="4vw" fontStyle="italic" textDecoration="underline">
