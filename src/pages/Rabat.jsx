@@ -147,14 +147,13 @@ export default function Rabat() {
             <Image
               alt="pin"
               src={pin}
-              width="100px"
-              height="100px"
+              width="50px"
+              height="60px"
               backgroundColor="initial"
               opacity="100%"
-              objectFit="cover"
+              objectFit="none"
               >
               </Image>
-              <Text>Home</Text>
             </div>
           </ReactRouterLink>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
