@@ -94,6 +94,7 @@ export default function Rabat() {
       smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
       height: form.get("height"),
+      bmi: Math.pow(parseFloat(form.get("weight"))/parseFloat(form.get("height"))),
       hba1c: form.get("hba1c"),
       weight: form.get("weight"),
       cholesterol: form.get("cholesterol"),
@@ -345,6 +346,7 @@ export default function Rabat() {
             <TableCell as="th">Location</TableCell>
             <TableCell as="th">Phone Number</TableCell>
             <TableCell as="th">Weight</TableCell>
+            <TableCell as="th">Height</TableCell>
             <TableCell as="th">Blood Sugar Level (Glucose)</TableCell>
             <TableCell as="th">HBA1C</TableCell>
             <TableCell as="th">Hemoglobin</TableCell>
@@ -370,6 +372,7 @@ export default function Rabat() {
                 <TableCell>{value.location}</TableCell>
                 <TableCell>+{value.phoneNumber}</TableCell>
                 <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
+                <TableCell>{value.height} <Text fontStyle="italic"> cm</Text></TableCell>
                 <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
                 <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
                 <TableCell>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></TableCell>
