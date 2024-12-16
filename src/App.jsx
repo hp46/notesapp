@@ -51,21 +51,17 @@ export default function App() {
             <div className="flex w-[30%] h-[7%] absolute top-[40%] left-[50%]">
             <ReactRouterLink to="/Rabat" component={Link}>
               <div className="flex flex-row h-full items-center justify-start">
-              <Image
-                alt="pin"
-                src={pin}
-                backgroundColor="initial"
-                opacity="100%"
-                height="100%"
-                width="100%"
-                objectFit="cover" 
-                >
-                </Image>
-                <div>
-                  <p className=" text-4vw text-black hover:text-gray-700">
-                    RABAT 
-                  </p>
-                </div>
+                <Image
+                  alt="pin"
+                  src={pin}
+                  backgroundColor="initial"
+                  opacity="100%"
+                  objectFit="cover" 
+                  >
+                  </Image>
+                    <p className=" text-40 text-black hover:text-gray-700">
+                      RABAT 
+                    </p>
               </div>
             </ReactRouterLink>
             </div>
