@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        'mapFont': '4vw'
+        large: [ '4vw'],
       },
       spacing: {
         '7%': '7%',
