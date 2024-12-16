@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        large: [ '4vw'],
+        title: [ '4vw'],
       },
       spacing: {
         '7%': '7%',
