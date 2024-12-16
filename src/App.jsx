@@ -60,7 +60,7 @@ export default function App() {
                 >
                 </Image>
                 <div>
-                  <p className=" text-[title] text-black hover:text-gray-700">
+                  <p className=" text-4vw text-black hover:text-gray-700">
                     RABAT 
                   </p>
                 </div>
