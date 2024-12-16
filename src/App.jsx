@@ -60,7 +60,7 @@ export default function App() {
                 >
                 </Image>
                 <div>
-                  <p className=" font-bold italic tracking-wide text-black hover:text-gray-700">
+                  <p className=" font-bold italic text-[mapFont] tracking-wide text-black hover:text-gray-700">
                     RABAT 
                   </p>
                 </div>

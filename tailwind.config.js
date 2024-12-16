@@ -3,6 +3,9 @@ export default {
   content:["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
+      fontSize: {
+        'mapFont': '4vw'
+      },
       spacing: {
         '7%': '7%',
         '20%': '8%',
