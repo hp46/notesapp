@@ -46,7 +46,15 @@ const client = generateClient({
 export default function Rabat() {
   const [rabat, setRabat] = useState([]);
   const [search, setSearch] = useState("");
+  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState('');
+  const [bmi, setBmi] = useState(null);
   // const [value, setValue] = useState('');
+
+  const BmiCalculator = () => {
+    const bmiValue = (weight / (height * height)) * 703;
+    setBmi(bmiValue.toFixed(1));
+  }
 
   const onChange = (event) => {
     setSearch(event.target.value);
@@ -58,6 +66,7 @@ export default function Rabat() {
 
   useEffect(() => {
     fetchRabat();
+    BmiCalculator();
   }, []);
 
   async function fetchRabat() {
@@ -94,7 +103,7 @@ export default function Rabat() {
       smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
       height: form.get("height"),
-      bmi: Math.pow(parseFloat(form.get("weight"))/parseFloat(form.get("height"))),
+      bmi: bmi,
       hba1c: form.get("hba1c"),
       weight: form.get("weight"),
       cholesterol: form.get("cholesterol"),
@@ -255,6 +264,8 @@ export default function Rabat() {
                 name="weight"
                 placeholder="weight"
                 label="weight"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
                 required
               />
               <TextField
@@ -262,6 +273,8 @@ export default function Rabat() {
                 name="height"
                 placeholder="height"
                 label="height"
+                value={height}
+                onChange={(e) => setHeight(e.target.height)}
                 required
               />
               <TextField

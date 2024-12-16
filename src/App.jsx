@@ -50,7 +50,7 @@ export default function App() {
             </div>
             <div className="flex w-[30%] h-[7%] absolute top-[40%] left-[50%]">
             <ReactRouterLink to="/Rabat" component={Link}>
-              <div className="flex flex-row h-full">
+              <div className="flex flex-row h-full items-center justify-start">
               <Image
                 alt="pin"
                 src={pin}
