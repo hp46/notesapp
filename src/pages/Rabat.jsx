@@ -274,7 +274,7 @@ export default function Rabat() {
                 placeholder="height"
                 label="height"
                 value={height}
-                onChange={(e) => setHeight(e.target.height)}
+                onChange={(e) => setHeight(e.target.value)}
                 required
               />
               <TextField
