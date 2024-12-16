@@ -48,7 +48,7 @@ export default function App() {
                 Sign Out
               </Button>
             </div>
-            <div className="flex w-[30%] h-[10%] absolute top-[40%] left-[50%] text-black hover:text-gray-600">
+            <div className="flex w-[30%] h-[7%] absolute top-[40%] left-[50%]">
             <ReactRouterLink to="/Rabat" component={Link}>
               <div className="flex flex-row h-full">
               <Image
@@ -59,9 +59,11 @@ export default function App() {
                 objectFit="cover"
                 >
                 </Image>
-                <Text fontWeight={800} fontSize="4vw" fontStyle="italic" textDecoration="underline">
-                  RABAT 
-                </Text>
+                <div className="text-black hover:text-gray-700">
+                  <Text fontWeight={800} fontSize="4vw" fontStyle="italic" >
+                    RABAT 
+                  </Text>
+                </div>
               </div>
             </ReactRouterLink>
             </div>
