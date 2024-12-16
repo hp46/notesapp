@@ -66,7 +66,6 @@ export default function Rabat() {
 
   useEffect(() => {
     fetchRabat();
-    BmiCalculator();
   }, []);
 
   async function fetchRabat() {
@@ -89,6 +88,7 @@ export default function Rabat() {
 
   async function createNote(event) {
     event.preventDefault();
+    BmiCalculator()
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 

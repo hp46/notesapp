@@ -61,7 +61,7 @@ export default function App() {
                   height="100%"
                   >
                   </Image>
-                    <p className=" text-4xl text-black hover:text-gray-700">
+                    <p className=" text-4xl text-black font-black hover:text-gray-700 hover:italic" >
                       RABAT 
                     </p>
               </div>
