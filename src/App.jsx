@@ -48,7 +48,7 @@ export default function App() {
                 Sign Out
               </Button>
             </div>
-            <div className="flex w-[30%] h-[7%] absolute top-[40%] left-[50%] items-center justify-start">
+            <div className="flex w-[30%] h-[7%] absolute top-[40%] left-[50%]">
             <ReactRouterLink to="/Rabat" component={Link}>
               <div className="flex flex-row h-full">
               <Image
