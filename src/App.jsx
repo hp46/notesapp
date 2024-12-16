@@ -59,10 +59,10 @@ export default function App() {
                 objectFit="cover"
                 >
                 </Image>
-                <div className="text-black hover:text-gray-700">
-                  <Text fontWeight={800} fontSize="4vw" fontStyle="italic" >
+                <div>
+                  <p className=" font-bold italic tracking-wide text-black hover:text-gray-700">
                     RABAT 
-                  </Text>
+                  </p>
                 </div>
               </div>
             </ReactRouterLink>
