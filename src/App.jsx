@@ -56,10 +56,12 @@ export default function App() {
                   src={pin}
                   backgroundColor="initial"
                   opacity="100%"
-                  objectFit="cover" 
+                  objectFit="contain" 
+                  width="10%"
+                  height="100%"
                   >
                   </Image>
-                    <p className=" text-40 text-black hover:text-gray-700">
+                    <p className=" text-[5xl] text-black hover:text-gray-700">
                       RABAT 
                     </p>
               </div>

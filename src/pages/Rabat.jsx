@@ -261,7 +261,7 @@ export default function Rabat() {
               />
               <TextField
                 width="200px"
-                name="weight"
+                // name="weight"
                 placeholder="weight"
                 label="weight"
                 value={weight}
@@ -270,7 +270,7 @@ export default function Rabat() {
               />
               <TextField
                 width="200px"
-                name="height"
+                // name="height"
                 placeholder="height"
                 label="height"
                 value={height}
