@@ -54,6 +54,7 @@ export default function Rabat() {
   const BmiCalculator = () => {
     const bmiValue = (parseFloat(weight) / 
     ((parseFloat(height) / 100) ** 2)).toFixed(2);
+    console.log("bmi value is", bmiValue)
     setBmi(bmiValue);
   }
 
@@ -391,7 +392,7 @@ export default function Rabat() {
                 <TableCell>+{value.phoneNumber}</TableCell>
                 <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
                 <TableCell>{value.height} <Text fontStyle="italic"> cm</Text></TableCell>
-                <TableCell>{value.bmi} <Text fontStyle="italic"> bmi</Text></TableCell>
+                <TableCell>{value.bmi} <Text fontStyle="italic"></Text></TableCell>
                 <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
                 <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
                 <TableCell>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></TableCell>
