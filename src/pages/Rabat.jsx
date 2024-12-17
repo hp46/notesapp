@@ -56,7 +56,7 @@ export default function Rabat() {
     ((parseFloat(height) / 100) ** 2)).toFixed(2);
     console.log("bmi value is", bmiValue)
     setBmi(bmiValue);
-    console.log("Setbmi value is", bmiValue)
+    console.log("Setbmi value is", bmi)
   }
 
   const onChange = (event) => {
