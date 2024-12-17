@@ -89,6 +89,8 @@ export default function Rabat() {
   async function createNote(event) {
     event.preventDefault();
     BmiCalculator()
+    console.log(weight)
+    console.log(height)
     console.log(bmi)
     const form = new FormData(event.target);
     console.log(form.get("image").name);
