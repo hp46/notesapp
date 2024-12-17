@@ -48,14 +48,14 @@ export default function Rabat() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [bmi, setBmi] = useState(0.0);
+  const [bmi, setBmi] = useState(null);
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
     const bmiValue = (parseFloat(weight) / 
     ((parseFloat(height) / 100) ** 2)).toFixed(1);
     console.log("bmi value is", bmiValue)
-    setBmi(parseFloat(bmiValue));
+    setBmi(bmiValue);
     console.log("Setbmi value is", bmi)
   }
 
