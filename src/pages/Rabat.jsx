@@ -55,7 +55,7 @@ export default function Rabat() {
     const bmiValue = (parseFloat(weight) / 
     ((parseFloat(height) / 100) ** 2)).toFixed(2);
     console.log("bmi value is", bmiValue)
-    setBmi(bmiValue);
+    setBmi(parseFloat(bmiValue));
     console.log("Setbmi value is", bmi)
   }
 
