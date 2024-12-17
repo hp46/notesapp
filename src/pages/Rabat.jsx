@@ -92,6 +92,7 @@ export default function Rabat() {
   async function createNote(event) {
     event.preventDefault();
     const bmiValue = await BmiCalculator();
+    console.log("bmi is at create", bmi);
     console.log("bmi is at create", bmiValue);
     const form = new FormData(event.target);
     console.log(form.get("image").name);
