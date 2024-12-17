@@ -53,7 +53,7 @@ export default function Rabat() {
 
   const BmiCalculator = () => {
     const bmiValue = (weight / (height * height)) * 703;
-    setBmi(bmiValue.toFixed(1));
+    setBmi(bmiValue);
   }
 
   const onChange = (event) => {
