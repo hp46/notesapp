@@ -56,6 +56,7 @@ export default function Rabat() {
     ((parseFloat(height) / 100) ** 2)).toFixed(2);
     console.log("bmi value is", bmiValue)
     setBmi(bmiValue);
+    console.log("Setbmi value is", bmiValue)
   }
 
   const onChange = (event) => {
@@ -91,9 +92,7 @@ export default function Rabat() {
   async function createNote(event) {
     event.preventDefault();
     BmiCalculator()
-    console.log(weight)
-    console.log(height)
-    console.log(bmi)
+    console.log("bmi  is at create",bmi)
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
