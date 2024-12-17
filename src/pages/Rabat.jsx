@@ -107,7 +107,7 @@ export default function Rabat() {
       smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
       height: height,
-      bmi: bmi,
+      bmi: bmiValue,
       hba1c: form.get("hba1c"),
       weight: weight,
       cholesterol: form.get("cholesterol"),
