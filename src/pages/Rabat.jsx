@@ -52,11 +52,13 @@ export default function Rabat() {
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
-    const bmiValue = (parseFloat(weight) / ((parseFloat(height) / 100) ** 2)).toFixed(1);
-    console.log("bmi value is", bmiValue)
-    setBmi(bmiValue, () => {
-      console.log("Updated BMI value is", bmiValue)});
-  };
+    return new Promise((resolve) => {
+      const bmiValue = (parseFloat(weight) / ((parseFloat(height) / 100) ** 2)).toFixed(1);
+      setBmi(bmiValue);
+      resolve(bmiValue);
+    });
+  }
+  
 
   const onChange = (event) => {
     setSearch(event.target.value);
@@ -87,11 +89,10 @@ export default function Rabat() {
     console.log(rabat);
     setRabat(rabat);
   }
-
   async function createNote(event) {
     event.preventDefault();
-    BmiCalculator()
-    console.log("bmi  is at create",bmi)
+    const bmiValue = await BmiCalculator();
+    console.log("bmi is at create", bmiValue);
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
