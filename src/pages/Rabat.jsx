@@ -48,11 +48,12 @@ export default function Rabat() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [bmi, setBmi] = useState(null);
+  const [bmi, setBmi] = useState();
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
-    const bmiValue = (weight / (height * height)) * 703;
+    const bmiValue = (parseFloat(weight) / 
+    ((parseFloat(height) / 100) ** 2)).toFixed(2);
     setBmi(bmiValue);
   }
 
@@ -363,6 +364,7 @@ export default function Rabat() {
             <TableCell as="th">Phone Number</TableCell>
             <TableCell as="th">Weight</TableCell>
             <TableCell as="th">Height</TableCell>
+            <TableCell as="th">BMI</TableCell>
             <TableCell as="th">Blood Sugar Level (Glucose)</TableCell>
             <TableCell as="th">HBA1C</TableCell>
             <TableCell as="th">Hemoglobin</TableCell>
@@ -389,6 +391,7 @@ export default function Rabat() {
                 <TableCell>+{value.phoneNumber}</TableCell>
                 <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
                 <TableCell>{value.height} <Text fontStyle="italic"> cm</Text></TableCell>
+                <TableCell>{value.bmi} <Text fontStyle="italic"> bmi</Text></TableCell>
                 <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
                 <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
                 <TableCell>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></TableCell>
