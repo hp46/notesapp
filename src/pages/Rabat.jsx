@@ -48,13 +48,11 @@ export default function Rabat() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [bmi, setBmi] = useState(null);
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
     return new Promise((resolve) => {
       const bmiValue = (parseFloat(weight) / ((parseFloat(height) / 100) ** 2)).toFixed(1);
-      setBmi(bmiValue);
       resolve(bmiValue);
     });
   }
@@ -91,9 +89,8 @@ export default function Rabat() {
   }
   async function createNote(event) {
     event.preventDefault();
-    const bmiValue = await BmiCalculator();
+    const bmi = await BmiCalculator();
     console.log("bmi is at create", bmi);
-    console.log("bmi is at create", bmiValue);
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
@@ -108,7 +105,7 @@ export default function Rabat() {
       smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
       height: height,
-      bmi: bmiValue,
+      bmi: bmi,
       hba1c: form.get("hba1c"),
       weight: weight,
       cholesterol: form.get("cholesterol"),
@@ -158,12 +155,11 @@ export default function Rabat() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-10 left-10">
+            <div className="absolute top-10 left-10 w-9 h-9">
             <Image
               alt="pin"
               src={pin}
-              width="50px"
-              height="60px"
+              height="100%"
               backgroundColor="initial"
               opacity="100%"
               objectFit="none"
@@ -366,7 +362,7 @@ export default function Rabat() {
             <TableCell as="th">Weight</TableCell>
             <TableCell as="th">Height</TableCell>
             <TableCell as="th">BMI</TableCell>
-            <TableCell as="th">Blood Sugar Level (Glucose)</TableCell>
+            <TableCell as="th">B.S.L Glucose</TableCell>
             <TableCell as="th">HBA1C</TableCell>
             <TableCell as="th">Hemoglobin</TableCell>
             <TableCell as="th">Cholesterol</TableCell>
@@ -390,17 +386,17 @@ export default function Rabat() {
                 <TableCell>{value.smoking}</TableCell>
                 <TableCell>{value.location}</TableCell>
                 <TableCell>+{value.phoneNumber}</TableCell>
-                <TableCell>{value.weight} <Text fontStyle="italic"> kg</Text></TableCell>
-                <TableCell>{value.height} <Text fontStyle="italic"> cm</Text></TableCell>
-                <TableCell>{value.bmi} <Text fontStyle="italic"></Text></TableCell>
-                <TableCell>{value.bloodSugarLevel} <Text fontStyle="italic">mg/dL</Text></TableCell>
-                <TableCell>{value.hba1c} <Text fontStyle="italic"> mmol/mol</Text></TableCell>
-                <TableCell>{value.hemoglobin}<Text fontStyle="italic"> g/dL</Text></TableCell>
-                <TableCell>{value.cholesterol}<Text fontStyle="italic"> mg/dL</Text></TableCell>
-                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<Text fontStyle="italic"> mmHg</Text></TableCell>
+                <TableCell>{value.weight} <span className="italic"> kg</span></TableCell>
+                <TableCell>{value.height} <span className="italic"> cm</span></TableCell>
+                <TableCell>{value.bmi} <span className="italic"></span></TableCell>
+                <TableCell>{value.bloodSugarLevel} <span className="italic">mg/dL</span></TableCell>
+                <TableCell>{value.hba1c} <span className="italic"> mmol/mol</span></TableCell>
+                <TableCell>{value.hemoglobin}<span className="italic"> g/dL</span></TableCell>
+                <TableCell>{value.cholesterol}<span className="italic"> mg/dL</span></TableCell>
+                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<span className="italic"> mmHg</span></TableCell>
                 <TableCell>
                   <Button
-                    width="100px"
+                    width="40px"
                     variation="destructive"
                     onClick={() => deleteRabat(value)}
                   >
