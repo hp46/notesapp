@@ -44,7 +44,7 @@ const client = generateClient({
 });
 
 export default function AlHaouz() {
-  const [rabat, setAlHaouz] = useState([]);
+  const [alhaouz, setAlHaouz] = useState([]);
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
@@ -370,7 +370,7 @@ export default function AlHaouz() {
             <TableCell as="th"></TableCell>
           </TableHead>
           <TableBody>
-            {rabat.filter((value)=>{
+            {alhaouz.filter((value)=>{
               if(value===""){
                 return value
               }
