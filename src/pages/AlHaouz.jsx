@@ -43,8 +43,8 @@ const client = generateClient({
   authMode: "userPool",
 });
 
-export default function Rabat() {
-  const [rabat, setRabat] = useState([]);
+export default function AlHaouz() {
+  const [rabat, setAlHaouz] = useState([]);
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
@@ -67,25 +67,25 @@ export default function Rabat() {
   };
 
   useEffect(() => {
-    fetchRabat();
+    fetchAlHaouz();
   }, []);
 
-  async function fetchRabat() {
-    const { data: rabat } = await client.models.Rabat.list();
+  async function fetchAlHaouz() {
+    const { data: alhaouz } = await client.models.AlHaouz.list();
     await Promise.all(
-      rabat.map(async (rabatinfo) => {
-        if (rabatinfo.image) {
+        alhaouz.map(async (alhaouzinfo) => {
+        if (alhaouzinfo.image) {
           const linkToStorageFile = await getUrl({
-            path: ({ identityId }) => `media/${identityId}/${rabatinfo.image}`,
+            path: ({ identityId }) => `media/${identityId}/${alhaouzinfo.image}`,
           });
           console.log(linkToStorageFile.url);
-          rabatinfo.image = linkToStorageFile.url;
+          alhaouzinfo.image = linkToStorageFile.url;
         }
-        return rabatinfo;
+        return alhaouzinfo;
       })
     );
-    console.log(rabat);
-    setRabat(rabat);
+    console.log(alhaouz);
+    setAlHaouz(alhaouz);
   }
   async function createNote(event) {
     event.preventDefault();
@@ -94,7 +94,7 @@ export default function Rabat() {
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
-    const { data: newRabat } = await client.models.Rabat.create({
+    const { data: newAlHaouz } = await client.models.AlHaouz.create({
       description: form.get("description"),
       image: form.get("image").name,
       firstName: form.get("firstName"),
@@ -116,30 +116,30 @@ export default function Rabat() {
 
 
 
-    console.log(newRabat);
-    if (newRabat.image)
-      if (newRabat.image)
+    console.log(newAlHaouz);
+    if (newAlHaouz.image)
+      if (newAlHaouz.image)
         await uploadData({
-          path: ({ identityId }) => `media/${identityId}/${newRabat.image}`,
+          path: ({ identityId }) => `media/${identityId}/${newAlHaouz.image}`,
 
           data: form.get("image"),
         }).result;
 
-    fetchRabat();
+    fetchAlHaouz();
     event.target.reset();
   }
 
-  async function deleteRabat({ id }) {
-    const tobeDeletedRabat = {
+  async function deleteAlHaouz({ id }) {
+    const tobeDeletedAlHaouz = {
       id: id,
     };
 
-    const { data: deletedRabat } = await client.models.Rabat.delete(
-        tobeDeletedRabat
+    const { data: deleteAlHaouz } = await client.models.AlHaouz.delete(
+        tobeDeletedAlHaouz
     );
-    console.log(deletedRabat);
+    console.log(deleteAlHaouz);
 
-    fetchRabat();
+    fetchAlHaouz();
   }
 
   return (
@@ -218,7 +218,7 @@ export default function Rabat() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['Rabat', 'Tagier', 'Cassablanca']}
+                  options={['Al Haouz']}
                   required
                   >
                 </SelectField>
@@ -398,7 +398,7 @@ export default function Rabat() {
                   <Button
                     width="40px"
                     variation="destructive"
-                    onClick={() => deleteRabat(value)}
+                    onClick={() => deleteAlHaouz(value)}
                   >
                     Delete 
                   </Button>

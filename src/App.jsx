@@ -50,28 +50,47 @@ export default function App() {
                 </Button>
               </div>
               <div className="flex w-[30%] h-[7%] absolute top-[40%] left-[50%]">
-              <ReactRouterLink to="/Rabat" component={Link}>
-                <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                  <Image
-                    alt="pin"
-                    src={pin}
-                    backgroundColor="initial"
-                    opacity="100%"
-                    objectFit="contain" 
-                    width="10%"
-                    height="100%"
-                    >
-                    </Image>
-                      <p className=" text-4xl italic text-black font-black hover:text-gray-300" >
-                        RABAT 
-                      </p>
-                </div>
-              </ReactRouterLink>
+                <ReactRouterLink to="/Rabat" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-4xl italic text-black font-black hover:text-gray-300" >
+                          RABAT 
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[20%] left-[30%]">
+                <ReactRouterLink to="/Rabat" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-4xl italic text-black font-black hover:text-gray-300" >
+                          Al Haouz 
+                        </p>
+                  </div>
+                </ReactRouterLink>
               </div>
             </Flex>
           </div>
           <div>
-            <ReactRouterLink to="/Rabat" component={Link}>
+            <ReactRouterLink to="/alhaouz" component={Link}>
             <div className="flex flex-row h-full justify-start ">
                   <p className=" text-4xl italic text-black font-black hover:text-gray-300" >
                     RABAT 
