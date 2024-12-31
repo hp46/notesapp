@@ -19,6 +19,8 @@ export default {
         '40%': '34%',
         '50%': '49%',
         '80%': '80%',
+        'alhaouz_top': '83%',
+        'alhaouz_left': '37%',
       }
     },
   },
