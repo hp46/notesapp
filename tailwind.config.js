@@ -3,6 +3,9 @@ export default {
   content:["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'landingTag':'200px minmax(900px, 1fr) 100px',
+      },
       fontSize: {
         sm: '0.8rem',
         base: '1rem',
