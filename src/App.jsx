@@ -81,7 +81,7 @@ export default function App() {
                       height="100%"
                       >
                       </Image>
-                        <p className=" text-4xl italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
                           AL HAOUZ 
                         </p>
                   </div>
