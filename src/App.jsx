@@ -37,7 +37,7 @@ export default function App() {
               height="100%"
               width="100%"
               opacity="100%"
-              objectFit="cover"
+              objectFit="initial"
               >
               </Image>
               <div className="absolute top-10 left-10">
