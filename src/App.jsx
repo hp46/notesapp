@@ -49,9 +49,9 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="flex w-[30%] h-[7%] absolute top-[34%] left-[52%]">
+              <div className="w-[20%] h-[7%] border-2 border-orange-300 rounded-lg absolute top-[34%] left-[52%]">
                 <ReactRouterLink to="/Rabat" component={Link}>
-                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                  <div className="grid grid-cols-2 h-full items-center justify-start overflow-hidden">
                     <Image
                       alt="pin"
                       src={pin}
@@ -62,9 +62,9 @@ export default function App() {
                       height="100%"
                       >
                       </Image>
-                        <p className=" text-4xl italic text-black font-black hover:text-gray-300" >
-                          RABAT 
-                        </p>
+                      <p className=" text-[xl] italic text-black font-black hover:text-gray-300" >
+                        RABAT 
+                      </p>
                   </div>
                 </ReactRouterLink>
               </div>
