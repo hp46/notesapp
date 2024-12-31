@@ -51,7 +51,7 @@ export default function App() {
               </div>
               <div className="w-[20%] h-[7%] border-2 border-orange-300 rounded-lg absolute top-[34%] left-[52%]">
                 <ReactRouterLink to="/Rabat" component={Link}>
-                  <div className="grid grid-cols-[50px 200px] h-full items-center justify-start overflow-hidden">
+                  <div className="grid grid-cols-[50px, 200px] h-full items-center justify-start overflow-hidden">
                     <Image
                       alt="pin"
                       src={pin}
@@ -62,7 +62,7 @@ export default function App() {
                       height="100%"
                       >
                       </Image>
-                      <p className=" text-[xl] italic text-black font-black hover:text-gray-300" >
+                      <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
                         RABAT 
                       </p>
                   </div>
