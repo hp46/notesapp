@@ -51,7 +51,7 @@ export default function App() {
               </div>
               <div className="w-[20%] h-[7%] border-2 border-orange-300 rounded-lg absolute top-[34%] left-[52%]">
                 <ReactRouterLink to="/Rabat" component={Link}>
-                  <div className="grid grid-cols-[2] h-full items-center justify-start overflow-hidden">
+                  <div className="grid grid-cols-[50px 200px] h-full items-center justify-start overflow-hidden">
                     <Image
                       alt="pin"
                       src={pin}
