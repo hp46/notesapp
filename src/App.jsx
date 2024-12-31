@@ -49,7 +49,7 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="flex w-[30%] h-[7%] absolute top-[rabat_top] left-[rabat_left]">
+              <div className="flex w-[30%] h-[7%] absolute top-['34%'] left-['52%']">
                 <ReactRouterLink to="/Rabat" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                     <Image
@@ -68,7 +68,7 @@ export default function App() {
                   </div>
                 </ReactRouterLink>
               </div>
-              {/* <div className="flex w-[30%] h-[7%] absolute top-[20%] left-[30%]">
+              <div className="flex w-[30%] h-[7%] absolute top-['83%'] left-[37%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                     <Image
@@ -86,7 +86,7 @@ export default function App() {
                         </p>
                   </div>
                 </ReactRouterLink>
-              </div> */}
+              </div>
               <div>
                 <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full justify-start ">

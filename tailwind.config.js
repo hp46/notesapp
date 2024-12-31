@@ -16,11 +16,15 @@ export default {
         '7%': '7%',
         '20%': '8%',
         '30%': '30%',
-        'rabat_top': '34%',
-        'rabat_left': '52%',
+        //Rabat top
+        '34%': '34%',
+        //Rabat left
+        '52%': '52%',
         '80%': '80%',
-        'alhaouz_top': '83%',
-        'alhaouz_left': '37%',
+        //Alhaouz top
+        '83%': '83%',
+        //Alhaouz left
+        '37%': '37%',
       }
     },
   },
