@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'landingTag':'200px minmax(900px, 1fr) 100px',
+        '2':'200px minmax(900px, 1fr) 100px',
       },
       fontSize: {
         sm: '0.8rem',
