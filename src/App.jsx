@@ -7,6 +7,7 @@ import {
   Flex,
   Text,
   Link,
+  Grid,
 } from "@aws-amplify/ui-react";
 import {
   BrowserRouter as Router,
@@ -51,7 +52,10 @@ export default function App() {
               </div>
               <div className="w-[20%] h-[7%] border-2 border-orange-300 rounded-lg absolute top-[34%] left-[52%]">
                 <ReactRouterLink to="/Rabat" component={Link}>
-                  <div className="grid grid-cols-[2] h-full items-center justify-start overflow-hidden">
+                  <Grid
+                    rowGap="1rem"
+                    templateRows="1fr 3fr"
+                  >
                     <Image
                       alt="pin"
                       src={pin}
@@ -65,7 +69,7 @@ export default function App() {
                       <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
                         RABAT 
                       </p>
-                  </div>
+                  </Grid>
                 </ReactRouterLink>
               </div>
               <div className="flex w-[30%] h-[7%] absolute top-[83%] left-[37%]">
