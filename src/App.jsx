@@ -50,7 +50,7 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="w-[20%] h-[7%] absolute top-[34%] left-[52%]">
+              <div className="w-[20%] h-[7%] absolute top-[38%] left-[52%]">
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
                     {/* <Grid
@@ -83,7 +83,7 @@ export default function App() {
                         height="100%"
                         >
                         </Image>
-                          <p className=" text-[2rem] italic text-black font-black hover:text-[3rem]" >
+                          <p className=" uppercase text-[2rem] italic text-black font-black hover:text-[3rem]" >
                             Rabat 
                           </p>
                    </div>
