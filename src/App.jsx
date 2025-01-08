@@ -56,6 +56,9 @@ export default function App() {
                     rowGap="1rem"
                     templateRows="1fr 3fr"
                   >
+                      <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        RABAT 
+                      </p>
                     <Image
                       alt="pin"
                       src={pin}
@@ -66,9 +69,6 @@ export default function App() {
                       height="100%"
                       >
                       </Image>
-                      <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                        RABAT 
-                      </p>
                   </Grid>
                 </ReactRouterLink>
               </div>
