@@ -55,6 +55,8 @@ export default function App() {
                   <Grid
                     rowGap="1rem"
                     templateRows="1fr 3fr"
+                    templateColumns="2fr"
+                    justifyContent="center"
                   >
                       <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
                         RABAT 
@@ -65,7 +67,7 @@ export default function App() {
                       backgroundColor="initial"
                       opacity="100%"
                       objectFit="contain" 
-                      width="10%"
+                      width="20%"
                       height="100%"
                       >
                       </Image>
