@@ -50,30 +50,31 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="w-[20%] h-[7%] border-2 border-orange-300 rounded-lg absolute top-[34%] left-[52%]">
-                <ReactRouterLink to="/Rabat" component={Link}>
-                  <Grid
-                    rowGap="1rem"
-                    templateRows="1fr 3fr"
-                    templateColumns="2fr"
-                    justifyContent="center"
-                  >
-                      <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                        RABAT 
-                      </p>
-                    <Image
-                      alt="pin"
-                      src={pin}
-                      backgroundColor="initial"
-                      opacity="100%"
-                      objectFit="contain" 
-                      width="20%"
-                      height="100%"
-                      >
-                      </Image>
-                  </Grid>
-                </ReactRouterLink>
-              </div>
+              <div className="w-[20%] h-[7%] absolute top-[34%] left-[52%]">
+                <div className="flex justify-center items-center">
+                  <ReactRouterLink to="/Rabat" component={Link}>
+                    <Grid
+                      templateRows="1fr 3fr"
+                      templateColumns="2fr"
+                      justifyContent="center"
+                    >
+                        <p className=" text-[3rem] italic text-black font-black hover:text-gray-300" >
+                          RABAT 
+                        </p>
+                      <Image
+                        alt="pin"
+                        src={pin}
+                        backgroundColor="initial"
+                        opacity="100%"
+                        objectFit="contain" 
+                        width="20%"
+                        height="100%"
+                        >
+                        </Image>
+                    </Grid>
+                  </ReactRouterLink>
+                  </div>
+                </div>
               <div className="flex w-[30%] h-[7%] absolute top-[83%] left-[37%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
