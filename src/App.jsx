@@ -14,7 +14,7 @@ import {
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
   import image from "./assets/morooco_final.png"
-  import pin from "./assets/pin.png"
+  import pin from "./assets/bluepin.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
