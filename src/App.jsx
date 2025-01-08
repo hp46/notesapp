@@ -13,7 +13,7 @@ import {
   Link as ReactRouterLink,
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
-  import image from "./assets/morocco1.png"
+  import image from "./assets/morooco_final.png"
   import pin from "./assets/pin.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
