@@ -53,7 +53,7 @@ export default function App() {
               <div className="w-[20%] h-[7%] absolute top-[34%] left-[52%]">
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
-                    <Grid
+                    {/* <Grid
                       templateRows="3fr"
                       templateColumns="1fr 2fr"
                       justifyContent="center"
@@ -71,7 +71,22 @@ export default function App() {
                         <p className=" text-[3rem] italic text-black font-black hover:text-gray-300" >
                           RABAT 
                         </p>
-                    </Grid>
+                    </Grid> */}
+                    <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                      <Image
+                        alt="pin"
+                        src={pin}
+                        backgroundColor="initial"
+                        opacity="100%"
+                        objectFit="contain" 
+                        width="10%"
+                        height="100%"
+                        >
+                        </Image>
+                          <p className=" text-[2rem] italic text-black font-black hover:text-[3rem]" >
+                            Rabat 
+                          </p>
+                   </div>
                   </ReactRouterLink>
                   </div>
                 </div>
