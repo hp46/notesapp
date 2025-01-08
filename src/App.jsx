@@ -54,13 +54,10 @@ export default function App() {
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
                     <Grid
-                      templateRows="1fr 3fr"
-                      templateColumns="2fr"
+                      templateRows="3fr"
+                      templateColumns="1fr 2fr"
                       justifyContent="center"
                     >
-                        <p className=" text-[3rem] italic text-black font-black hover:text-gray-300" >
-                          RABAT 
-                        </p>
                       <Image
                         alt="pin"
                         src={pin}
@@ -71,6 +68,9 @@ export default function App() {
                         height="100%"
                         >
                         </Image>
+                        <p className=" text-[3rem] italic text-black font-black hover:text-gray-300" >
+                          RABAT 
+                        </p>
                     </Grid>
                   </ReactRouterLink>
                   </div>
