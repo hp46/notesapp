@@ -123,7 +123,14 @@ export default function App() {
                           Al Haouz 
                         </p>
                   </div>
-                </ReactRouterLink>
+                  </ReactRouterLink>
+                  <ReactRouterLink to="/casablanca" component={Link}>
+                  <div className="flex flex-row h-full justify-start ">
+                        <p className=" text-3xl italic text-black font-black hover:text-gray-300 uppercase" >
+                          Casablanca
+                        </p>
+                  </div>
+                  </ReactRouterLink>
               </div>
             </Flex>
           </div>
