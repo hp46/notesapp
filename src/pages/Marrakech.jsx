@@ -1,5 +1,5 @@
 export default function Marrakech() {
     return(
-        <div></div>
+        <div>this is marrakech</div>
     )
 }
