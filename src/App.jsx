@@ -14,7 +14,7 @@ import {
   Link as ReactRouterLink,
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
-  import image from "./assets/morooco_final.png"
+  import image from "./assets/morocco-01-01.png"
   import pin from "./assets/bluepin.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
@@ -109,7 +109,7 @@ export default function App() {
                   </div>
                 </ReactRouterLink>
               </div>
-              <div className="flex w-[30%] h-[7%] absolute top-[80%] left-[45%]">
+              <div className="flex w-[30%] h-[7%] absolute top-[80%] left-[37%]">
                 <ReactRouterLink to="/marrakech" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                     <Image
@@ -123,34 +123,144 @@ export default function App() {
                       >
                       </Image>
                         <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                          Marrakech
+                          MARRAKECH
                         </p>
                   </div>
                 </ReactRouterLink>
               </div>
-              {/* <div>
-                <ReactRouterLink to="/Rabat" component={Link}>
-                    <div className="flex flex-row h-full justify-start ">
-                          <p className=" text-3xl italic text-black font-black hover:text-gray-300 uppercase" >
-                            Rabat 
-                          </p>
-                    </div>
-                  </ReactRouterLink>
-                  <ReactRouterLink to="/alhaouz" component={Link}>
-                  <div className="flex flex-row h-full justify-start ">
-                        <p className=" text-3xl italic text-black font-black hover:text-gray-300 uppercase" >
-                          Al Haouz 
+              <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[45%]">
+                <ReactRouterLink to="/temara" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                          TEMARA
                         </p>
                   </div>
-                  </ReactRouterLink>
-                  <ReactRouterLink to="/casablanca" component={Link}>
-                  <div className="flex flex-row h-full justify-start ">
-                        <p className=" text-3xl italic text-black font-black hover:text-gray-300 uppercase" >
-                          Casablanca
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[45%]">
+                <ReactRouterLink to="/temara" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                          TEMARA
                         </p>
                   </div>
-                  </ReactRouterLink>
-              </div> */}
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[38%] left-[54%]">
+                <ReactRouterLink to="/sale" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                          Sale
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[39%] left-[50%]">
+                <ReactRouterLink to="/azour" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        Azour
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[53%] left-[30%]">
+                <ReactRouterLink to="/eljadida" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        El Jadida
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[90%] left-[60%]">
+                <ReactRouterLink to="/ouarzazate" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        Ouarzazate
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[65%]">
+                <ReactRouterLink to="/Khemisset" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        Khemisset
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
             </Flex>
           </div>
         </div>
