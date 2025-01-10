@@ -24,7 +24,7 @@ export default {
         '20%': '20%',
         '30%': '30%',
         //Rabat top
-        '38%': '38%',
+        '40%': '40%',
         //Rabat left
         '52%': '52%',
         //Casablanca

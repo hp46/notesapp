@@ -50,7 +50,7 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="w-[20%] h-[7%] absolute top-[38%] left-[52%]">
+              <div className="w-[20%] h-[7%] absolute top-[40%] left-[52%]">
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full items-center justify-start overflow-hidden">
@@ -71,7 +71,7 @@ export default function App() {
                   </ReactRouterLink>
                   </div>
               </div>
-              <div className="flex w-[30%] h-[7%] absolute top-[83%] left-[37%]">
+              <div className="flex w-[30%] h-[7%] absolute top-[90%] left-[37%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                     <Image
@@ -105,6 +105,25 @@ export default function App() {
                       </Image>
                         <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
                           CASABLANCA
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              <div className="flex w-[30%] h-[7%] absolute top-[80%] left-[45%]">
+                <ReactRouterLink to="/marrakech" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                          Marrakech
                         </p>
                   </div>
                 </ReactRouterLink>
