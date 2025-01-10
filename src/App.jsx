@@ -49,9 +49,9 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="absolute top-40 left-10 border-black-2 text-xl">
+              <div className="absolute top-40 left-10 border-2 rounded-lg ">
                 <ReactRouterLink to="/Rabat" component={Link}>  
-                  <p>Rabat</p>
+                  <p className="text-xl font-black hover:text-xxl">Rabat</p>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  
                   <p>Al Haouz</p>
