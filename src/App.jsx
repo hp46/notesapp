@@ -53,25 +53,6 @@ export default function App() {
               <div className="w-[20%] h-[7%] absolute top-[38%] left-[52%]">
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
-                    {/* <Grid
-                      templateRows="3fr"
-                      templateColumns="1fr 2fr"
-                      justifyContent="center"
-                    >
-                      <Image
-                        alt="pin"
-                        src={pin}
-                        backgroundColor="initial"
-                        opacity="100%"
-                        objectFit="contain" 
-                        width="20%"
-                        height="100%"
-                        >
-                        </Image>
-                        <p className=" text-[3rem] italic text-black font-black hover:text-gray-300" >
-                          RABAT 
-                        </p>
-                    </Grid> */}
                     <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                       <Image
                         alt="pin"
@@ -109,7 +90,26 @@ export default function App() {
                   </div>
                 </ReactRouterLink>
               </div>
-              <div>
+              <div className="flex w-[30%] h-[7%] absolute top-[83%] left-[37%]">
+                <ReactRouterLink to="/alhaouz" component={Link}>
+                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <Image
+                      alt="pin"
+                      src={pin}
+                      backgroundColor="initial"
+                      opacity="100%"
+                      objectFit="contain" 
+                      width="10%"
+                      height="100%"
+                      >
+                      </Image>
+                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                          CASABLANCA
+                        </p>
+                  </div>
+                </ReactRouterLink>
+              </div>
+              {/* <div>
                 <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full justify-start ">
                           <p className=" text-3xl italic text-black font-black hover:text-gray-300 uppercase" >
@@ -131,7 +131,7 @@ export default function App() {
                         </p>
                   </div>
                   </ReactRouterLink>
-              </div>
+              </div> */}
             </Flex>
           </div>
         </div>
