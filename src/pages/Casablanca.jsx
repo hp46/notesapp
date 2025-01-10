@@ -44,7 +44,7 @@ const client = generateClient({
 });
 
 export default function Casablanca() {
-  const [casablanca, setCasablanca] = useState([]);
+  const [rabat, setRabat] = useState([]);
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
@@ -67,25 +67,25 @@ export default function Casablanca() {
   };
 
   useEffect(() => {
-    fetchCasablanca();
+    fetchRabat();
   }, []);
 
-  async function fetchCasablanca() {
-    const { data: casablanca } = await client.models.Casablanca.list();
+  async function fetchRabat() {
+    const { data: rabat } = await client.models.Rabat.list();
     await Promise.all(
-        casablanca.map(async (casablancainfo) => {
-        if (casablancainfo.image) {
+      rabat.map(async (rabatinfo) => {
+        if (rabatinfo.image) {
           const linkToStorageFile = await getUrl({
-            path: ({ identityId }) => `media/${identityId}/${casablancainfo.image}`,
+            path: ({ identityId }) => `media/${identityId}/${rabatinfo.image}`,
           });
           console.log(linkToStorageFile.url);
-          casablancainfo.image = linkToStorageFile.url;
+          rabatinfo.image = linkToStorageFile.url;
         }
-        return casablancainfo;
+        return rabatinfo;
       })
     );
-    console.log(Casablanca);
-    setCasablanca(Casablanca);
+    console.log(rabat);
+    setRabat(rabat);
   }
   async function createNote(event) {
     event.preventDefault();
@@ -94,7 +94,7 @@ export default function Casablanca() {
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
-    const { data: newCasablanca } = await client.models.Casablanca.create({
+    const { data: newRabat } = await client.models.Rabat.create({
       description: form.get("description"),
       image: form.get("image").name,
       firstName: form.get("firstName"),
@@ -116,30 +116,30 @@ export default function Casablanca() {
 
 
 
-    console.log(newCasablanca);
-    if (newCasablanca.image)
-      if (newCasablanca.image)
+    console.log(newRabat);
+    if (newRabat.image)
+      if (newRabat.image)
         await uploadData({
-          path: ({ identityId }) => `media/${identityId}/${newCasablanca.image}`,
+          path: ({ identityId }) => `media/${identityId}/${newRabat.image}`,
 
           data: form.get("image"),
         }).result;
 
-    fetchCasablanca();
+    fetchRabat();
     event.target.reset();
   }
 
-  async function deleteCasablanca({ id }) {
-    const tobedeletedCasablanca = {
+  async function deleteRabat({ id }) {
+    const tobeDeletedRabat = {
       id: id,
     };
 
-    const { data: deletedCasablanca } = await client.models.Casablanca.delete(
-        tobedeletedCasablanca
+    const { data: deletedRabat } = await client.models.Rabat.delete(
+        tobeDeletedRabat
     );
-    console.log(deletedCasablanca);
+    console.log(deletedRabat);
 
-    fetchCasablanca();
+    fetchRabat();
   }
 
   return (
@@ -218,7 +218,7 @@ export default function Casablanca() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['Casablanca', 'Tagier', 'Cassablanca']}
+                  options={['Rabat', 'Tagier', 'Cassablanca']}
                   required
                   >
                 </SelectField>
@@ -370,7 +370,7 @@ export default function Casablanca() {
             <TableCell as="th"></TableCell>
           </TableHead>
           <TableBody>
-            {casablanca.filter((value)=>{
+            {rabat.filter((value)=>{
               if(value===""){
                 return value
               }
@@ -398,7 +398,7 @@ export default function Casablanca() {
                   <Button
                     width="40px"
                     variation="destructive"
-                    onClick={() => deleteCasablanca(value)}
+                    onClick={() => deleteRabat(value)}
                   >
                     Delete 
                   </Button>
