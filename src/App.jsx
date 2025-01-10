@@ -49,6 +49,41 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
+              <div className="absolute top-20 left-10">
+                <ReactRouterLink to="/Rabat" component={Link}>  
+                  <p>Rabat</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/alhaouz" component={Link}>  
+                  <p>Al Haouz</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/casablanca" component={Link}>  
+                  <p>Casablanca</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/marrakech" component={Link}>  
+                  <p>Marrakech</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/temara" component={Link}>  
+                  <p>Temera</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/sale" component={Link}>  
+                  <p>Sale</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/azour" component={Link}>  
+                  <p>Azour</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/eljadida" component={Link}>  
+                  <p>Eljadida</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/ouarzazate" component={Link}>  
+                  <p>Ouarzazate</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/khemisset" component={Link}>  
+                  <p>Khemisset</p>
+                </ReactRouterLink>
+                <ReactRouterLink to="/azour" component={Link}>  
+                  <p>Azour</p>
+                </ReactRouterLink>
+              </div>
               <div className="w-[20%] h-[7%] absolute top-[40%] left-[52%]">
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
@@ -70,7 +105,7 @@ export default function App() {
                 </ReactRouterLink>
               </div>
               <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[45%]">
-                <ReactRouterLink to="/alhaouz" component={Link}>
+                <ReactRouterLink to="/casablanca" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                         <p className=" text-[1rem] italic text-black font-black hover:text-gray-300" >
                           CASABLANCA
@@ -88,15 +123,6 @@ export default function App() {
                 </ReactRouterLink>
               </div>
               <div className="flex w-[30%] h-[7%] absolute top-[43%] left-[48%]">
-                <ReactRouterLink to="/temara" component={Link}>
-                  <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[1rem] italic text-black font-black hover:text-gray-300" >
-                          TEMARA
-                        </p>
-                  </div>
-                </ReactRouterLink>
-              </div>
-              <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[45%]">
                 <ReactRouterLink to="/temara" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                         <p className=" text-[1rem] italic text-black font-black hover:text-gray-300" >
@@ -142,7 +168,7 @@ export default function App() {
                 </ReactRouterLink>
               </div>
               <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[65%]">
-                <ReactRouterLink to="/Khemisset" component={Link}>
+                <ReactRouterLink to="/khemisset" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                         <p className=" text-[1rem] italic text-black font-black hover:text-gray-300" >
                         Khemisset
