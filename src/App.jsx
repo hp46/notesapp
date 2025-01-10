@@ -49,7 +49,7 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="absolute top-20 left-10">
+              <div className="absolute top-40 left-10 border-black-2 text-xl">
                 <ReactRouterLink to="/Rabat" component={Link}>  
                   <p>Rabat</p>
                 </ReactRouterLink>
