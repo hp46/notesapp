@@ -50,9 +50,9 @@ export default function App() {
                 </Button>
               </div>
               <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black">
-                <h1 className="text-xxl uppercase">Choose a City</h1>
+                <h1 className="text-xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink to="/Rabat" component={Link}>  
-                  <p className="text-xl text-black hover:font-black hover:italic">Rabat</p>
+                  <p className="text-2xl text-black hover:font-black hover:italic">Rabat</p>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Al Haouz</p>
@@ -89,7 +89,7 @@ export default function App() {
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                          <p className="uppercase text-[2rem] italic text-black font-black" >
+                          <p className="uppercase text-[1rem] italic text-gray-600" >
                             Rabat 
                           </p>
                    </div>
@@ -99,8 +99,8 @@ export default function App() {
               <div className="absolute top-[90%] left-[37%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                          AL HAOUZ 
+                        <p className=" text-[1rem] italic text-gray-600" >
+                          Al Haouz
                         </p>
                   </div>
                 </ReactRouterLink>
@@ -108,8 +108,8 @@ export default function App() {
               <div className="absolute top-[45%] left-[45%]">
                 <ReactRouterLink to="/casablanca" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                          CASABLANCA
+                        <p className=" text-[1rem] italic text-gray-600" >
+                          Casablanca
                         </p>
                   </div>
                 </ReactRouterLink>
@@ -117,8 +117,8 @@ export default function App() {
               <div className="absolute top-[80%] left-[37%]">
                 <ReactRouterLink to="/marrakech" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                          MARRAKECH
+                        <p className=" text-[1rem] italic text-gray-600" >
+                          Marrakech
                         </p>
                   </div>
                 </ReactRouterLink>
@@ -126,8 +126,8 @@ export default function App() {
               <div className="absolute top-[43%] left-[48%]">
                 <ReactRouterLink to="/temara" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
-                          TEMARA
+                        <p className=" text-[1rem] italic text-gray-600" >
+                          Temera
                         </p>
                   </div>
                 </ReactRouterLink>
@@ -135,7 +135,7 @@ export default function App() {
               <div className="absolute top-[38%] left-[54%]">
                 <ReactRouterLink to="/sale" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[1rem] italic text-gray-600" >
                           Sale
                         </p>
                   </div>
@@ -144,7 +144,7 @@ export default function App() {
               <div className="absolute top-[39%] left-[50%]">
                 <ReactRouterLink to="/azour" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[1rem] italic text-gray-600" >
                         Azour
                         </p>
                   </div>
@@ -153,7 +153,7 @@ export default function App() {
               <div className="absolute top-[53%] left-[30%]">
                 <ReactRouterLink to="/eljadida" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[1rem] italic text-gray-600" >
                         El Jadida
                         </p>
                   </div>
@@ -162,7 +162,7 @@ export default function App() {
               <div className="absolute top-[90%] left-[60%]">
                 <ReactRouterLink to="/ouarzazate" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[1rem] italic text-gray-600" >
                         Ouarzazate
                         </p>
                   </div>
@@ -171,7 +171,7 @@ export default function App() {
               <div className="absolute top-[45%] left-[65%]">
                 <ReactRouterLink to="/khemisset" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[1rem] italic text-gray-600" >
                         Khemisset
                         </p>
                   </div>
@@ -180,7 +180,7 @@ export default function App() {
               <div className="absolute top-[39%] left-[50%]">
                 <ReactRouterLink to="/azour" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[2rem] italic text-black font-black hover:text-gray-300" >
+                        <p className=" text-[1rem] italic text-gray-600" >
                         Azour
                         </p>
                   </div>
