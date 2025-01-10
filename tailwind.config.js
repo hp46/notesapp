@@ -27,6 +27,8 @@ export default {
         '38%': '38%',
         //Rabat left
         '52%': '52%',
+        //Casablanca
+        '45%': '45%',
         '80%': '80%',
         //Alhaouz top
         '83%': '83%',

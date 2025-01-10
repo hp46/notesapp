@@ -70,7 +70,7 @@ export default function App() {
                    </div>
                   </ReactRouterLink>
                   </div>
-                </div>
+              </div>
               <div className="flex w-[30%] h-[7%] absolute top-[83%] left-[37%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
@@ -90,7 +90,7 @@ export default function App() {
                   </div>
                 </ReactRouterLink>
               </div>
-              <div className="flex w-[30%] h-[7%] absolute top-[83%] left-[37%]">
+              <div className="flex w-[30%] h-[7%] absolute top-[45%] left-[45%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                     <Image
