@@ -155,6 +155,7 @@ export default function Azour() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
+          <h1> AZOUR </h1>
             <div className="absolute top-10 left-10 w-9 h-9">
             <Image
               alt="pin"
