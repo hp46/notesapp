@@ -99,7 +99,7 @@ export default function App() {
               <div className="absolute top-[90%] left-[37%]">
                 <ReactRouterLink to="/alhaouz" component={Link}>
                   <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                        <p className=" text-[1rem] italic text-gray-600" >
+                        <p className=" text-[2rem] italic text-gray-600" >
                           Al Haouz
                         </p>
                   </div>
