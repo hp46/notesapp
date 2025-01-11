@@ -50,9 +50,9 @@ export default function App() {
                 </Button>
               </div>
               <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black">
-                <h1 className="text-xl uppercase font-black">Choose a City</h1>
+                <h1 className="text-2xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink to="/Rabat" component={Link}>  
-                  <p className="text-2xl text-black hover:font-black hover:italic">Rabat</p>
+                  <p className="text-xl text-black hover:font-black hover:italic">Rabat</p>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Al Haouz</p>
