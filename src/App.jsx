@@ -14,6 +14,7 @@ import {
   Link as ReactRouterLink,
 } from 'react-router-dom';
   import "@aws-amplify/ui-react/styles.css";
+  import pin from "./assets/pin.png"
   import image from "./assets/morooco_final.png"
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
@@ -89,7 +90,18 @@ export default function App() {
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full items-center justify-start overflow-hidden">
-                          <p className="uppercase text-[1rem] italic text-gray-600" >
+                      <Image
+                        alt="pin"
+                        src={pin}
+                        objectPosition="50% 50%"
+                        backgroundColor="initial"
+                        height="100%"
+                        width="100%"
+                        opacity="100%"
+                        objectFit="initial"
+                      >
+                        </Image>
+                          <p className=" text-[1rem] italic text-gray-600" >
                             Rabat 
                           </p>
                    </div>
