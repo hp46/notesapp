@@ -54,6 +54,24 @@ export default function App() {
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink to="/Rabat" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Rabat</p>
+                  <div className="flex justify-center items-center">
+                  <ReactRouterLink to="/Rabat" component={Link}>
+                    <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                      <Image
+                        alt="pin"
+                        src={pin}
+                        objectPosition="50% 50%"
+                        backgroundColor="initial"
+                        height="2%"
+                        width="2%"
+                        opacity="100%"
+                        objectFit="initial"
+                      >
+                        </Image>
+                          <p className=" text-[1rem] italic text-gray-600" >
+                            Rabat 
+                          </p>
+                   </div>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Al Haouz</p>
@@ -86,7 +104,7 @@ export default function App() {
                   <p className="text-xl text-black hover:font-black hover:italic">Azour</p>
                 </ReactRouterLink>
               </div>
-              <div className="absolute top-[40%] left-[52%]">
+              {/* <div className="absolute top-[40%] left-[52%]">
                 <div className="flex justify-center items-center">
                   <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full items-center justify-start overflow-hidden">
@@ -197,7 +215,7 @@ export default function App() {
                         </p>
                   </div>
                 </ReactRouterLink>
-              </div>
+              </div> */}
             </Flex>
           </div>
         </div>
