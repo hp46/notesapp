@@ -95,8 +95,8 @@ export default function App() {
                         src={pin}
                         objectPosition="50% 50%"
                         backgroundColor="initial"
-                        height="100%"
-                        width="100%"
+                        height="2%"
+                        width="2%"
                         opacity="100%"
                         objectFit="initial"
                       >
