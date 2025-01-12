@@ -50,7 +50,7 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black hover:font-black hover:italic">
+              <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink  className="hover:font-black hover:italic" to="/Rabat" component={Link}>  
                   <p className="text-xl text-black">Rabat</p>
