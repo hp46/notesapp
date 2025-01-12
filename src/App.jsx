@@ -55,7 +55,7 @@ export default function App() {
                 <ReactRouterLink to="/Rabat" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Rabat</p>
                   <div className="flex justify-center items-center">
-                    <div className="flex flex-row h-full items-center justify-start overflow-hidden">
+                    <div className="absolute top-[40%] left-[52%]">
                       <Image
                         alt="pin"
                         src={pin}
