@@ -55,7 +55,6 @@ export default function App() {
                 <ReactRouterLink to="/Rabat" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Rabat</p>
                   <div className="flex justify-center items-center">
-                  <ReactRouterLink to="/Rabat" component={Link}>
                     <div className="flex flex-row h-full items-center justify-start overflow-hidden">
                       <Image
                         alt="pin"
@@ -72,6 +71,7 @@ export default function App() {
                             Rabat 
                           </p>
                    </div>
+                  </div>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Al Haouz</p>
