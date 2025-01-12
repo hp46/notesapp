@@ -50,19 +50,19 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black">
+              <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black hover:font-black hover:italic">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink to="/Rabat" component={Link}>  
-                  <p className="text-xl text-black hover:font-black hover:italic">Rabat</p>
+                  <p className="text-xl text-black">Rabat</p>
                   <div className="flex justify-center items-center">
-                    <div className="absolute top-[40%] left-[52%]">
+                    <div className="absolute top-[110%] left-[322%]">
                       <Image
                         alt="pin"
                         src={pin}
                         objectPosition="50% 50%"
                         backgroundColor="initial"
-                        height="2%"
-                        width="2%"
+                        height="5%"
+                        width="5%"
                         opacity="100%"
                         objectFit="initial"
                       >
