@@ -54,7 +54,7 @@ export default function App() {
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink  className=" block hover:font-black hover:italic hover:filter grayscale" to="/Rabat" component={Link}>  
                   <p className="text-xl text-black">Rabat</p>
-                    <div className="absolute top-[110%] left-[322%]">
+                    <div className="absolute top-[110%] left-[322%] w-20">
                       <Image
                         alt="pin"
                         src={pin}
