@@ -52,10 +52,10 @@ export default function App() {
               </div>
               <div className="absolute top-40 left-10 border-2 rounded-lg p-10 border-black text-black">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
-                <ReactRouterLink  className=" block w-20 hover:font-black hover:italic hover:w-100" to="/Rabat" component={Link}>  
+                <ReactRouterLink  className=" block w-20 hover:font-black hover:italic hover:w-30" to="/Rabat" component={Link}>  
                   <p className="text-xl text-black">Rabat</p>
                   <div className="flex justify-center items-center">
-                    <div className="absolute top-[110%] left-[322%] w-80">
+                    <div className="absolute top-[110%] left-[322%] w-20">
                       <Image
                         alt="pin"
                         src={pin}
