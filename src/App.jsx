@@ -68,7 +68,7 @@ export default function App() {
                       >
                         </Image>
                           <p className=" text-[1rem] italic text-gray-600" >
-                            Rabat 
+                            o 
                           </p>
                    </div>
                   </div>
