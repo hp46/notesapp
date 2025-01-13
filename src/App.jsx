@@ -54,7 +54,6 @@ export default function App() {
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
                 <ReactRouterLink  className=" block w-20 hover:font-black hover:italic hover:w-30" to="/Rabat" component={Link}>  
                   <p className="text-xl text-black">Rabat</p>
-                  <div className="flex justify-center items-center">
                     <div className="absolute top-[110%] left-[322%] w-20">
                       <Image
                         alt="pin"
@@ -65,8 +64,7 @@ export default function App() {
                         opacity="100%"
                         objectFit="initial"
                       >
-                        </Image>
-                   </div>
+                      </Image>
                   </div>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  
