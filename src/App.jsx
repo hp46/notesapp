@@ -67,9 +67,6 @@ export default function App() {
                         objectFit="initial"
                       >
                         </Image>
-                          <p className=" text-[1rem] italic text-gray-600" >
-                            o 
-                          </p>
                    </div>
                   </div>
                 </ReactRouterLink>
