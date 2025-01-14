@@ -50,9 +50,9 @@ export default function App() {
                   Sign Out
                 </Button>
               </div>
-              <div className="absolute top-40 left-10 border-2 rounded-lg p-10 w-80 border-black text-black hover:even:bg-[#467380] ">
+              <div className="absolute top-40 left-10 border-2 rounded-lg p-10 w-80 border-black text-black">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
-                <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl"  to="/Rabat" component={Link}>  
+                <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl hover:even:bg-[#467380]"  to="/Rabat" component={Link}>  
                   <div>
                     <p>Rabat</p>
                   </div>
