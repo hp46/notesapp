@@ -58,7 +58,7 @@ export default function App() {
                   </div>
                   <div className="absolute top-[110%] left-[322%]">
                     <button className="rounded-full bg-[#f05829] hover:bg-[#467830]">
-                      <p className=" ">Rabat</p>
+                      <p className="invisible">Rabat</p>
                     </button>
                   </div>
                 </ReactRouterLink>
