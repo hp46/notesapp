@@ -52,7 +52,7 @@ export default function App() {
               </div>
               <div className="absolute top-40 left-10 border-2 rounded-lg p-10 w-80 border-black text-black">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
-                <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl hover:bg-black hover:text-2xl"  to="/Rabat" component={Link}>  
+                <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl hover:text-2xl"  to="/Rabat" component={Link}>  
                   <div>
                     <p className=" text-black">Rabat</p>
                   </div>
