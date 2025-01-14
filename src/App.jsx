@@ -58,7 +58,7 @@ export default function App() {
                   </div>
                   <div className="absolute top-[110%] left-[322%]">
                     <button className="rounded-full w-5 h-5 bg-[#f05829]">
-
+                      <p className=" hidden">0</p>
                     </button>
                   </div>
                 </ReactRouterLink>
