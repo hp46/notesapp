@@ -155,11 +155,11 @@ export default function Rabat() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-10 left-10 w-9 h-9">
+            <div className="absolute top-10 left-10 w-10 h-10">
             <Image
               alt="pin"
               src={pin}
-              height="100%"
+              width="2.5rem"
               backgroundColor="initial"
               opacity="100%"
               objectFit="none"
@@ -218,7 +218,7 @@ export default function Rabat() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['Rabat', 'Tagier', 'Cassablanca']}
+                  options={['Sale Cabinet']}
                   required
                   >
                 </SelectField>

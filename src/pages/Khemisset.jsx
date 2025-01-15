@@ -218,7 +218,7 @@ export default function Khemisset() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['khemisset']}
+                  options={['Khemisset']}
                   required
                   >
                 </SelectField>

@@ -219,7 +219,7 @@ export default function Azour() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['Cassablanca']}
+                  options={['Azour']}
                   required
                   >
                 </SelectField>

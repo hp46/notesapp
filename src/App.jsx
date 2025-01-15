@@ -52,14 +52,9 @@ export default function App() {
               </div>
               <div className="absolute top-40 left-10 border-2 rounded-lg p-10 w-80 border-black text-black">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
-                <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl hover:bg-white"  to="/Rabat" component={Link}>  
+                <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl"  to="/Rabat" component={Link}>  
                   <div>
                     <p>Rabat</p>
-                  </div>
-                  <div className="absolute top-[110%] left-[322%]">
-                    <button className="rounded-full border-2 bg-[#f05829]">
-                      <p className="invisible">Save</p>
-                    </button>
                   </div>
                 </ReactRouterLink>
                 <ReactRouterLink to="/alhaouz" component={Link}>  

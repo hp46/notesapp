@@ -218,7 +218,7 @@ export default function Sale() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['sale', 'Tagier', 'Cassablanca']}
+                  options={['Sale']}
                   required
                   >
                 </SelectField>

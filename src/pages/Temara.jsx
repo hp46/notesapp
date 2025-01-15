@@ -218,7 +218,7 @@ export default function Temara() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['temara', 'Tagier', 'Cassablanca']}
+                  options={['Temara']}
                   required
                   >
                 </SelectField>

@@ -218,7 +218,7 @@ export default function Ouarzazate() {
                   width="200px"
                   label="Location"
                   name="location"
-                  options={['ouarzazate', 'Tagier', 'Cassablanca']}
+                  options={['Ouarzazate']}
                   required
                   >
                 </SelectField>
