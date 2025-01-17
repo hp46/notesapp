@@ -32,6 +32,7 @@ const schema = a.schema({
       diastolicBloodPressure: a.float(),
       
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     AlHaouz: a
