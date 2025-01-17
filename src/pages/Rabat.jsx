@@ -100,6 +100,7 @@ export default function Rabat() {
       firstName: form.get("firstName"),
       lastName: form.get("lastName"),
       sex: form.get("sex"),
+      age: form.get("age"),
       location: form.get("location"),
       phoneNumber: form.get("phoneNumber"),
       smoking: form.get("smoking"),
@@ -214,6 +215,13 @@ export default function Rabat() {
                   <Radio value="Male">Male</Radio>
                   <Radio value="Female">Female</Radio>
                 </RadioGroupField>
+                <TextField
+                  width="200px"
+                  name="age"
+                  placeholder="Insert Age"
+                  label="Age"
+                  required
+                />
                 <SelectField
                   width="200px"
                   label="Location"

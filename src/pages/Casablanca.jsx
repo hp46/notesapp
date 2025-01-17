@@ -100,6 +100,7 @@ export default function Casablanca() {
       firstName: form.get("firstName"),
       lastName: form.get("lastName"),
       sex: form.get("sex"),
+      age: form.get("age"),
       location: form.get("location"),
       phoneNumber: form.get("phoneNumber"),
       smoking: form.get("smoking"),
@@ -155,14 +156,14 @@ export default function Casablanca() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-10 left-10 w-9 h-9">
+            <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
             <Image
               alt="pin"
               src={pin}
-              height="100%"
+              width="2.5rem"
               backgroundColor="initial"
               opacity="100%"
-              objectFit="none"
+              objectFit="cover"
               >
               </Image>
             </div>
@@ -214,6 +215,13 @@ export default function Casablanca() {
                   <Radio value="Male">Male</Radio>
                   <Radio value="Female">Female</Radio>
                 </RadioGroupField>
+                <TextField
+                  width="200px"
+                  name="age"
+                  placeholder="Insert Age"
+                  label="Age"
+                  required
+                />
                 <SelectField
                   width="200px"
                   label="Location"
