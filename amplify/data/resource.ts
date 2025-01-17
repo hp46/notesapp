@@ -28,7 +28,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
       
-    })
+    }).identifier(['location',])
     .authorization((allow) => [allow.owner()]),
 
     AlHaouz: a

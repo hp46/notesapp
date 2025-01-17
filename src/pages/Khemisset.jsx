@@ -29,7 +29,7 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../../amplify_outputs.json";
-import pin from "../assets/pin.png"
+import pin from "../assets/back.png"
 import {
   BrowserRouter as Router,
   Link as ReactRouterLink,
