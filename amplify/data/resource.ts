@@ -1,4 +1,5 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
+import { PrimaryKey } from 'aws-cdk-lib/aws-appsync';
 
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
@@ -10,6 +11,7 @@ and "delete" any "Todo" records.
 const schema = a.schema({
     Rabat: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
