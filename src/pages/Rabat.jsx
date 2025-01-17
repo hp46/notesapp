@@ -162,7 +162,7 @@ export default function Rabat() {
               width="2.5rem"
               backgroundColor="initial"
               opacity="100%"
-              objectFit="none"
+              objectFit="cover"
               >
               </Image>
             </div>
