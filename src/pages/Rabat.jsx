@@ -155,7 +155,7 @@ export default function Rabat() {
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-10 left-10 w-10 h-10">
+            <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
             <Image
               alt="pin"
               src={pin}
