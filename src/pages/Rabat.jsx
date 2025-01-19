@@ -34,6 +34,7 @@ import {
   BrowserRouter as Router,
   Link as ReactRouterLink,
 } from 'react-router-dom';
+import { stringify } from "postcss";
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -57,6 +58,12 @@ export default function Rabat() {
     });
   }
   
+  const primaryIdGenerator=()=> {
+    return new Promise((resolve) => {
+      const primaryId = weight.concat(height)
+      resolve(primaryId)
+    });
+  }
 
   const onChange = (event) => {
     setSearch(event.target.value);
@@ -90,11 +97,13 @@ export default function Rabat() {
   async function createNote(event) {
     event.preventDefault();
     const bmi = await BmiCalculator();
+    const primaryid = await primaryIdGenerator();
     console.log("bmi is at create", bmi);
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
     const { data: newRabat } = await client.models.Rabat.create({
+      patientId: primaryid,
       description: form.get("description"),
       image: form.get("image").name,
       firstName: form.get("firstName"),
