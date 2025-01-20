@@ -49,7 +49,7 @@ export default function Rabat() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [location, setLocation] = useState('')
+  const [location, setLocation] = useState('Sale Cabinet')
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
