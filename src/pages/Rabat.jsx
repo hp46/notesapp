@@ -242,8 +242,8 @@ export default function Rabat() {
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   required
-                  options={['Sale Cabinet']}
                   >
+                   <option value="Sale Cabinent">Sale Cabient</option>
                 </SelectField>
                 <PhoneNumberField
                   defaultDialCode="+212"
