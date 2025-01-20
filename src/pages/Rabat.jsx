@@ -49,6 +49,7 @@ export default function Rabat() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
+  const [location, setLocation] = useState('')
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
@@ -58,12 +59,14 @@ export default function Rabat() {
     });
   }
   
-  const primaryIdGenerator=()=> {
+  const primaryIdGenerator = () => {
     return new Promise((resolve) => {
-      const primaryId = weight.concat(height)
+      const primaryId = location.concat();
       resolve(primaryId)
     });
   }
+
+
 
   const onChange = (event) => {
     setSearch(event.target.value);
@@ -110,7 +113,7 @@ export default function Rabat() {
       lastName: form.get("lastName"),
       sex: form.get("sex"),
       age: form.get("age"),
-      location: form.get("location"),
+      location: location,
       phoneNumber: form.get("phoneNumber"),
       smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
@@ -234,9 +237,10 @@ export default function Rabat() {
                 <SelectField
                   width="200px"
                   label="Location"
-                  name="location"
-                  options={['Sale Cabinet']}
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
                   required
+                  options={['Sale Cabinet']}
                   >
                 </SelectField>
                 <PhoneNumberField
