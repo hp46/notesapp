@@ -34,7 +34,7 @@ import {
   BrowserRouter as Router,
   Link as ReactRouterLink,
 } from 'react-router-dom';
-import { stringify } from "postcss";
+import { v4 as uuidv4 } from "uuid";
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -61,7 +61,9 @@ export default function Rabat() {
   
   const primaryIdGenerator = () => {
     return new Promise((resolve) => {
-      const primaryId = location.concat();
+      const uniqueId = uuidv4();
+      const primaryId = location.concat(uniqueId.substring(0,4));
+      console.log(primaryId)
       resolve(primaryId)
     });
   }
