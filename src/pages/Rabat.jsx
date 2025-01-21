@@ -150,18 +150,18 @@ export default function Rabat() {
     event.target.reset();
   }
 
-  async function deleteRabat({ primaryId }) {
-    const tobeDeletedRabat = {
-      id: primaryId,
-    };
+  // async function deleteRabat({ primaryId }) {
+  //   const tobeDeletedRabat = {
+  //     id: primaryId,
+  //   };
 
-    const { data: deletedRabat } = await client.models.Rabat.delete(
-        tobeDeletedRabat
-    );
-    console.log(deletedRabat);
+  //   const { data: deletedRabat } = await client.models.Rabat.delete(
+  //       tobeDeletedRabat
+  //   );
+  //   console.log(deletedRabat);
 
-    fetchRabat();
-  }
+  //   fetchRabat();
+  // }
 
   return (
     <Authenticator>
@@ -386,74 +386,77 @@ export default function Rabat() {
             </Grid>
           </View>
           <Divider />
-        <SearchField
-          label="Search"
-          placeholder="Search here..."
-          onChange={onChange}
-          onClear={onClear}
-          value={search}
-        /> 
-        <Table
-          highlightOnHover={true}
-          variation="striped"
-          width="90vw"
-        >
-          <TableHead>
-            <TableCell as="th">Name</TableCell>
-            <TableCell as="th">Sex</TableCell>
-            <TableCell as="th">Smoke</TableCell>
-            <TableCell as="th">Location</TableCell>
-            <TableCell as="th">Phone Number</TableCell>
-            <TableCell as="th">Weight</TableCell>
-            <TableCell as="th">Height</TableCell>
-            <TableCell as="th">BMI</TableCell>
-            <TableCell as="th">B.S.L Glucose</TableCell>
-            <TableCell as="th">HBA1C</TableCell>
-            <TableCell as="th">Hemoglobin</TableCell>
-            <TableCell as="th">Cholesterol</TableCell>
-            <TableCell as="th">Blood Pressure</TableCell>
-            <TableCell as="th"></TableCell>
-          </TableHead>
-          <TableBody>
-            {rabat.filter((value)=>{
-              if(value===""){
-                return value
-              }
-              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
-                return value
-              }
-            })
-            .map((value, key) => {
-            return(
-              <TableRow key={key}>
-                <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
-                <TableCell>{value.sex}</TableCell>
-                <TableCell>{value.smoking}</TableCell>
-                <TableCell>{value.location}</TableCell>
-                <TableCell>+{value.phoneNumber}</TableCell>
-                <TableCell>{value.weight} <span className="italic"> kg</span></TableCell>
-                <TableCell>{value.height} <span className="italic"> cm</span></TableCell>
-                <TableCell>{value.bmi} <span className="italic"></span></TableCell>
-                <TableCell>{value.bloodSugarLevel} <span className="italic">mg/dL</span></TableCell>
-                <TableCell>{value.hba1c} <span className="italic"> mmol/mol</span></TableCell>
-                <TableCell>{value.hemoglobin}<span className="italic"> g/dL</span></TableCell>
-                <TableCell>{value.cholesterol}<span className="italic"> mg/dL</span></TableCell>
-                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<span className="italic"> mmHg</span></TableCell>
-                <TableCell>
-                  <Button
-                    width="40px"
-                    variation="destructive"
-                    onClick={() => deleteRabat(value)}
-                  >
-                    Delete 
-                  </Button>
-                </TableCell>
-              </TableRow>
-            )
-            })}
-          </TableBody>
-        </Table>
-          <Button onClick={signOut}>Sign Out</Button>
+        <section>
+          <SearchField
+            label="Search"
+            placeholder="Search here..."
+            onChange={onChange}
+            onClear={onClear}
+            value={search}
+          /> 
+          <Table
+            highlightOnHover={true}
+            variation="striped"
+            width="90vw"
+          >
+            <TableHead>
+              <TableCell as="th">Name</TableCell>
+              <TableCell as="th">Sex</TableCell>
+              <TableCell as="th">Smoke</TableCell>
+              <TableCell as="th">Location</TableCell>
+              <TableCell as="th">Phone Number</TableCell>
+              <TableCell as="th">Weight</TableCell>
+              <TableCell as="th">Height</TableCell>
+              <TableCell as="th">BMI</TableCell>
+              <TableCell as="th">B.S.L Glucose</TableCell>
+              <TableCell as="th">HBA1C</TableCell>
+              <TableCell as="th">Hemoglobin</TableCell>
+              <TableCell as="th">Cholesterol</TableCell>
+              <TableCell as="th">Blood Pressure</TableCell>
+              {/* <TableCell as="th"></TableCell> */}
+            </TableHead>
+            <TableBody>
+              {rabat.filter((value)=>{
+                if(value===""){
+                  return value
+                }
+                else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+                  return value
+                }
+              })
+              .map((value, key) => {
+              return(
+                <TableRow key={key}>
+                  <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
+                  <TableCell>{value.sex}</TableCell>
+                  <TableCell>{value.smoking}</TableCell>
+                  <TableCell>{value.location}</TableCell>
+                  <TableCell>+{value.phoneNumber}</TableCell>
+                  <TableCell>{value.weight} <span className="italic"> kg</span></TableCell>
+                  <TableCell>{value.height} <span className="italic"> cm</span></TableCell>
+                  <TableCell>{value.bmi} <span className="italic"></span></TableCell>
+                  <TableCell>{value.bloodSugarLevel} <span className="italic">mg/dL</span></TableCell>
+                  <TableCell>{value.hba1c} <span className="italic"> mmol/mol</span></TableCell>
+                  <TableCell>{value.hemoglobin}<span className="italic"> g/dL</span></TableCell>
+                  <TableCell>{value.cholesterol}<span className="italic"> mg/dL</span></TableCell>
+                  <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<span className="italic"> mmHg</span></TableCell>
+                  {/* <TableCell>
+                    <Button
+                      width="40px"
+                      variation="destructive"
+                      onClick={() => deleteRabat(value)}
+                    >
+                      Delete 
+                    </Button>
+                  </TableCell> */}
+                </TableRow>
+              )
+              })}
+            </TableBody>
+          </Table>
+            <Button onClick={signOut}>Sign Out</Button>
+        </section>
+        
         </Flex>
         
       )}
