@@ -379,9 +379,10 @@ export default function Rabat() {
                   accept="image/png, image/jpeg"
                 />
             </Flex>
-            <Button type="submit" variation="primary" height="100px">
+            <button type="submit"
+            className="w-50 h-5 bg-[#f05829] hover:bg-[#467380]">
                 Create Note
-            </Button>
+            </button>
             </Flex>
             </Grid>
           </View>
