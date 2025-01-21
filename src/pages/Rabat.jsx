@@ -150,9 +150,9 @@ export default function Rabat() {
     event.target.reset();
   }
 
-  async function deleteRabat({ id }) {
+  async function deleteRabat({ primaryId }) {
     const tobeDeletedRabat = {
-      id: id,
+      id: primaryId,
     };
 
     const { data: deletedRabat } = await client.models.Rabat.delete(
