@@ -385,9 +385,9 @@ export default function Rabat() {
             </Flex>
             </Grid>
           </View>
-          <Divider />
         <section className="w-screen bg-[#f05829] p-10">
           <SearchField
+            className="bg-ewhite pb-10"
             label="Search"
             placeholder="Search here..."
             onChange={onChange}
