@@ -386,14 +386,15 @@ export default function Rabat() {
             </Grid>
           </View>
         <section className="w-screen bg-[#f05829] p-10">
-          <SearchField
-            className="bg-ewhite pb-10"
-            label="Search"
-            placeholder="Search here..."
-            onChange={onChange}
-            onClear={onClear}
-            value={search}
-          /> 
+          <div className="bg-white pb-10 w-auto h-auto">
+            <SearchField
+              label="Search"
+              placeholder="Search here..."
+              onChange={onChange}
+              onClear={onClear}
+              value={search}
+            /> 
+          </div>
           <Table
             highlightOnHover={true}
             variation="striped"
