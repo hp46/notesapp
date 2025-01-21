@@ -66,7 +66,7 @@ export default function Rabat() {
       const string = location.replaceAll(" ", "");
       const finalString = string.concat(charcater);
       console.log(finalString);
-      const primaryId = finalString.concat(uniqueId.substring(0,4));
+      const primaryId = finalString.toUpperCase().concat(uniqueId.substring(0,4));
       console.log(primaryId)
       resolve(primaryId)
     });
