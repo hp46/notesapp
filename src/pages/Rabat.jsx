@@ -62,8 +62,10 @@ export default function Rabat() {
   const primaryIdGenerator = () => {
     return new Promise((resolve) => {
       const uniqueId = uuidv4();
+      const charcater = '_';
       const string = location.replaceAll(" ", "");
-      const primaryId = string.concat(uniqueId.substring(0,4));
+      const finalString = string.concat(charcater)
+      const primaryId = finalString.concat(uniqueId.substring(0,4));
       console.log(primaryId)
       resolve(primaryId)
     });
