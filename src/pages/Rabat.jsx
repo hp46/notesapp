@@ -386,7 +386,7 @@ export default function Rabat() {
             </Grid>
           </View>
           <Divider />
-        <section>
+        <section className="w-screen bg-[#f05829] p-10">
           <SearchField
             label="Search"
             placeholder="Search here..."
@@ -454,7 +454,6 @@ export default function Rabat() {
               })}
             </TableBody>
           </Table>
-            <Button onClick={signOut}>Sign Out</Button>
         </section>
         
         </Flex>
