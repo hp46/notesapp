@@ -119,6 +119,8 @@ export default function Rabat() {
       lastName: form.get("lastName"),
       sex: form.get("sex"),
       age: form.get("age"),
+      diabetes: form.get("diabetes"),
+      bloodPressurePill: form.get("bloodPressurePill"),
       location: location,
       phoneNumber: form.get("phoneNumber"),
       smoking: form.get("smoking"),
@@ -258,6 +260,22 @@ export default function Rabat() {
                 <RadioGroupField
                   legend="Smoking"
                   name="smoking"
+                  options={['Yes', 'No']}
+                  direction="column">
+                  <Radio value="Yes">Yes</Radio>
+                  <Radio value="No">No</Radio>
+                </RadioGroupField>
+                <RadioGroupField
+                  legend="Diabetes"
+                  name="diabetes"
+                  options={['Yes', 'No']}
+                  direction="column">
+                  <Radio value="Yes">Yes</Radio>
+                  <Radio value="No">No</Radio>
+                </RadioGroupField>
+                <RadioGroupField
+                  legend="Blood Pressure Pill"
+                  name="bloodPressurePill"
                   options={['Yes', 'No']}
                   direction="column">
                   <Radio value="Yes">Yes</Radio>

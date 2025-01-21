@@ -19,6 +19,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
