@@ -380,13 +380,13 @@ export default function Rabat() {
                 />
             </Flex>
             <button type="submit"
-            className="w-50 h-5 bg-[#f05829] hover:bg-[#467380]">
+            className="py-2 px-4 rounded bg-[#f05829] hover:bg-[#467380]">
                 Create Note
             </button>
-            </Flex>
+            </Flex>py-2 px-4
             </Grid>
           </View>
-        <section className="w-screen bg-[#f05829] p-10">
+        <section className="w-screen">
           <div className="bg-white pb-10 w-auto h-auto">
             <SearchField
               label="Search"
