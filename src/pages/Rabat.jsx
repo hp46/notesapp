@@ -3,7 +3,6 @@ import {
   Authenticator,
   TextAreaField,
   Button,
-  Text,
   TextField,
   Heading,
   Flex,
@@ -12,14 +11,10 @@ import {
   SearchField,
   Grid,
   PhoneNumberField,
-  Divider,
   Table,
-  TableCell,
-  TableBody,
-  TableHead,
+  Accordion,
   Link,
   Image,
-  TableRow,
   RadioGroupField,
   Radio,
 } from "@aws-amplify/ui-react";
@@ -387,7 +382,7 @@ export default function Rabat() {
             </Flex>py-2 px-4
             </Grid>
           </View>
-        <section className="w-screen flex-col justify-center">
+        <section className="w-screen flex-col justify-center items-center">
           <div className="bg-white pb-10 w-1/2 h-auto">
             <SearchField
               label="Search"
@@ -402,23 +397,7 @@ export default function Rabat() {
             variation="striped"
             width="90vw"
           >
-            <TableHead>
-              <TableCell as="th">Name</TableCell>
-              <TableCell as="th">Sex</TableCell>
-              <TableCell as="th">Smoke</TableCell>
-              <TableCell as="th">Location</TableCell>
-              <TableCell as="th">Phone Number</TableCell>
-              <TableCell as="th">Weight</TableCell>
-              <TableCell as="th">Height</TableCell>
-              <TableCell as="th">BMI</TableCell>
-              <TableCell as="th">B.S.L Glucose</TableCell>
-              <TableCell as="th">HBA1C</TableCell>
-              <TableCell as="th">Hemoglobin</TableCell>
-              <TableCell as="th">Cholesterol</TableCell>
-              <TableCell as="th">Blood Pressure</TableCell>
-              {/* <TableCell as="th"></TableCell> */}
-            </TableHead>
-            <TableBody>
+            <Accordion.Container>
               {rabat.filter((value)=>{
                 if(value===""){
                   return value
@@ -429,33 +408,17 @@ export default function Rabat() {
               })
               .map((value, key) => {
               return(
-                <TableRow key={key}>
-                  <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
-                  <TableCell>{value.sex}</TableCell>
-                  <TableCell>{value.smoking}</TableCell>
-                  <TableCell>{value.location}</TableCell>
-                  <TableCell>+{value.phoneNumber}</TableCell>
-                  <TableCell>{value.weight} <span className="italic"> kg</span></TableCell>
-                  <TableCell>{value.height} <span className="italic"> cm</span></TableCell>
-                  <TableCell>{value.bmi} <span className="italic"></span></TableCell>
-                  <TableCell>{value.bloodSugarLevel} <span className="italic">mg/dL</span></TableCell>
-                  <TableCell>{value.hba1c} <span className="italic"> mmol/mol</span></TableCell>
-                  <TableCell>{value.hemoglobin}<span className="italic"> g/dL</span></TableCell>
-                  <TableCell>{value.cholesterol}<span className="italic"> mg/dL</span></TableCell>
-                  <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<span className="italic"> mmHg</span></TableCell>
-                  {/* <TableCell>
-                    <Button
-                      width="40px"
-                      variation="destructive"
-                      onClick={() => deleteRabat(value)}
-                    >
-                      Delete 
-                    </Button>
-                  </TableCell> */}
-                </TableRow>
+                <Accordion.Container key={key}>
+                  <Accordion.Trigger>
+                    {value.firstName}
+                  </Accordion.Trigger>
+                  <Accordion.Content>
+                    {value.location}
+                  </Accordion.Content>
+                </Accordion.Container>
               )
               })}
-            </TableBody>
+            </Accordion.Container>
           </Table>
         </section>
           <Button onClick={signOut}>Sign Out</Button>
