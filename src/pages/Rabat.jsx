@@ -190,10 +190,11 @@ export default function Rabat() {
           </ReactRouterLink>
           <View as="form" onSubmit={createNote}>
           <Grid
+            className="bg-slate-300"
             columnGap="0.5rem"
             rowGap="0.5rem"
             width="100vw"
-            templateColumns=".25fr 2fr"
+            templateColumns=".35fr 2fr"
             templateRows="auto auto auto"
           >
             <Flex
@@ -387,7 +388,7 @@ export default function Rabat() {
             </Grid>
           </View>
         <section className="w-screen flex-col justify-center">
-          <div className="bg-white pb-10 w-auto h-auto">
+          <div className="bg-white pb-10 w-1/2 h-auto">
             <SearchField
               label="Search"
               placeholder="Search here..."
