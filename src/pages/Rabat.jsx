@@ -383,7 +383,7 @@ export default function Rabat() {
             </Grid>
           </View>
         <section className="w-screen flex-col justify-center items-center">
-          <div className="bg-white pb-10 w-1/2 h-auto">
+          <div className="text-black pb-10 w-1/2 h-auto">
             <SearchField
               label="Search"
               placeholder="Search here..."
@@ -392,34 +392,28 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <Table
-            highlightOnHover={true}
-            variation="striped"
-            width="90vw"
-          >
-            <Accordion.Container>
-              {rabat.filter((value)=>{
-                if(value===""){
-                  return value
-                }
-                else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
-                  return value
-                }
-              })
-              .map((value, key) => {
-              return(
-                <Accordion.Container key={key}>
-                  <Accordion.Trigger>
-                    {value.firstName}
-                  </Accordion.Trigger>
-                  <Accordion.Content>
-                    {value.location}
-                  </Accordion.Content>
-                </Accordion.Container>
-              )
-              })}
-            </Accordion.Container>
-          </Table>
+          <Accordion.Container>
+            {rabat.filter((value)=>{
+              if(value===""){
+                return value
+              }
+              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+                return value
+              }
+            })
+            .map((value, key) => {
+            return(
+              <Accordion.Container key={key}>
+                <Accordion.Trigger>
+                  {value.firstName}
+                </Accordion.Trigger>
+                <Accordion.Content>
+                  {value.location}
+                </Accordion.Content>
+              </Accordion.Container>
+            )
+            })}
+          </Accordion.Container>
         </section>
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
