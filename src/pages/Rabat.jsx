@@ -407,17 +407,19 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div>
-                      <h1>{value.firstName} {value.lastName}</h1>
+                    <div className="flex flex-row justify-between">
+                      <h1 className="font-black font-xl">{value.firstName} {value.lastName}</h1>
                       <p1>{value.location}</p1> <p>{value.age}</p>
                       <p>{value.phoneNumber}</p>
                     </div>
                     <Accordion.Icon />
                   </Accordion.Trigger>
                   <Accordion.Content>
-                    <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
-                    <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
-                    <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
+                    <div className="flex flex-row">
+                      <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
+                      <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
+                      <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
+                    </div>
                   </Accordion.Content>
                 </Accordion.Item>
               </Accordion.Container>
