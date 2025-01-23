@@ -393,32 +393,30 @@ export default function Rabat() {
             /> 
           </div>
           <div className="w-3/4 text-black">
-            <Accordion.Item>
-              {rabat.filter((value)=>{
-                if(value===""){
-                  return value
-                }
-                else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
-                  return value
-                }
-              })
-              .map((value, key) => {
-              return(
-                <Accordion.Container key={key}>
-                  <Accordion.Item>
-                    <Accordion.Trigger>
-                      {value.firstName}
-                      <Accordion.Icon />
-                    </Accordion.Trigger>
-                    <Accordion.Content>
-                      {value.location}
-                      <Accordion.Icon />
-                    </Accordion.Content>
-                  </Accordion.Item>
-                </Accordion.Container>
-              )
-              })}
-            </Accordion.Item>
+            {rabat.filter((value)=>{
+              if(value===""){
+                return value
+              }
+              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+                return value
+              }
+            })
+            .map((value, key) => {
+            return(
+              <Accordion.Container key={key}>
+                <Accordion.Item>
+                  <Accordion.Trigger>
+                    {value.firstName}
+                    <Accordion.Icon />
+                  </Accordion.Trigger>
+                  <Accordion.Content>
+                    {value.location}
+                    <Accordion.Icon />
+                  </Accordion.Content>
+                </Accordion.Item>
+              </Accordion.Container>
+            )
+            })}
           </div>
         </section>
           <Button onClick={signOut}>Sign Out</Button>
