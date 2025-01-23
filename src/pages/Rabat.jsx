@@ -193,7 +193,7 @@ export default function Rabat() {
             columnGap="0.5rem"
             rowGap="0.5rem"
             width="100vw"
-            templateColumns=".5fr 2fr"
+            templateColumns=".25fr 2fr"
             templateRows="auto auto auto"
           >
             <Flex
@@ -202,7 +202,7 @@ export default function Rabat() {
               justifyContent="center"
               alignItems="center"
             >
-              <Heading level={2}>Add Patients</Heading>
+              <Heading level={2}>Add <br></br> Patients</Heading>
             </Flex>
             <View
             >
@@ -386,7 +386,7 @@ export default function Rabat() {
             </Flex>py-2 px-4
             </Grid>
           </View>
-        <section className="w-screen">
+        <section className="w-screen flex justify-center">
           <div className="bg-white pb-10 w-auto h-auto">
             <SearchField
               label="Search"
@@ -457,7 +457,7 @@ export default function Rabat() {
             </TableBody>
           </Table>
         </section>
-        
+          <Button onClick={signOut}>Sign Out</Button>
         </Flex>
         
       )}
