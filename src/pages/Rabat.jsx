@@ -12,6 +12,7 @@ import {
   Grid,
   PhoneNumberField,
   Table,
+  Card,
   Accordion,
   Link,
   Image,
@@ -406,12 +407,17 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    {value.firstName}
+                    <div>
+                      <h1>{value.firstName} {value.lastName}</h1>
+                      <p1>{value.location}</p1> <p>{value.age}</p>
+                      <p>{value.phoneNumber}</p>
+                    </div>
                     <Accordion.Icon />
                   </Accordion.Trigger>
                   <Accordion.Content>
-                    {value.location}
-                    <Accordion.Icon />
+                    <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
+                    <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
+                    <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
                   </Accordion.Content>
                 </Accordion.Item>
               </Accordion.Container>
