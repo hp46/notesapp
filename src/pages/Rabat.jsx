@@ -386,7 +386,7 @@ export default function Rabat() {
             </Flex>py-2 px-4
             </Grid>
           </View>
-        <section className="w-screen flex justify-center">
+        <section className="w-screen flex-col justify-center">
           <div className="bg-white pb-10 w-auto h-auto">
             <SearchField
               label="Search"
