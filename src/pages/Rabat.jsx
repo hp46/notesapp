@@ -392,7 +392,7 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <Accordion.Container>
+          <Accordion.Item>
             {rabat.filter((value)=>{
               if(value===""){
                 return value
@@ -404,16 +404,20 @@ export default function Rabat() {
             .map((value, key) => {
             return(
               <Accordion.Container key={key}>
-                <Accordion.Trigger>
-                  {value.firstName}
-                </Accordion.Trigger>
-                <Accordion.Content>
-                  {value.location}
-                </Accordion.Content>
+                <Accordion.Item>
+                  <Accordion.Trigger>
+                    {value.firstName}
+                    <Accordion.Icon />
+                  </Accordion.Trigger>
+                  <Accordion.Content>
+                    {value.location}
+                    <Accordion.Icon />
+                  </Accordion.Content>
+                </Accordion.Item>
               </Accordion.Container>
             )
             })}
-          </Accordion.Container>
+          </Accordion.Item>
         </section>
           <Button onClick={signOut}>Sign Out</Button>
         </Flex>
