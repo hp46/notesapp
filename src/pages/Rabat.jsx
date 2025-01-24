@@ -189,12 +189,11 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns=".35fr 2fr"
-            templateRows="auto auto auto"
+            templateColumns=".35fr auto auto auto"
+            templateRows="auto"
           >
             <Flex
               // backgroundColor="#f05829"
-              rowSpan={3}
               direction="column"
               justifyContent="center"
               alignItems="center"
