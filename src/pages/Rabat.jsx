@@ -169,6 +169,7 @@ export default function Rabat() {
           alignItems="center"
           direction="column"
           width="100vw"
+          height="100vh"
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
@@ -194,6 +195,7 @@ export default function Rabat() {
             templateRows="auto auto auto"
           >
             <Flex
+              backgroundColor="#f05829"
               rowSpan={3}
               direction="column"
               justifyContent="center"
@@ -208,6 +210,7 @@ export default function Rabat() {
                 direction="row"
                 gap="2rem"
                 padding="2rem"
+                margin="2rem"
                 wrap="wrap"
               >
                 <TextField
@@ -407,10 +410,10 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row items-center justify-between w-full h-10 p-5">
+                    <div className="flex flex-row items-center justify-between w-full h-10 p-10">
                       <div>
-                        <h1 className="font-black font-2xl">{value.firstName} {value.lastName}</h1>
-                        <p>{value.sex} {value.age}</p>
+                        <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
+                        <p className="font-m">{value.sex} {value.age}</p>
                       </div>
                       <p>{value.location}</p>
                       <p>+{value.phoneNumber}</p>
@@ -418,7 +421,7 @@ export default function Rabat() {
                     <Accordion.Icon />
                   </Accordion.Trigger>
                   <Accordion.Content>
-                    <div className="flex flex-row w-full items-center justify-between  ">
+                    <div className="flex flex-row w-full items-center justify-between  p-10">
                       <div>
                         <div>
                           <p className="font-light">Weight</p>
