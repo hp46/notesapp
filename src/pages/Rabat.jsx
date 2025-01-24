@@ -393,9 +393,6 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <div className="flex text-black w-3/4  flex-row items-center justify-between h-10">
-            <p>Name</p> <p>Sex</p> <p>Age</p> <p>Location</p> <p>PhoneNumber</p>
-          </div>
           <div className="w-3/4 text-black">
             {rabat.filter((value)=>{
               if(value===""){
@@ -411,17 +408,24 @@ export default function Rabat() {
                 <Accordion.Item>
                   <Accordion.Trigger>
                     <div className="flex flex-row items-center justify-between w-full h-10">
-                      <h1 className="font-black font-xl">{value.firstName} {value.lastName}</h1>
-                      <p>{value.sex}</p> <p>{value.age}</p> <p>{value.location}</p>
-                      <p>{value.phoneNumber}</p>
+                      <div>
+                        <h1 className="font-black font-2xl">{value.firstName} {value.lastName}</h1>
+                        <p>{value.sex}</p> <p>{value.age}</p>
+                      </div>
+                      <p>{value.location}</p>
+                      <p>+{value.phoneNumber}</p>
                     </div>
                     <Accordion.Icon />
                   </Accordion.Trigger>
                   <Accordion.Content>
                     <div className="flex flex-row">
-                      <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
-                      <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
-                      <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
+                      <div>
+                      <p>{value.weight} {value.height} {value.bmi} </p>
+                      </div>
+                      <div>
+                        <p> {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
+                      </div>
+                      <p>{value.bloodSugarLevel} {value.hba1c}  {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
                     </div>
                   </Accordion.Content>
                 </Accordion.Item>
