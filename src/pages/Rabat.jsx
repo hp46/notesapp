@@ -50,7 +50,7 @@ export default function Rabat() {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
   const [location, setLocation] = useState('Sale Cabinet')
-  // const [value, setValue] = useState('');
+   const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
     return new Promise((resolve) => {
@@ -150,18 +150,18 @@ export default function Rabat() {
     event.target.reset();
   }
 
-  // async function deleteRabat({ primaryId }) {
-  //   const tobeDeletedRabat = {
-  //     id: primaryId,
-  //   };
+   async function deleteRabat({ primaryId }) {
+     const tobeDeletedRabat = {
+       id: primaryId,
+     };
 
-  //   const { data: deletedRabat } = await client.models.Rabat.delete(
-  //       tobeDeletedRabat
-  //   );
-  //   console.log(deletedRabat);
+     const { data: deletedRabat } = await client.models.Rabat.delete(
+         tobeDeletedRabat
+     );
+     console.log(deletedRabat);
 
-  //   fetchRabat();
-  // }
+     fetchRabat();
+   }
 
   return (
     <Authenticator>
@@ -308,7 +308,7 @@ export default function Rabat() {
               />
               <TextField
                 width="200px"
-                // name="weight"
+                 name="weight"
                 placeholder="weight"
                 label="weight"
                 value={weight}
@@ -317,7 +317,7 @@ export default function Rabat() {
               />
               <TextField
                 width="200px"
-                // name="height"
+                 name="height"
                 placeholder="height"
                 label="height"
                 value={height}
@@ -398,14 +398,20 @@ export default function Rabat() {
             /> 
           </div>
           <div className="flex text-black w-3/4  flex-row items-center justify-between h-10">
-            <TableHead>
-              <TableRow>
-                <TableCell as="th">Name</TableCell>
-                <TableCell as="th">Sex</TableCell>
-                <TableCell as="th">Age</TableCell>
-                <TableCell as="th">Location</TableCell>
-                <TableCell as="th">PhoneNumber</TableCell>
-              </TableRow>
+              <Table
+              highlightOnHover={true}
+              variation="striped"
+              width="90vw"
+            >
+              <TableHead>
+                <TableRow>
+                  <TableCell as="th">Name</TableCell>
+                  <TableCell as="th">Sex</TableCell>
+                  <TableCell as="th">Age</TableCell>
+                  <TableCell as="th">Location</TableCell>
+                  <TableCell as="th">PhoneNumber</TableCell>
+                </TableRow>
+              </TableHead>
               <TableBody>
                 {rabat.filter((value)=>{
                   if(value===""){
@@ -418,30 +424,22 @@ export default function Rabat() {
                 .map((value, key) => {
                 return(
                   <Accordion.Container key={key}>
-                    <Accordion.Item>
-                      <Accordion.Trigger>
+                    <Accordion.Trigger>
                       <TableRow>
-                          <TableCell>{value.firstName}{value.lastName}</TableCell>
-                          <TableCell>{value.sex}</TableCell>
-                          <TableCell>{value.age}</TableCell>
-                          <TableCell>{value.location}</TableCell>
-                          <TableCell>{value.phoneNumber}</TableCell>
-                        </TableRow>
-                        <Accordion.Icon />
-                      </Accordion.Trigger>
-                      <Accordion.Content>
-                        <div className="flex flex-row">
-                          <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
-                          <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
-                          <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
-                        </div>
-                      </Accordion.Content>
-                    </Accordion.Item>
+                        <TableCell>{value.sex}</TableCell>
+                        <TableCell>{value.smoking}</TableCell>
+                        <TableCell>{value.location}</TableCell>
+                        <TableCell>{value.phoneNumber}</TableCell>
+                      </TableRow>
+                    </Accordion.Trigger>
+                    <Accordion.Content>
+                      {value.bmi}
+                    </Accordion.Content>
                   </Accordion.Container>
                 )
                 })}
               </TableBody>
-            </TableHead>
+            </Table>
           </div>
         </section>
           <Button onClick={signOut}>Sign Out</Button>
