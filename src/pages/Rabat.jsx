@@ -393,6 +393,9 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
+          <div className="flex flex-row items-center justify-between w-full h-10">>
+            <p>Name</p> <p>Sex</p> <p>Age</p> <p>Locatoin</p> <p>PhoneNumber</p>
+          </div>
           <div className="w-3/4 text-black">
             {rabat.filter((value)=>{
               if(value===""){
@@ -407,9 +410,9 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row items-center justify-between w-full h-10">
                       <h1 className="font-black font-xl">{value.firstName} {value.lastName}</h1>
-                      <p1>{value.location}</p1> <p>{value.age}</p>
+                      <p1>{value.sex} {value.age} {value.location}</p1>
                       <p>{value.phoneNumber}</p>
                     </div>
                     <Accordion.Icon />
