@@ -165,11 +165,9 @@ export default function Rabat() {
         
         <Flex
           className="App"
-          justifyContent="center"
           alignItems="center"
           direction="column"
           width="100vw"
-          height="100vh"
           margin="0 auto"
         >
           <ReactRouterLink to="/" component={Link}>
@@ -189,10 +187,11 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns=".35fr auto auto auto"
-            templateRows="auto"
+            templateColumns="auto auto auto"
+            templateRows=" .35fr auto"
           >
             <Flex
+              columnSpan={3}
               // backgroundColor="#f05829"
               direction="column"
               justifyContent="center"
@@ -206,7 +205,6 @@ export default function Rabat() {
                 height="auto"
                 direction="row"
                 gap="2rem"
-                padding="2rem"
                 margin="2rem"
                 wrap="wrap"
               >
@@ -258,7 +256,7 @@ export default function Rabat() {
                   legend="Smoking"
                   name="smoking"
                   options={['Yes', 'No']}
-                  direction="column">
+                  direction="row">
                   <Radio value="Yes">Yes</Radio>
                   <Radio value="No">No</Radio>
                 </RadioGroupField>
