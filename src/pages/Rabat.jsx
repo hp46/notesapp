@@ -407,10 +407,10 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row items-center justify-between w-full h-10">
+                    <div className="flex flex-row items-center justify-between w-full h-10 p-5">
                       <div>
                         <h1 className="font-black font-2xl">{value.firstName} {value.lastName}</h1>
-                        <p>{value.sex}</p> <p>{value.age}</p>
+                        <p>{value.sex} {value.age}</p>
                       </div>
                       <p>{value.location}</p>
                       <p>+{value.phoneNumber}</p>
@@ -418,7 +418,7 @@ export default function Rabat() {
                     <Accordion.Icon />
                   </Accordion.Trigger>
                   <Accordion.Content>
-                    <div className="flex flex-row">
+                    <div className="flex flex-row w-full items-center justify-between  ">
                       <div>
                         <div>
                           <p className="font-light">Weight</p>
