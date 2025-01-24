@@ -187,15 +187,13 @@ export default function Rabat() {
           </ReactRouterLink>
           <View as="form" onSubmit={createNote}>
           <Grid
-            className="bg-slate-300"
-            columnGap="0.5rem"
-            rowGap="0.5rem"
             width="100vw"
+            height="auto"
             templateColumns=".35fr 2fr"
             templateRows="auto auto auto"
           >
             <Flex
-              backgroundColor="#f05829"
+              // backgroundColor="#f05829"
               rowSpan={3}
               direction="column"
               justifyContent="center"
