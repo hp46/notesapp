@@ -393,7 +393,7 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <div className="flex flex-row items-center justify-between w-full h-10">
+          <div className="flex text-black w-3/4  flex-row items-center justify-between h-10">
             <p>Name</p> <p>Sex</p> <p>Age</p> <p>Locatoin</p> <p>PhoneNumber</p>
           </div>
           <div className="w-3/4 text-black">
