@@ -11,6 +11,10 @@ import {
   SearchField,
   Grid,
   PhoneNumberField,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
   Table,
   Card,
   Accordion,
@@ -394,40 +398,50 @@ export default function Rabat() {
             /> 
           </div>
           <div className="flex text-black w-3/4  flex-row items-center justify-between h-10">
-            <p>Name</p> <p>Sex</p> <p>Age</p> <p>Location</p> <p>PhoneNumber</p>
-          </div>
-          <div className="w-3/4 text-black">
-            {rabat.filter((value)=>{
-              if(value===""){
-                return value
-              }
-              else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
-                return value
-              }
-            })
-            .map((value, key) => {
-            return(
-              <Accordion.Container key={key}>
-                <Accordion.Item>
-                  <Accordion.Trigger>
-                    <div className="flex flex-row items-center justify-between w-full h-10">
-                      <h1 className="font-black font-xl">{value.firstName} {value.lastName}</h1>
-                      <p>{value.sex}</p> <p>{value.age}</p> <p>{value.location}</p>
-                      <p>{value.phoneNumber}</p>
-                    </div>
-                    <Accordion.Icon />
-                  </Accordion.Trigger>
-                  <Accordion.Content>
-                    <div className="flex flex-row">
-                      <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
-                      <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
-                      <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
-                    </div>
-                  </Accordion.Content>
-                </Accordion.Item>
-              </Accordion.Container>
-            )
-            })}
+            <TableHead>
+              <TableRow>
+                <TableCell as="th">Name</TableCell>
+                <TableCell as="th">Sex</TableCell>
+                <TableCell as="th">Age</TableCell>
+                <TableCell as="th">Location</TableCell>
+                <TableCell as="th">PhoneNumber</TableCell>
+              </TableRow>
+              <TableBody>
+                {rabat.filter((value)=>{
+                  if(value===""){
+                    return value
+                  }
+                  else if(value.firstName.toLowerCase().includes(search.toLowerCase())){
+                    return value
+                  }
+                })
+                .map((value, key) => {
+                return(
+                  <Accordion.Container key={key}>
+                    <Accordion.Item>
+                      <Accordion.Trigger>
+                      <TableRow>
+                          <TableCell>{value.firstName}{value.lastName}</TableCell>
+                          <TableCell>{value.sex}</TableCell>
+                          <TableCell>{value.age}</TableCell>
+                          <TableCell>{value.location}</TableCell>
+                          <TableCell>{value.phoneNumber}</TableCell>
+                        </TableRow>
+                        <Accordion.Icon />
+                      </Accordion.Trigger>
+                      <Accordion.Content>
+                        <div className="flex flex-row">
+                          <p>{value.sex} {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
+                          <p>{value.bloodSugarLevel} {value.hba1c} {value.weight} {value.height}</p>
+                          <p>{value.bmi} {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+                  </Accordion.Container>
+                )
+                })}
+              </TableBody>
+            </TableHead>
           </div>
         </section>
           <Button onClick={signOut}>Sign Out</Button>
