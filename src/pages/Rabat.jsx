@@ -420,12 +420,55 @@ export default function Rabat() {
                   <Accordion.Content>
                     <div className="flex flex-row">
                       <div>
-                      <p>{value.weight} {value.height} {value.bmi} </p>
+                        <div>
+                          <p className="font-light">Weight</p>
+                          <p>{value.weight}kg</p>
+                        </div>
+                        <div>
+                          <p className="font-light">height</p>
+                          <p>{value.height}cm</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Bmi</p>
+                          <p>{value.bmi} </p>
+                        </div>
                       </div>
                       <div>
-                        <p> {value.smoking} {value.diabetes} {value.bloodPressurePill}</p>
+                        <div>
+                          <p className="font-light">Smoke</p>
+                          <p>{value.smoking} </p>
+                        </div>
+                        <div>
+                          <p className="font-light">Diabetes</p>
+                          <p>{value.diabetes} </p>
+                        </div>
+                        <div>
+                          <p className="font-light">Blood Pressure Pill</p>
+                          <p>{value.bloodPressurePill} </p>
+                        </div>
                       </div>
-                      <p>{value.bloodSugarLevel} {value.hba1c}  {value.cholesterol} {value.hemoglobin} {value.systolicBloodPressure} {value.diastolicBloodPressure}</p>
+                      <div>
+                        <div>
+                          <p className="font-light">Blood Sugar Level</p>
+                          <p>{value.bloodSugarLevel}mg/dL</p>
+                        </div>
+                        <div>
+                          <p className="font-light">HBA1C</p>
+                          <p>{value.hba1c}mmol/mol</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Choleresterol</p>
+                          <p>{value.cholesterol}mg/dL</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Hemoglobin</p>
+                          <p>{value.hemoglobin}g/dL</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Blood Pressure</p>
+                          <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
+                        </div>
+                      </div>
                     </div>
                   </Accordion.Content>
                 </Accordion.Item>
