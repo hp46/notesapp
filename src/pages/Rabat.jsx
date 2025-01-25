@@ -191,14 +191,14 @@ export default function Rabat() {
             templateRows=" .35fr auto"
           >
             <Flex
-              font="white"
               columnSpan={3}
               backgroundColor="#f05829"
               direction="column"
               justifyContent="center"
               alignItems="center"
+              height="h-20"
             >
-              <Heading level={2}>Add <br></br> Patients</Heading>
+              <Heading font="white" level={2}>Add <br></br> Patients</Heading>
             </Flex>
             <View
             >
