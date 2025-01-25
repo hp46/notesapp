@@ -196,7 +196,7 @@ export default function Rabat() {
               direction="column"
               justifyContent="center"
               alignItems="center"
-              height="h-20"
+              height="60px"
             >
               <Heading font="white" level={2}>Add <br></br> Patients</Heading>
             </Flex>
