@@ -196,9 +196,9 @@ export default function Rabat() {
               direction="column"
               justifyContent="center"
               alignItems="center"
-              height="60px"
+              height="150px"
             >
-              <Heading font="white" level={2}>Add <br></br> Patients</Heading>
+              <Heading font="#ffffff" level={2}>Add <br></br> Patients</Heading>
             </Flex>
             <View
             >
@@ -225,7 +225,7 @@ export default function Rabat() {
                     required
                   />
                 </div>
-                <div>
+                <div className="flex flex-row w-[450px] justify-between">
                   <RadioGroupField
                     legend="Gender / Sex"
                     name="sex"
@@ -242,7 +242,7 @@ export default function Rabat() {
                     required
                   />
                 </div>
-                <div>
+                <div className="flex flex-row w-[450px] justify-between">
                   <SelectField
                     width="200px"
                     label="Location"
@@ -293,20 +293,23 @@ export default function Rabat() {
                 padding="2rem"        
                 wrap="wrap"                    
               >
-              <TextField
-                width="200px"
-                name="bloodSugarLevel"
-                placeholder="Enter Blood Sugar level"
-                label="Enter Blood Sugar level"
-                required
-              />
-              <TextField
-                width="200px"
-                name="hba1c"
-                placeholder="Insert hba1c"
-                label="hba1c"
-                required
-              />
+              <div className="flex flex-row w-[450px] justify-between">
+                <TextField
+                  width="200px"
+                  name="bloodSugarLevel"
+                  placeholder="Enter Blood Sugar level"
+                  label="Enter Blood Sugar level"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="hba1c"
+                  placeholder="Insert hba1c"
+                  label="hba1c"
+                  required
+                />
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
               <TextField
                 width="200px"
                 // name="weight"
@@ -325,6 +328,8 @@ export default function Rabat() {
                 onChange={(e) => setHeight(e.target.value)}
                 required
               />
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
               <TextField
                 width="200px"
                 name="cholesterol"
@@ -339,6 +344,7 @@ export default function Rabat() {
                 label="Hemoglobin level"
                 required
               />
+              </div
               <TextField
                 width="200px"
                 name="systolicBloodPressure"
