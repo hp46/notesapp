@@ -187,7 +187,7 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns="auto auto auto"
+            templateColumns="auto auto "
             templateRows=" .35fr auto"
           >
             <Flex
@@ -209,20 +209,22 @@ export default function Rabat() {
                 margin="2rem"
                 wrap="wrap"
               >
-                <TextField
-                  width="200px"
-                  name="firstName"
-                  placeholder="Insert first name"
-                  label="First name"
-                  required
-                />
-                <TextField
-                  width="200px"
-                  name="lastName"
-                  placeholder="Insert last name"
-                  label="Last name"
-                  required
-                />
+                <div className="flex flex-row">
+                  <TextField
+                    width="200px"
+                    name="firstName"
+                    placeholder="Insert first name"
+                    label="First name"
+                    required
+                  />
+                  <TextField
+                    width="200px"
+                    name="lastName"
+                    placeholder="Insert last name"
+                    label="Last name"
+                    required
+                  />
+                </div>
                 <RadioGroupField
                   legend="Gender / Sex"
                   name="sex"
