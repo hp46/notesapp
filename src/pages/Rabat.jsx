@@ -284,6 +284,34 @@ export default function Rabat() {
                   <Radio value="No">No</Radio>
                 </RadioGroupField>
               </Flex>
+              <div>
+                <Flex
+                  direction="row"
+                  gap="2rem"
+                  padding="2rem"
+                  alignItems="center"
+                  wrap="wrap"
+              
+                >
+                  <TextAreaField
+                      width="200px"
+                      name="description"
+                      placeholder="Note Description"
+                      label="Note Description"
+                    />
+                  <View
+                      name="image"
+                      as="input"
+                      type="file"
+                      alignSelf={"end"}
+                      accept="image/png, image/jpeg"
+                    />
+                <button type="submit"
+                className="py-2 px-4 rounded bg-[#f05829] hover:bg-[#467380]">
+                    Create Note
+                </button>
+                </Flex>
+              </div>
             </View>
             <View
             >
@@ -344,7 +372,7 @@ export default function Rabat() {
                 label="Hemoglobin level"
                 required
               />
-              </div
+              </div>
               <TextField
                 width="200px"
                 name="systolicBloodPressure"
@@ -361,38 +389,7 @@ export default function Rabat() {
               />
               </Flex>
             </View>            
-          <Flex
-            direction="row"
-            gap="2rem"
-            padding="2rem"
-            alignItems="center"
-            wrap="wrap"
-        
-          >
-            <Flex
-              direction="column"
-              gap="2rem"
-            >
-              <TextAreaField
-                  width="200px"
-                  name="description"
-                  placeholder="Note Description"
-                  label="Note Description"
-                />
-              <View
-                  name="image"
-                  as="input"
-                  type="file"
-                  alignSelf={"end"}
-                  accept="image/png, image/jpeg"
-                />
-            </Flex>
-            <button type="submit"
-            className="py-2 px-4 rounded bg-[#f05829] hover:bg-[#467380]">
-                Create Note
-            </button>
-            </Flex>py-2 px-4
-            </Grid>
+          </Grid>
           </View>
         <section className="w-screen flex flex-col justify-center items-center">
           <div className="text-black pb-10 w-1/2 h-auto">
