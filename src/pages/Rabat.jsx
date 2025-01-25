@@ -253,36 +253,62 @@ export default function Rabat() {
                     <option value="Sale Cabinent">Sale Cabient</option>
                   </SelectField>
                   <PhoneNumberField
+                    width="200px"
                     defaultDialCode="+212"
                     label="Phone number"
                     placeholder="xxx-xxx-xxx"
                     name="phoneNumber"
                   />
                 </div>
-                <RadioGroupField
-                  legend="Smoking"
-                  name="smoking"
-                  options={['Yes', 'No']}
-                  direction="column">
-                  <Radio value="Yes">Yes</Radio>
-                  <Radio value="No">No</Radio>
-                </RadioGroupField>
-                <RadioGroupField
-                  legend="Diabetes"
-                  name="diabetes"
-                  options={['Yes', 'No']}
-                  direction="column">
-                  <Radio value="Yes">Yes</Radio>
-                  <Radio value="No">No</Radio>
-                </RadioGroupField>
-                <RadioGroupField
-                  legend="Blood Pressure Pill"
-                  name="bloodPressurePill"
-                  options={['Yes', 'No']}
-                  direction="column">
-                  <Radio value="Yes">Yes</Radio>
-                  <Radio value="No">No</Radio>
-                </RadioGroupField>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <RadioGroupField
+                    legend="Smoking"
+                    name="smoking"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                  </RadioGroupField>
+                  <RadioGroupField
+                    legend="Diabetes"
+                    name="diabetes"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                  </RadioGroupField>
+                  <RadioGroupField
+                    legend="Blood Pressure Pill"
+                    name="bloodPressurePill"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                  </RadioGroupField>
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <div>
+                    <TextAreaField
+                          width="200px"
+                          name="description"
+                          placeholder="Note Description"
+                          label="Note Description"
+                        />
+                      <View
+                          name="image"
+                          as="input"
+                          type="file"
+                          alignSelf={"end"}
+                          accept="image/png, image/jpeg"
+                        />
+                  </div>
+                  <button 
+                    type="submit"
+                    className="py-2 px-4 rounded bg-[#f05829] hover:bg-[#467380]"
+                  >
+                      Create Note
+                  </button>
+                </div>
               </Flex>
               <div>
                 <Flex
