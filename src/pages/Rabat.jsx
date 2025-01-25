@@ -225,41 +225,45 @@ export default function Rabat() {
                     required
                   />
                 </div>
-                <RadioGroupField
-                  legend="Gender / Sex"
-                  name="sex"
-                  options={['Male', 'Female']}
-                  direction="column">
-                  <Radio value="Male">Male</Radio>
-                  <Radio value="Female">Female</Radio>
-                </RadioGroupField>
-                <TextField
-                  width="200px"
-                  name="age"
-                  placeholder="Insert Age"
-                  label="Age"
-                  required
-                />
-                <SelectField
-                  width="200px"
-                  label="Location"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  required
-                  >
-                   <option value="Sale Cabinent">Sale Cabient</option>
-                </SelectField>
-                <PhoneNumberField
-                  defaultDialCode="+212"
-                  label="Phone number"
-                  placeholder="xxx-xxx-xxx"
-                  name="phoneNumber"
-                />
+                <div>
+                  <RadioGroupField
+                    legend="Gender / Sex"
+                    name="sex"
+                    options={['Male', 'Female']}
+                    direction="column">
+                    <Radio value="Male">Male</Radio>
+                    <Radio value="Female">Female</Radio>
+                  </RadioGroupField>
+                  <TextField
+                    width="200px"
+                    name="age"
+                    placeholder="Insert Age"
+                    label="Age"
+                    required
+                  />
+                </div>
+                <div>
+                  <SelectField
+                    width="200px"
+                    label="Location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    required
+                    >
+                    <option value="Sale Cabinent">Sale Cabient</option>
+                  </SelectField>
+                  <PhoneNumberField
+                    defaultDialCode="+212"
+                    label="Phone number"
+                    placeholder="xxx-xxx-xxx"
+                    name="phoneNumber"
+                  />
+                </div>
                 <RadioGroupField
                   legend="Smoking"
                   name="smoking"
                   options={['Yes', 'No']}
-                  direction="row">
+                  direction="column">
                   <Radio value="Yes">Yes</Radio>
                   <Radio value="No">No</Radio>
                 </RadioGroupField>
