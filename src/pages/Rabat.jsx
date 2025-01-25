@@ -191,8 +191,9 @@ export default function Rabat() {
             templateRows=" .35fr auto"
           >
             <Flex
+              font="white"
               columnSpan={3}
-              // backgroundColor="#f05829"
+              backgroundColor="#f05829"
               direction="column"
               justifyContent="center"
               alignItems="center"
