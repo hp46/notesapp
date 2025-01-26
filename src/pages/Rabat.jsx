@@ -191,7 +191,7 @@ export default function Rabat() {
             templateRows="auto auto"
           >
             <Flex
-              rowSpan={2}
+              rowSpan={3}
               backgroundColor="#f05829"
               direction="column"
               justifyContent="center"
