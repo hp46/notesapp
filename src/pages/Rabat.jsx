@@ -187,7 +187,7 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns=".35fr auto "
+            templateColumns="3fr auto "
             templateRows="auto auto"
           >
             <Flex
