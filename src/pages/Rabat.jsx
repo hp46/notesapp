@@ -198,7 +198,7 @@ export default function Rabat() {
               alignItems="center"
               height="150px"
             >
-              <Heading font="#ffffff" level={2}>Add <br></br> Patients</Heading>
+              <h className="font-white text-2xl" >Add <br></br> Patients</h>
             </Flex>
             <View
             >
@@ -310,34 +310,6 @@ export default function Rabat() {
                   </button>
                 </div>
               </Flex>
-              <div>
-                <Flex
-                  direction="row"
-                  gap="2rem"
-                  padding="2rem"
-                  alignItems="center"
-                  wrap="wrap"
-              
-                >
-                  <TextAreaField
-                      width="200px"
-                      name="description"
-                      placeholder="Note Description"
-                      label="Note Description"
-                    />
-                  <View
-                      name="image"
-                      as="input"
-                      type="file"
-                      alignSelf={"end"}
-                      accept="image/png, image/jpeg"
-                    />
-                <button type="submit"
-                className="py-2 px-4 rounded bg-[#f05829] hover:bg-[#467380]">
-                    Create Note
-                </button>
-                </Flex>
-              </div>
             </View>
             <View
             >
@@ -391,7 +363,7 @@ export default function Rabat() {
                 label="cholesterol"
                 required
               />
-                            <TextField
+                <TextField
                 width="200px"
                 name="hemoglobin"
                 placeholder="Insert Hemoglobin level"
@@ -399,20 +371,22 @@ export default function Rabat() {
                 required
               />
               </div>
-              <TextField
-                width="200px"
-                name="systolicBloodPressure"
-                placeholder="Insert Systolic Blood Pressure"
-                label="Systolic Blood Pressure"
-                required
-              />
-              <TextField
-                width="200px"
-                name="diastolicBloodPressure"
-                placeholder="Insert Diastolic Blood Pressure"
-                label="Diastolic Blood Pressure"
-                required
-              />
+              <div className="flex flex-row w-[450px] justify-between">
+                <TextField
+                  width="200px"
+                  name="systolicBloodPressure"
+                  placeholder="Insert Systolic Blood Pressure"
+                  label="Systolic Blood Pressure"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="diastolicBloodPressure"
+                  placeholder="Insert Diastolic Blood Pressure"
+                  label="Diastolic Blood Pressure"
+                  required
+                />
+              </div>
               </Flex>
             </View>            
           </Grid>
