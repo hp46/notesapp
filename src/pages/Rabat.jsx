@@ -187,7 +187,7 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns="40fr auto auto "
+            templateColumns="auto auto auto "
             templateRows="auto auto"
             padding="20px"
           >
@@ -402,7 +402,7 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <div className="w-3/4 text-black">
+          <div className="w-1vw text-black bg-gray-200">
             {rabat.filter((value)=>{
               if(value===""){
                 return value
@@ -416,7 +416,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row items-center justify-between w-full h-10 p-10">
+                    <div className="flex flex-row items-center justify-between w-3/4 h-10 p-10 bg-gray-200">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
