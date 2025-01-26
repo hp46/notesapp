@@ -187,18 +187,18 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns="auto auto "
-            templateRows=" .35fr auto"
+            templateColumns=".35fr auto "
+            templateRows="auto auto"
           >
             <Flex
-              columnSpan={3}
+              rowSpan={2}
               backgroundColor="#f05829"
               direction="column"
               justifyContent="center"
               alignItems="center"
               height="150px"
             >
-              <h className="font-white text-2xl" >Add <br></br> Patients</h>
+              <h className="font-white text-4xl uppercase" >Add <br></br> Patients</h>
             </Flex>
             <View
             >
