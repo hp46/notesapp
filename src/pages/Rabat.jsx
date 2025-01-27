@@ -193,15 +193,11 @@ export default function Rabat() {
             padding="20px"
           >
             <Flex
-              borderRadius="50px"
               width="100%"
               columnSpan={2}
-              backgroundColor="#f05829"
-              justifyContent="center"
-              alignItems="center"
               height="auto"
             >
-              <h className="font-white text-4xl uppercase" >Add <br></br> Patients</h>
+              <h className="text-4xl uppercase" >Add Patients</h>
             </Flex>
             <View
             >
@@ -211,6 +207,7 @@ export default function Rabat() {
                 gap="2rem"
                 margin="2rem"
                 wrap="wrap"
+                backgroundColor="#ffffff"
               >
                 <h className="text-black">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
