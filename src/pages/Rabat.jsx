@@ -394,7 +394,7 @@ export default function Rabat() {
           </Grid>
           </View>
         <section className="w-screen flex flex-col justify-center p-10 items-center bg-gray-200">
-          <div className="text-black pb-10 w-1/2 h-auto">
+          <div className="text-black pb-10 w-1/2 h-auto bg-white">
             <SearchField
               backgroundColor="ffffff"
               label="Search"
