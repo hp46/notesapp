@@ -169,7 +169,7 @@ export default function Rabat() {
           direction="column"
           width="100vw"
           margin="0 auto"
-          backgroundColor="##ececec"
+          backgroundColor="#ececec"
         >
           <ReactRouterLink to="/" component={Link}>
             <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
