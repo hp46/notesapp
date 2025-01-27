@@ -169,7 +169,7 @@ export default function Rabat() {
           direction="column"
           width="100vw"
           margin="0 auto"
-          backgroundColor="fff000"
+          backgroundColor="808080"
         >
           <ReactRouterLink to="/" component={Link}>
             <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
@@ -194,7 +194,7 @@ export default function Rabat() {
           >
             <Flex
               borderRadius="50px"
-              width="30%"
+              width="100%"
               columnSpan={2}
               backgroundColor="#f05829"
               justifyContent="center"
@@ -212,7 +212,7 @@ export default function Rabat() {
                 margin="2rem"
                 wrap="wrap"
               >
-                <h className="font-black">Patient Information</h>
+                <h className="text-black">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
                   <TextField
                     width="200px"
@@ -318,12 +318,13 @@ export default function Rabat() {
             <View
             >
               <Flex
-                direction="row"
+                direction="column"
                 gap="2rem"
                 padding="2rem"        
-                wrap="wrap"                    
+                wrap="wrap"    
+
               >
-              <h className="font-black">Medical Information</h>
+              <h className="text-black ">Medical Information</h>
               <div className="flex flex-row w-[450px] justify-between">
                 <TextField
                   width="200px"
