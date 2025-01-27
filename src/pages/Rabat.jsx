@@ -393,9 +393,10 @@ export default function Rabat() {
             </View>            
           </Grid>
           </View>
-        <section className="w-screen flex flex-col justify-center items-center bg-gray-200">
+        <section className="w-screen flex flex-col justify-center p-10 items-center bg-gray-200">
           <div className="text-black pb-10 w-1/2 h-auto">
             <SearchField
+              backgroundColor="ffffff"
               label="Search"
               placeholder="Search here..."
               onChange={onChange}
@@ -417,7 +418,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between h-10 p-10">
+                    <div className="flex flex-row w-full items-center justify-between h-10">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
