@@ -187,14 +187,14 @@ export default function Rabat() {
           <Grid
             width="100vw"
             height="auto"
-            templateColumns="auto auto auto "
-            templateRows="auto auto"
+            templateColumns="auto auto "
+            templateRows="auto auto auto"
             padding="20px"
           >
             <Flex
               borderRadius="50px"
-              width="400px"
-              rowSpan={2}
+              width="30%"
+              columnSpan={2}
               backgroundColor="#f05829"
               justifyContent="center"
               alignItems="center"
@@ -211,6 +211,7 @@ export default function Rabat() {
                 margin="2rem"
                 wrap="wrap"
               >
+                <h>Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
                   <TextField
                     width="200px"
@@ -322,6 +323,7 @@ export default function Rabat() {
                 wrap="wrap"                    
               >
               <div className="flex flex-row w-[450px] justify-between">
+                <h>Medical Information</h>
                 <TextField
                   width="200px"
                   name="bloodSugarLevel"
@@ -394,7 +396,7 @@ export default function Rabat() {
           </Grid>
           </View>
         <section className="w-screen flex flex-col justify-center p-10 items-center bg-gray-200">
-          <div className="text-black pb-10 w-1/2 h-auto bg-white">
+          <div className="text-black w-1/2 h-auto bg-white">
             <SearchField
               backgroundColor="ffffff"
               label="Search"
@@ -404,7 +406,7 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <div className="w-full text-black bg-gray-200">
+          <div className="w-full text-black bg-gray-200 pt-10 rounded">
             {rabat.filter((value)=>{
               if(value===""){
                 return value
