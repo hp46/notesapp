@@ -193,6 +193,7 @@ export default function Rabat() {
           >
             <Flex
               borderRadius="50px"
+              width="400px"
               rowSpan={2}
               backgroundColor="#f05829"
               justifyContent="center"
@@ -416,7 +417,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row items-center justify-between w-3/4 h-10 p-10 bg-gray-200">
+                    <div className="flex flex-row items-center justify-between h-10 p-10">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
