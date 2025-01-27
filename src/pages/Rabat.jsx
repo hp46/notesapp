@@ -162,7 +162,6 @@ export default function Rabat() {
   return (
     <Authenticator>
       {({ signOut }) => (
-        
         <Flex
           className="App"
           alignItems="center"
@@ -191,6 +190,7 @@ export default function Rabat() {
             templateColumns="auto auto "
             templateRows="auto auto auto"
             padding="20px"
+            backgroundColor="#ffffff"
           >
             <Flex
               width="100%"
@@ -207,7 +207,6 @@ export default function Rabat() {
                 gap="2rem"
                 margin="2rem"
                 wrap="wrap"
-                backgroundColor="#ffffff"
               >
                 <h className="text-black">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
