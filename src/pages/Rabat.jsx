@@ -166,9 +166,8 @@ export default function Rabat() {
           className="App"
           alignItems="center"
           direction="column"
-          width="100vw"
-          margin="0 auto"
-          backgroundColor="#ececec"
+          width="80vw"
+          backgroundColor="#9c9a9a"
         >
           <ReactRouterLink to="/" component={Link}>
             <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
@@ -197,7 +196,7 @@ export default function Rabat() {
               columnSpan={2}
               height="auto"
             >
-              <h className="text-4xl uppercase" >Add Patients</h>
+              <h className="text-4xl uppercase text-black" >Add Patients</h>
             </Flex>
             <View
             >
@@ -304,7 +303,7 @@ export default function Rabat() {
                   </div>
                   <button 
                     type="submit"
-                    className="py-2 px-4 rounded bg-[#f05829] hover:bg-[#467380]"
+                    className="py-2 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
                   >
                       Create Note
                   </button>
@@ -393,7 +392,7 @@ export default function Rabat() {
             </View>            
           </Grid>
           </View>
-        <section className="w-screen flex flex-col justify-center p-10 items-center bg-white">
+        <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
           <div className="text-black w-1/2 h-auto bg-white">
             <SearchField
               backgroundColor="ffffff"
@@ -404,7 +403,8 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <div className="w-full text-black bg-gray-200 pt-10 rounded">
+          <h className="text-black ">Patient Result</h>
+          <div className="w-full text-black bg-gray-200 rounded">
             {rabat.filter((value)=>{
               if(value===""){
                 return value
@@ -488,7 +488,6 @@ export default function Rabat() {
             })}
           </div>
         </section>
-          <Button onClick={signOut}>Sign Out</Button>
         </Flex>
         
       )}
