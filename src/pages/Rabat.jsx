@@ -174,11 +174,12 @@ export default function Rabat() {
             width="100vw"
             height="100px"
             backgroundColor="#f05829"
-            justifyContent="center"
+            justifyContent="space-between"
             alignContent="center"
+            alignItems="center"
           >
             <ReactRouterLink to="/" component={Link}>
-              <div className="w-10 h-10 grayscale hover:grayscale-0">
+              <div className="w-10 h-10 grayscale hover:grayscale-0 pl-20">
               <Image
                 alt="pin"
                 src={pin}
@@ -190,7 +191,7 @@ export default function Rabat() {
                 </Image>
               </div>
             </ReactRouterLink>
-            <div>
+            <div className="pr-10">
             <Button onClick={signOut}>Sign Out</Button>
             </div>
           </Flex>
@@ -435,7 +436,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between h-10">
+                    <div className="flex flex-row w-full items-center justify-between h-10 mb-10">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
