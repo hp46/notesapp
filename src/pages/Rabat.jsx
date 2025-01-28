@@ -169,7 +169,7 @@ export default function Rabat() {
           height="100vh"
           backgroundColor="#9c9a9a"
         >
-          <ReactRouterLink to="/" component={Link}>
+          {/* <ReactRouterLink to="/" component={Link}>
             <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
             <Image
               alt="pin"
@@ -184,7 +184,7 @@ export default function Rabat() {
           </ReactRouterLink>
           <div className="absolute top-10 right-10">
             <Button onClick={signOut}>Sign Out</Button>
-          </div>
+          </div> */}
           <View 
           as="form" 
           onSubmit={createNote}
