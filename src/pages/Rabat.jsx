@@ -165,7 +165,6 @@ export default function Rabat() {
         <Flex
           className="App"
           alignItems="center"
-          direction="column"
           width="100vw"
           height="100vh"
           backgroundColor="#9c9a9a"
@@ -192,6 +191,13 @@ export default function Rabat() {
           width="80vw"
           backgroundColor="#ffffff"
           >
+            <Grid
+            width="100vw"
+            height="auto"
+            templateColumns="auto auto "
+            templateRows="auto auto auto"
+            padding="20px"
+            ></Grid>
           </View>
         </Flex>
       )}
