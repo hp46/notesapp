@@ -163,7 +163,6 @@ export default function Rabat() {
     <Authenticator>
       {({ signOut }) => (
         <Flex
-          className="App"
           alignItems="center"
           width="100vw"
           direction="column"
@@ -409,7 +408,7 @@ export default function Rabat() {
             </View>           
             </Grid>
           </View>
-          <div className="text-black w-full h-auto bg-white">
+          <div className="flex justify-center text-black w-full h-auto bg-white">
             <SearchField
               width="50%"
               backgroundColor="ffffff"
