@@ -198,6 +198,14 @@ export default function Rabat() {
             templateRows="auto auto auto"
             padding="20px"
             ></Grid>
+            <Flex
+              width="100%"
+              columnSpan={2}
+              height="auto"
+              margin="2rem"
+            >
+              <h className="text-4xl  text-black" >Add Patients</h>
+            </Flex>
           </View>
         </Flex>
       )}
