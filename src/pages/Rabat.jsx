@@ -167,7 +167,6 @@ export default function Rabat() {
           alignItems="center"
           width="100vw"
           direction="column"
-          height="100vh"
           backgroundColor="#9c9a9a"
         >
           <Flex
@@ -411,6 +410,7 @@ export default function Rabat() {
             </Grid>
           </View>
           <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
+          <h className="text-black ">Patient Result</h>
           <div className="text-black w-1/2 h-auto bg-white">
             <SearchField
               backgroundColor="ffffff"
@@ -421,7 +421,6 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <h className="text-black ">Patient Result</h>
           <div className="w-full text-black bg-gray-200 rounded">
             {rabat.filter((value)=>{
               if(value===""){
@@ -434,9 +433,9 @@ export default function Rabat() {
             .map((value, key) => {
             return(
               <Accordion.Container key={key}>
-                <Accordion.Item>
+                <Accordion.Item className="m-10">
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between h-10 mb-10">
+                    <div className="flex flex-row w-full items-center justify-between h-10">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
