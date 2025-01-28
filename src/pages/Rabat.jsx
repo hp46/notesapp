@@ -231,6 +231,7 @@ export default function Rabat() {
                     placeholder="Insert first name"
                     label="First name"
                     required
+                    weight="500px"
                   />
                   <TextField
                     width="200px"
@@ -408,7 +409,7 @@ export default function Rabat() {
             </View>           
             </Grid>
           </View>
-          <div className="flex justify-center text-black w-full h-auto bg-white">
+          <div className="flex justify-center text-black w-full h-40 bg-white">
             <SearchField
               width="50%"
               backgroundColor="ffffff"
@@ -420,16 +421,8 @@ export default function Rabat() {
             /> 
           </div>
           <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
-          <h className="text-black ">Patient Result</h>
-          <div className="flex justify-center text-black w-1/2 h-auto bg-white">
-            <SearchField
-              backgroundColor="ffffff"
-              label="Search"
-              placeholder="Search here..."
-              onChange={onChange}
-              onClear={onClear}
-              value={search}
-            /> 
+          <div className="w-full flex ">
+             <h className="text-black">Patient Result</h>
           </div>
           <div className="w-full text-black bg-gray-200 rounded">
             {rabat.filter((value)=>{
@@ -443,9 +436,9 @@ export default function Rabat() {
             .map((value, key) => {
             return(
               <Accordion.Container key={key}>
-                <Accordion.Item className="m-10">
+                <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between m-10 h-10">
+                    <div className="flex flex-row w-full items-center justify-between h-10">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
