@@ -174,6 +174,8 @@ export default function Rabat() {
             width="100vw"
             height="100px"
             backgroundColor="#f05829"
+            justifyContent="center"
+            alignContent="center"
           >
             <ReactRouterLink to="/" component={Link}>
               <div className="w-10 h-10 grayscale hover:grayscale-0">
@@ -188,10 +190,10 @@ export default function Rabat() {
                 </Image>
               </div>
             </ReactRouterLink>
-          </Flex>
-          <div >
+            <div>
             <Button onClick={signOut}>Sign Out</Button>
-          </div>
+            </div>
+          </Flex>
           <View 
           as="form" 
           onSubmit={createNote}
