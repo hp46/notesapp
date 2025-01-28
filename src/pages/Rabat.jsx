@@ -166,7 +166,7 @@ export default function Rabat() {
           className="App"
           alignItems="center"
           direction="column"
-          width="80vw"
+          width="100vw"
           backgroundColor="#9c9a9a"
         >
           <ReactRouterLink to="/" component={Link}>
@@ -182,9 +182,12 @@ export default function Rabat() {
               </Image>
             </div>
           </ReactRouterLink>
+          <div className="absolute top-10 right-10">
+            <Button onClick={signOut}>Sign Out</Button>
+          </div>
           <View as="form" onSubmit={createNote}>
           <Grid
-            width="100vw"
+            width="80vw"
             height="auto"
             templateColumns="auto auto "
             templateRows="auto auto auto"
