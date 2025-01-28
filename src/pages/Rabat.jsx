@@ -166,6 +166,7 @@ export default function Rabat() {
           className="App"
           alignItems="center"
           width="100vw"
+          direction="column"
           height="100vh"
           backgroundColor="#9c9a9a"
         >
