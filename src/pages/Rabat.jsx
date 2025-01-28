@@ -409,6 +409,17 @@ export default function Rabat() {
             </View>           
             </Grid>
           </View>
+          <div className="text-black w-full h-auto bg-white">
+            <SearchField
+              width="50%"
+              backgroundColor="ffffff"
+              label="Search"
+              placeholder="Search here..."
+              onChange={onChange}
+              onClear={onClear}
+              value={search}
+            /> 
+          </div>
           <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
           <h className="text-black ">Patient Result</h>
           <div className="text-black w-1/2 h-auto bg-white">
