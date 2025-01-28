@@ -192,7 +192,7 @@ export default function Rabat() {
           backgroundColor="#ffffff"
           >
             <Grid
-            width="100vw"
+            width="100%"
             height="auto"
             templateColumns="auto auto "
             templateRows="auto auto auto"
