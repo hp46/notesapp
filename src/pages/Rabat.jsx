@@ -178,8 +178,8 @@ export default function Rabat() {
             alignItems="center"
           >
             <ReactRouterLink to="/" component={Link}>
-              <div className="w-10 h-10 grayscale hover:grayscale-0 pl-20">
-              <Image
+              <div className="w-10 h-10 grayscale-100 hover:grayscale-0 pl-20">
+              {/* <Image
                 alt="pin"
                 src={pin}
                 width="2.5rem"
@@ -187,7 +187,7 @@ export default function Rabat() {
                 opacity="100%"
                 objectFit="cover"
                 >
-                </Image>
+                </Image> */}
               </div>
             </ReactRouterLink>
             <div className="pr-10">
@@ -422,7 +422,7 @@ export default function Rabat() {
           </div>
           <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
           <h className="text-black ">Patient Result</h>
-          <div className="text-black w-1/2 h-auto bg-white">
+          <div className="flex justify-center text-black w-1/2 h-auto bg-white">
             <SearchField
               backgroundColor="ffffff"
               label="Search"
@@ -446,7 +446,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item className="m-10">
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between h-10">
+                    <div className="flex flex-row w-full items-center justify-between m-10 h-10">
                       <div>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
