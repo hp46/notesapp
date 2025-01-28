@@ -186,8 +186,18 @@ export default function Rabat() {
           <div className="absolute top-10 right-10">
             <Button onClick={signOut}>Sign Out</Button>
           </div>
+          <View as="form" onSubmit={createNote}>
+            <Grid
+              width="100vw"
+              height="auto"
+              templateColumns="auto auto "
+              templateRows="auto auto auto"
+              padding="20px"
+              backgroundColor="#ffffff"
+            >
+            </Grid>
+          </View>
         </Flex>
-        
       )}
     </Authenticator>
   );
