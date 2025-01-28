@@ -176,7 +176,7 @@ export default function Rabat() {
             backgroundColor="#f05829"
           >
             <ReactRouterLink to="/" component={Link}>
-              <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
+              <div className="w-10 h-10 grayscale hover:grayscale-0">
               <Image
                 alt="pin"
                 src={pin}
@@ -189,7 +189,7 @@ export default function Rabat() {
               </div>
             </ReactRouterLink>
           </Flex>
-          <div className="absolute top-10 right-10">
+          <div >
             <Button onClick={signOut}>Sign Out</Button>
           </div>
           <View 
