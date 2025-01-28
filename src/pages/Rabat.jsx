@@ -188,7 +188,7 @@ export default function Rabat() {
           </div>
           <View as="form" onSubmit={createNote}>
           <Grid
-            width="80vw"
+            width="100vw"
             height="auto"
             templateColumns="auto auto "
             templateRows="auto auto auto"
@@ -201,7 +201,7 @@ export default function Rabat() {
               height="auto"
               margin="2rem"
             >
-              <h className="text-4xl uppercase text-black" >Add Patients</h>
+              <h className="text-4xl  text-black" >Add Patients</h>
             </Flex>
             <View
             >
@@ -324,7 +324,7 @@ export default function Rabat() {
                 wrap="wrap"    
 
               >
-              <h className="text-4xl text-black" >Add Patients</h>
+              <h className=" text-black" >Medical Information</h>
               <div className="flex flex-row w-[450px] justify-between">
                 <TextField
                   width="200px"
