@@ -197,15 +197,208 @@ export default function Rabat() {
             templateColumns="auto auto "
             templateRows="auto auto auto"
             padding="20px"
-            ></Grid>
-            <Flex
+            >
+              <Flex
               width="100%"
               columnSpan={2}
               height="auto"
               margin="2rem"
-            >
+              >
               <h className="text-4xl  text-black" >Add Patients</h>
-            </Flex>
+              </Flex>
+              <View
+            >
+              <Flex
+                height="auto"
+                direction="column"
+                gap="2rem"
+                margin="2rem"
+                wrap="wrap"
+              >
+                <h className="text-black">Patient Information</h>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <TextField
+                    width="200px"
+                    name="firstName"
+                    placeholder="Insert first name"
+                    label="First name"
+                    required
+                  />
+                  <TextField
+                    width="200px"
+                    name="lastName"
+                    placeholder="Insert last name"
+                    label="Last name"
+                    required
+                  />
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <RadioGroupField
+                    legend="Gender / Sex"
+                    name="sex"
+                    options={['Male', 'Female']}
+                    direction="column">
+                    <Radio value="Male">Male</Radio>
+                    <Radio value="Female">Female</Radio>
+                  </RadioGroupField>
+                  <TextField
+                    width="200px"
+                    name="age"
+                    placeholder="Insert Age"
+                    label="Age"
+                    required
+                  />
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <SelectField
+                    width="200px"
+                    label="Location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    required
+                    >
+                    <option value="Sale Cabinent">Sale Cabient</option>
+                  </SelectField>
+                  <PhoneNumberField
+                    width="200px"
+                    defaultDialCode="+212"
+                    label="Phone number"
+                    placeholder="xxx-xxx-xxx"
+                    name="phoneNumber"
+                  />
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <RadioGroupField
+                    legend="Smoking"
+                    name="smoking"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                  </RadioGroupField>
+                  <RadioGroupField
+                    legend="Diabetes"
+                    name="diabetes"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                  </RadioGroupField>
+                  <RadioGroupField
+                    legend="Blood Pressure Pill"
+                    name="bloodPressurePill"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                  </RadioGroupField>
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <div>
+                    <TextAreaField
+                          width="200px"
+                          name="description"
+                          placeholder="Note Description"
+                          label="Note Description"
+                        />
+                      <View
+                          name="image"
+                          as="input"
+                          type="file"
+                          alignSelf={"end"}
+                          accept="image/png, image/jpeg"
+                        />
+                  </div>
+                  <button 
+                    type="submit"
+                    className="py-2 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
+                  >
+                      Create Note
+                  </button>
+                </div>
+              </Flex>
+            </View>
+            <View
+            >
+              <Flex
+                direction="column"
+                gap="2rem"
+                padding="2rem"        
+                wrap="wrap"    
+
+              >
+              <h className=" text-black" >Medical Information</h>
+              <div className="flex flex-row w-[450px] justify-between">
+                <TextField
+                  width="200px"
+                  name="bloodSugarLevel"
+                  placeholder="Enter Blood Sugar level"
+                  label="Enter Blood Sugar level"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="hba1c"
+                  placeholder="Insert hba1c"
+                  label="hba1c"
+                  required
+                />
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+              <TextField
+                width="200px"
+                // name="weight"
+                placeholder="weight"
+                label="weight"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                required
+              />
+              <TextField
+                width="200px"
+                // name="height"
+                placeholder="height"
+                label="height"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                required
+              />
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+              <TextField
+                width="200px"
+                name="cholesterol"
+                placeholder="Insert cholesterol"
+                label="cholesterol"
+                required
+              />
+                <TextField
+                width="200px"
+                name="hemoglobin"
+                placeholder="Insert Hemoglobin level"
+                label="Hemoglobin level"
+                required
+              />
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+                <TextField
+                  width="200px"
+                  name="systolicBloodPressure"
+                  placeholder="Insert Systolic Blood Pressure"
+                  label="Systolic Blood Pressure"
+                  required
+                />
+                <TextField
+                  width="200px"
+                  name="diastolicBloodPressure"
+                  placeholder="Insert Diastolic Blood Pressure"
+                  label="Diastolic Blood Pressure"
+                  required
+                />
+              </div>
+              </Flex>
+            </View>           
+            </Grid>
           </View>
         </Flex>
       )}
