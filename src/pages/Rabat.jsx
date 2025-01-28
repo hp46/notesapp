@@ -170,22 +170,28 @@ export default function Rabat() {
           height="100vh"
           backgroundColor="#9c9a9a"
         >
-          {/* <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
-            <Image
-              alt="pin"
-              src={pin}
-              width="2.5rem"
-              backgroundColor="initial"
-              opacity="100%"
-              objectFit="cover"
-              >
-              </Image>
-            </div>
-          </ReactRouterLink>
+          <Flex
+            width="100vw"
+            height="100px"
+            backgroundColor="#f05829"
+          >
+            <ReactRouterLink to="/" component={Link}>
+              <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
+              <Image
+                alt="pin"
+                src={pin}
+                width="2.5rem"
+                backgroundColor="initial"
+                opacity="100%"
+                objectFit="cover"
+                >
+                </Image>
+              </div>
+            </ReactRouterLink>
+          </Flex>
           <div className="absolute top-10 right-10">
             <Button onClick={signOut}>Sign Out</Button>
-          </div> */}
+          </div>
           <View 
           as="form" 
           onSubmit={createNote}
