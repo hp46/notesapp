@@ -176,7 +176,6 @@ export default function Rabat() {
             justifyContent="space-between"
             alignContent="center"
             alignItems="center"
-            marginTop="20px"
             marginBottom="20px"
             gap='0rem'
           >
@@ -202,6 +201,7 @@ export default function Rabat() {
           onSubmit={createNote}
           width="80vw"
           backgroundColor="#ffffff"
+          marginBottom="20px"
           >
             <Grid
             width="100%"
