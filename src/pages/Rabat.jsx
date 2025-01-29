@@ -228,7 +228,7 @@ export default function Rabat() {
                     placeholder="Insert first name"
                     label="First name"
                     required
-                    weight="500px"
+                    fontWeightweight="500"
                   />
                   <TextField
                     width="200px"
@@ -447,19 +447,19 @@ export default function Rabat() {
                         <p className="font-m">{value.sex} {value.age}</p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Location:</p>
+                        <p className="text-gray-800">Sex</p>
                         <p>{value.sex} </p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Location:</p>
+                        <p className="text-gray-800">Age</p>
                         <p>{value.age}</p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Location:</p>
+                        <p className="text-gray-800">Location</p>
                         <p>{value.location}</p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Phone Number:</p>
+                        <p className="text-gray-800">Phone Number</p>
                         <p>+{value.phoneNumber}</p>
                       </div>
                     </div>
