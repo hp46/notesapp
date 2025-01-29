@@ -194,7 +194,7 @@ export default function Rabat() {
           width="80vw"
           backgroundColor="#ffffff"
           marginBottom="20px"
-          fontFamily="400"
+          fontWeight="400"
           >
             <Grid
             width="100%"
@@ -209,7 +209,7 @@ export default function Rabat() {
               height="1/2"
               marginLeft="2rem"
               >
-              <h className="text-4xl  text-black" >Add Patients</h>
+              <h className="text-4xl   text-black" >Add Patients</h>
               </Flex>
               <View
             >
@@ -220,7 +220,7 @@ export default function Rabat() {
                 margin="2rem"
                 wrap="wrap"
               >
-                <h className="text-black">Patient Information</h>
+                <h className="text-black text">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
                   <TextField
                     width="200px"
@@ -441,10 +441,10 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between h-10">
+                    <div className="flex flex-row w-full items-center justify-between h-20">
                       <div>
+                        <p>{value.identityId}</p>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
-                        <p className="font-m">{value.sex} {value.age}</p>
                       </div>
                       <div>
                         <p className="text-gray-800">Sex</p>
@@ -466,7 +466,7 @@ export default function Rabat() {
                     <Accordion.Icon />
                   </Accordion.Trigger>
                   <Accordion.Content>
-                    <div className="flex flex-row w-full items-center justify-between  p-10">
+                    <div className="flex flex-row w-full items-center justify-between p-10">
                       <div>
                         <div>
                           <p className="font-light">Weight</p>
