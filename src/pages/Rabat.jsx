@@ -181,15 +181,7 @@ export default function Rabat() {
           >
             <ReactRouterLink to="/" component={Link}>
               <div className="w-10 h-10 grayscale-10 hover:grayscale-0 pl-20">
-              <Image
-                alt="pin"
-                src={pin}
-                width="2.5rem"
-                backgroundColor="initial"
-                opacity="100%"
-                objectFit="cover"
-                >
-                </Image>
+                <p>Home</p>
               </div>
             </ReactRouterLink>
             <div className="pr-10">
@@ -434,7 +426,7 @@ export default function Rabat() {
           <div className="w-full flex ">
              <h className=" text-2xl text-black">Patient Result</h>
           </div>
-          <div className="w-full text-black bg-gray-200 rounded">
+          <div className="w-full h-20 text-black bg-gray-200 rounded">
             {rabat.filter((value)=>{
               if(value===""){
                 return value
