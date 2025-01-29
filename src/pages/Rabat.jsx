@@ -409,7 +409,7 @@ export default function Rabat() {
             </View>           
             </Grid>
           </View>
-          <div className="flex justify-center item text-black w-full h-40 bg-[#467380]">
+          <div className="flex justify-center items-center item text-black w-full h-40 bg-[#467380]">
             <SearchField
               width="50%"
               backgroundColor="ffffff"
