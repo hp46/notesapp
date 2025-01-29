@@ -209,7 +209,7 @@ export default function Rabat() {
               height="1/2"
               marginLeft="2rem"
               >
-              <h className="text-4xl   text-black" >Add Patients</h>
+              <h className="text-4xl  text-black" >Add Patients</h>
               </Flex>
               <View
             >
@@ -220,7 +220,7 @@ export default function Rabat() {
                 margin="2rem"
                 wrap="wrap"
               >
-                <h className="text-black text">Patient Information</h>
+                <h className="text-black text-2xl">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
                   <TextField
                     width="200px"
@@ -228,7 +228,7 @@ export default function Rabat() {
                     placeholder="Insert first name"
                     label="First name"
                     required
-                    fontWeightweight="500"
+                    fontWeight="500"
                   />
                   <TextField
                     width="200px"
@@ -443,23 +443,23 @@ export default function Rabat() {
                   <Accordion.Trigger>
                     <div className="flex flex-row w-full items-center justify-between h-20">
                       <div>
-                        <p>{value.identityId}</p>
+                        <p className="text-gray-400">{value.patientId}</p>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                       </div>
                       <div>
-                        <p className="text-gray-800">Sex</p>
+                        <p className="text-gray-400 font-light italics">Sex</p>
                         <p>{value.sex} </p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Age</p>
+                        <p className="text-gray-400 font-light italics">Age</p>
                         <p>{value.age}</p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Location</p>
+                        <p className="text-gray-400 font-light italics">Location</p>
                         <p>{value.location}</p>
                       </div>
                       <div>
-                        <p className="text-gray-800">Phone Number</p>
+                        <p className="text-gray-400 font-light">Phone Number</p>
                         <p>+{value.phoneNumber}</p>
                       </div>
                     </div>
