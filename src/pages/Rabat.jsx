@@ -390,12 +390,11 @@ export default function Rabat() {
               width="100%"
               columnSpan={2}
               height="1/2"
-              marginLeft="2rem"
             >
-              <div className="flex flex-row  justify-between">
+              <div className="flex flex-row w-full justify-center items-center">
                     <div>
                       <TextAreaField
-                            width="200px"
+                            width="400px"
                             name="description"
                             placeholder="Note Description"
                             label="Note Description"
@@ -429,7 +428,7 @@ export default function Rabat() {
               value={search}
             /> 
           </div>
-          <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
+          <section className="w-full flex flex-col justify-center p-10 items-center bg-white">
           <div className="w-full flex ">
              <h className=" text-2xl text-black">Patient Result</h>
           </div>
