@@ -171,7 +171,7 @@ export default function Rabat() {
         >
           <Flex
             width="100vw"
-            height="100px"
+            height="80px"
             backgroundColor="#f05829"
             justifyContent="space-between"
             alignContent="center"
@@ -180,7 +180,7 @@ export default function Rabat() {
           >
             <ReactRouterLink to="/" component={Link}>
               <div className="w-10 h-10 grayscale-100 hover:grayscale-0 pl-20">
-              {/* <Image
+              <Image
                 alt="pin"
                 src={pin}
                 width="2.5rem"
@@ -188,7 +188,7 @@ export default function Rabat() {
                 opacity="100%"
                 objectFit="cover"
                 >
-                </Image> */}
+                </Image>
               </div>
             </ReactRouterLink>
             <div className="pr-10">
@@ -411,10 +411,10 @@ export default function Rabat() {
             </View>           
             </Grid>
           </View>
-          <div className="flex justify-center items-center item text-black w-full h-40 bg-[#467380]">
+          <div className="flex justify-center items-center item text-black w-full h-30 bg-[#467380]">
             <SearchField
               width="50%"
-              backgroundColor="ffffff"
+              backgroundColor="#ffffff"
               label="Search"
               placeholder="Search here..."
               onChange={onChange}
