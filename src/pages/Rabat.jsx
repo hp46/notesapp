@@ -167,6 +167,7 @@ export default function Rabat() {
           width="100vw"
           direction="column"
           backgroundColor="#9c9a9a"
+          gap='0rem'
         >
           <Flex
             width="100vw"
@@ -175,6 +176,7 @@ export default function Rabat() {
             justifyContent="space-between"
             alignContent="center"
             alignItems="center"
+            gap='0rem'
           >
             <ReactRouterLink to="/" component={Link}>
               <div className="w-10 h-10 grayscale-100 hover:grayscale-0 pl-20">
