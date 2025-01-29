@@ -392,7 +392,7 @@ export default function Rabat() {
               height="1/2"
               marginLeft="2rem"
             >
-              <div className="flex flex-row w-[450px] justify-between">
+              <div className="flex flex-row  justify-between">
                     <div>
                       <TextAreaField
                             width="200px"
