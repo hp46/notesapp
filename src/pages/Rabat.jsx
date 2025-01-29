@@ -179,7 +179,7 @@ export default function Rabat() {
             gap='0rem'
           >
             <ReactRouterLink to="/" component={Link}>
-              <div className="w-10 h-10 grayscale-100 hover:grayscale-0 pl-20">
+              <div className="w-10 h-10 grayscale-10 hover:grayscale-0 pl-20">
               <Image
                 alt="pin"
                 src={pin}
@@ -212,7 +212,7 @@ export default function Rabat() {
               width="100%"
               columnSpan={2}
               height="1/2"
-              margin="2rem"
+              marginLeft="2rem"
               >
               <h className="text-4xl  text-black" >Add Patients</h>
               </Flex>
@@ -304,29 +304,6 @@ export default function Rabat() {
                     <Radio value="No">No</Radio>
                   </RadioGroupField>
                 </div>
-                <div className="flex flex-row w-[450px] justify-between">
-                  <div>
-                    <TextAreaField
-                          width="200px"
-                          name="description"
-                          placeholder="Note Description"
-                          label="Note Description"
-                        />
-                      <View
-                          name="image"
-                          as="input"
-                          type="file"
-                          alignSelf={"end"}
-                          accept="image/png, image/jpeg"
-                        />
-                  </div>
-                  <button 
-                    type="submit"
-                    className="py-2 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
-                  >
-                      Create Note
-                  </button>
-                </div>
               </Flex>
             </View>
             <View
@@ -408,10 +385,40 @@ export default function Rabat() {
                 />
               </div>
               </Flex>
-            </View>           
+            </View>        
+            <Flex
+              width="100%"
+              columnSpan={2}
+              height="1/2"
+              marginLeft="2rem"
+            >
+              <div className="flex flex-row w-[450px] justify-between">
+                    <div>
+                      <TextAreaField
+                            width="200px"
+                            name="description"
+                            placeholder="Note Description"
+                            label="Note Description"
+                          />
+                        <View
+                            name="image"
+                            as="input"
+                            type="file"
+                            alignSelf={"end"}
+                            accept="image/png, image/jpeg"
+                          />
+                    </div>
+                    <button 
+                      type="submit"
+                      className="py-2 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
+                    >
+                        Create Note
+                    </button>
+                </div>
+            </Flex>   
             </Grid>
           </View>
-          <div className="flex justify-center items-center item text-black w-full h-30 bg-[#467380]">
+          <div className="flex justify-center items-center item text-black w-full h-20 bg-[#467380]">
             <SearchField
               width="50%"
               backgroundColor="#ffffff"
