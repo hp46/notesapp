@@ -200,7 +200,7 @@ export default function Rabat() {
             height="auto"
             templateColumns="auto auto "
             templateRows="auto auto auto"
-            padding="20px"
+            margin="20px"
             >
               <Flex
               width="100%"
@@ -403,7 +403,7 @@ export default function Rabat() {
                     </div>
                     <button 
                       type="submit"
-                      className="py-2 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
+                      className="py-2 ml-10 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
                     >
                         Create Note
                     </button>
