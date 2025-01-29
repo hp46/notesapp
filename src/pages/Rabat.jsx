@@ -409,7 +409,7 @@ export default function Rabat() {
             </View>           
             </Grid>
           </View>
-          <div className="flex justify-center text-black w-full h-40 bg-white">
+          <div className="flex justify-center item text-black w-full h-40 bg-[#467380]">
             <SearchField
               width="50%"
               backgroundColor="ffffff"
@@ -422,7 +422,7 @@ export default function Rabat() {
           </div>
           <section className="w-4/5 flex flex-col justify-center p-10 items-center bg-white">
           <div className="w-full flex ">
-             <h className="text-black">Patient Result</h>
+             <h className=" text-2xl text-black">Patient Result</h>
           </div>
           <div className="w-full text-black bg-gray-200 rounded">
             {rabat.filter((value)=>{
