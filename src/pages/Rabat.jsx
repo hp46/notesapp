@@ -194,6 +194,7 @@ export default function Rabat() {
           width="80vw"
           backgroundColor="#ffffff"
           marginBottom="20px"
+          fontFamily="400"
           >
             <Grid
             width="100%"
@@ -445,8 +446,22 @@ export default function Rabat() {
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                         <p className="font-m">{value.sex} {value.age}</p>
                       </div>
-                      <p>{value.location}</p>
-                      <p>+{value.phoneNumber}</p>
+                      <div>
+                        <p className="text-gray-800">Location:</p>
+                        <p>{value.sex} </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-800">Location:</p>
+                        <p>{value.age}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-800">Location:</p>
+                        <p>{value.location}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-800">Phone Number:</p>
+                        <p>+{value.phoneNumber}</p>
+                      </div>
                     </div>
                     <Accordion.Icon />
                   </Accordion.Trigger>
