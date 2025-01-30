@@ -348,7 +348,7 @@ export default function Rabat() {
                 wrap="wrap"    
 
               >
-              <h className=" text-black" >Medical Information</h>
+              <h className=" text-black text-2xl" >Medical Information</h>
               <div className="flex flex-row w-[450px] justify-between">
                 <div>
                   <p className="font-bold text-black">Blood Sugar Level</p>
@@ -482,7 +482,7 @@ export default function Rabat() {
             </Flex>   
             </Grid>
           </View>
-          <div className="flex justify-center items-center item text-black w-full h-[15px] bg-[#467380]">
+          <div className="flex justify-center items-center item text-black w-full h-30 bg-[#467380]">
             <SearchField
               width="50%"
               backgroundColor="#ffffff"
@@ -511,7 +511,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center p-10 justify-between h-30">
+                    <div className="flex flex-row w-full items-center p-10 justify-between h-20">
                       <div>
                         <p className="text-gray-400 font-sm">{value.patientId}</p>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
