@@ -211,8 +211,8 @@ export default function Rabat() {
               marginLeft="2rem"
               >
               <h className="text-4xl uppercase text-black" >Add Patients</h>
-              </Flex>
               <Divider />
+              </Flex>
               <View
             >
               <Flex
@@ -255,7 +255,6 @@ export default function Rabat() {
                       legend="Gender / Sex"
                       labelHidden
                       name="sex"
-                      fontWeight="200"
                       options={['Male', 'Female']}
                       direction="column">
                       <Radio value="Male">Male</Radio>
@@ -275,49 +274,63 @@ export default function Rabat() {
                   </div>
                 </div>
                 <div className="flex flex-row w-[450px] justify-between">
-                  <SelectField
+                  <div>
+                    <p className="font-bold text-black">Location</p>
+                    <SelectField
                     width="200px"
                     label="Location"
-                    fontWeight="800"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                     required
                     >
                     <option value="Sale Cabinent">Sale Cabient</option>
-                  </SelectField>
-                  <PhoneNumberField
+                    </SelectField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Phone Number</p>
+                    <PhoneNumberField
                     width="200px"
                     defaultDialCode="+212"
                     label="Phone number"
                     placeholder="xxx-xxx-xxx"
                     name="phoneNumber"
-                  />
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-row w-[450px] justify-between">
-                  <RadioGroupField
+                  <div>
+                    <p className="font-bold text-black">Phone Number</p>
+                    <RadioGroupField
                     legend="Smoking"
                     name="smoking"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
                     <Radio value="No">No</Radio>
-                  </RadioGroupField>
-                  <RadioGroupField
+                    </RadioGroupField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Phone Number</p>
+                    <RadioGroupField
                     legend="Diabetes"
                     name="diabetes"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
                     <Radio value="No">No</Radio>
-                  </RadioGroupField>
-                  <RadioGroupField
+                    </RadioGroupField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Phone Number</p>
+                    <RadioGroupField
                     legend="Blood Pressure Pill"
                     name="bloodPressurePill"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
                     <Radio value="No">No</Radio>
-                  </RadioGroupField>
+                    </RadioGroupField>
+                  </div>
                 </div>
               </Flex>
             </View>
