@@ -281,6 +281,7 @@ export default function Rabat() {
                     label="Location"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
+                    labelHidden
                     required
                     >
                     <option value="Sale Cabinent">Sale Cabient</option>
@@ -292,6 +293,7 @@ export default function Rabat() {
                     width="200px"
                     defaultDialCode="+212"
                     label="Phone number"
+                    labelHidden
                     placeholder="xxx-xxx-xxx"
                     name="phoneNumber"
                     />
@@ -299,10 +301,11 @@ export default function Rabat() {
                 </div>
                 <div className="flex flex-row w-[450px] justify-between">
                   <div>
-                    <p className="font-bold text-black">Phone Number</p>
+                    <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     legend="Smoking"
                     name="smoking"
+                    labelHidden
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,10 +313,11 @@ export default function Rabat() {
                     </RadioGroupField>
                   </div>
                   <div>
-                    <p className="font-bold text-black">Phone Number</p>
+                    <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     legend="Diabetes"
                     name="diabetes"
+                    labelHidden
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -321,10 +325,11 @@ export default function Rabat() {
                     </RadioGroupField>
                   </div>
                   <div>
-                    <p className="font-bold text-black">Phone Number</p>
+                    <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     legend="Blood Pressure Pill"
                     name="bloodPressurePill"
+                    labelHidden
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -345,72 +350,104 @@ export default function Rabat() {
               >
               <h className=" text-black" >Medical Information</h>
               <div className="flex flex-row w-[450px] justify-between">
-                <TextField
+                <div>
+                  <p className="font-bold text-black">Blood Sugar Level</p>
+                  <TextField
                   width="200px"
                   name="bloodSugarLevel"
                   placeholder="Enter Blood Sugar level"
                   label="Enter Blood Sugar level"
+                  labelHidden
                   required
                 />
-                <TextField
+                </div>
+                <div>
+                  <p className="font-bold text-black">HBA1C</p>
+                  <TextField
                   width="200px"
                   name="hba1c"
                   placeholder="Insert hba1c"
+                  labelHidden
                   label="hba1c"
                   required
                 />
+                </div>
               </div>
               <div className="flex flex-row w-[450px] justify-between">
-              <TextField
-                width="200px"
-                // name="weight"
-                placeholder="weight"
-                label="weight"
-                value={weight}
-                onChange={(e) => setWeight(e.target.value)}
-                required
-              />
-              <TextField
-                width="200px"
-                // name="height"
-                placeholder="height"
-                label="height"
-                value={height}
-                onChange={(e) => setHeight(e.target.value)}
-                required
-              />
-              </div>
-              <div className="flex flex-row w-[450px] justify-between">
-              <TextField
-                width="200px"
-                name="cholesterol"
-                placeholder="Insert cholesterol"
-                label="cholesterol"
-                required
-              />
-                <TextField
-                width="200px"
-                name="hemoglobin"
-                placeholder="Insert Hemoglobin level"
-                label="Hemoglobin level"
-                required
-              />
-              </div>
-              <div className="flex flex-row w-[450px] justify-between">
-                <TextField
+                <div>
+                    <p className="font-bold text-black">Weight</p>
+                    <TextField
+                      width="200px"
+                      // name="weight"
+                      placeholder="weight"
+                      labelHidden
+                      label="weight"
+                      value={weight}
+                      onChange={(e) => setWeight(e.target.value)}
+                      required
+                    />
+                </div>
+                <div>
+                  <p className="font-bold text-black">Height</p>
+                  <TextField
                   width="200px"
-                  name="systolicBloodPressure"
-                  placeholder="Insert Systolic Blood Pressure"
-                  label="Systolic Blood Pressure"
+                  // name="height"
+                  placeholder="height"
+                  labelHidden
+                  label="height"
+                  value={height}
+                  onChange={(e) => setHeight(e.target.value)}
                   required
-                />
-                <TextField
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+                <div>
+                  <p className="font-bold text-black">Chlesterol</p>
+                  <TextField
                   width="200px"
-                  name="diastolicBloodPressure"
-                  placeholder="Insert Diastolic Blood Pressure"
-                  label="Diastolic Blood Pressure"
+                  labelHidden
+                  name="cholesterol"
+                  placeholder="Insert cholesterol"
+                  label="cholesterol"
                   required
-                />
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-black">Hemoblogin</p>
+                  <TextField
+                  width="200px"
+                  labelHidden
+                  name="hemoglobin"
+                  placeholder="Insert Hemoglobin level"
+                  label="Hemoglobin level"
+                  required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+                <div>
+                    <p className="font-bold text-black">Systolic Blood Pressure</p>
+                    <TextField
+                    width="200px"
+                    labelHidden
+                    name="systolicBloodPressure"
+                    placeholder="Insert Systolic Blood Pressure"
+                    label="Systolic Blood Pressure"
+                    required
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-black">Diastolic Blood Pressure</p>
+                  <TextField
+                    width="200px"
+                    name="diastolicBloodPressure"
+                    labelHidden
+                    placeholder="Insert Diastolic Blood Pressure"
+                    label="Diastolic Blood Pressure"
+                    required
+                  />
+                </div>
               </div>
               </Flex>
             </View>        
@@ -445,7 +482,7 @@ export default function Rabat() {
             </Flex>   
             </Grid>
           </View>
-          <div className="flex justify-center items-center item text-black w-full h-20 bg-[#467380]">
+          <div className="flex justify-center items-center item text-black w-full h-[15px] bg-[#467380]">
             <SearchField
               width="50%"
               backgroundColor="#ffffff"
