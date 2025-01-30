@@ -12,6 +12,7 @@ import {
   Grid,
   PhoneNumberField,
   Table,
+  Divider,
   Card,
   Accordion,
   Link,
@@ -209,8 +210,9 @@ export default function Rabat() {
               height="1/2"
               marginLeft="2rem"
               >
-              <h className="text-4xl  text-black" >Add Patients</h>
+              <h className="text-4xl uppercase text-black" >Add Patients</h>
               </Flex>
+              <Divider />
               <View
             >
               <Flex
@@ -223,7 +225,7 @@ export default function Rabat() {
                 <h className="text-black text-2xl">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
                   <div>
-                    <p className="font-bold">First name</p>
+                    <p className="font-bold text-black">First name</p>
                     <TextField
                       width="200px"
                       name="firstName"
@@ -233,32 +235,44 @@ export default function Rabat() {
                       labelHidden
                     />
                   </div>
-                  <TextField
-                    width="200px"
-                    name="lastName"
-                    placeholder="Insert last name"
-                    label="Last name"
-                    fontWeight="800"
-                    required
-                  />
+                  <div>
+                    <p className="font-bold text-black">Last name</p>
+                    <TextField
+                      width="200px"
+                      name="lastName"
+                      placeholder="Insert last name"
+                      label="Last name"
+                      labelHidden
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-row w-[450px] justify-between">
-                  <RadioGroupField
-                    legend="Gender / Sex"
-                    name="sex"
-                    fontWeight="200"
-                    options={['Male', 'Female']}
-                    direction="column">
-                    <Radio value="Male">Male</Radio>
-                    <Radio value="Female">Female</Radio>
-                  </RadioGroupField>
-                  <TextField
-                    width="200px"
-                    name="age"
-                    placeholder="Insert Age"
-                    label="Age"
-                    required
-                  />
+                  <div>
+                    
+                  <p className="font-bold text-black">Sex</p>
+                    <RadioGroupField
+                      legend="Gender / Sex"
+                      labelHidden
+                      name="sex"
+                      fontWeight="200"
+                      options={['Male', 'Female']}
+                      direction="column">
+                      <Radio value="Male">Male</Radio>
+                      <Radio value="Female">Female</Radio>
+                    </RadioGroupField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Age</p>
+                    <TextField
+                      width="200px"
+                      name="age"
+                      placeholder="Insert Age"
+                      label="Age"
+                      required
+                      labelHidden
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-row w-[450px] justify-between">
                   <SelectField
