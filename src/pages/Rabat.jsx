@@ -222,14 +222,17 @@ export default function Rabat() {
               >
                 <h className="text-black text-2xl">Patient Information</h>
                 <div className="flex flex-row w-[450px] justify-between">
-                  <TextField
-                    width="200px"
-                    name="firstName"
-                    placeholder="Insert first name"
-                    label="First name"
-                    required
-                    fontWeight="600"
-                  />
+                  <div>
+                    <p className="font-bold">First name</p>
+                    <TextField
+                      width="200px"
+                      name="firstName"
+                      placeholder="Insert first name"
+                      label="First name"
+                      required
+                      labelHidden
+                    />
+                  </div>
                   <TextField
                     width="200px"
                     name="lastName"
