@@ -242,6 +242,7 @@ export default function Rabat() {
                   <RadioGroupField
                     legend="Gender / Sex"
                     name="sex"
+                    fontWeight="200"
                     options={['Male', 'Female']}
                     direction="column">
                     <Radio value="Male">Male</Radio>
@@ -259,6 +260,7 @@ export default function Rabat() {
                   <SelectField
                     width="200px"
                     label="Location"
+                    fontWeight="800"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                     required
@@ -427,7 +429,7 @@ export default function Rabat() {
           <div className="w-full flex ">
              <h className=" text-2xl text-black">Patient Result</h>
           </div>
-          <div className="w-full h-20 text-black bg-gray-200 rounded">
+          <div className="w-full h-20 text-black bg-gray-400 rounded">
             {rabat.filter((value)=>{
               if(value===""){
                 return value
@@ -443,7 +445,7 @@ export default function Rabat() {
                   <Accordion.Trigger>
                     <div className="flex flex-row w-full items-center justify-between h-20">
                       <div>
-                        <p className="text-gray-400">{value.patientId}</p>
+                        <p className="text-gray-400 font-m">{value.patientId}</p>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                       </div>
                       <div>
