@@ -228,7 +228,7 @@ export default function Rabat() {
                     placeholder="Insert first name"
                     label="First name"
                     required
-                    fontWeight="500"
+                    fontWeight="600"
                   />
                   <TextField
                     width="200px"
@@ -445,7 +445,7 @@ export default function Rabat() {
                   <Accordion.Trigger>
                     <div className="flex flex-row w-full items-center justify-between h-20">
                       <div>
-                        <p className="text-gray-400 font-m">{value.patientId}</p>
+                        <p className="text-gray-400 font-sm">{value.patientId}</p>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
                       </div>
                       <div>
