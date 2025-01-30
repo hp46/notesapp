@@ -216,7 +216,7 @@ export default function Rabat() {
               <Flex
                 height="auto"
                 direction="column"
-                gap="2rem"
+                gap="1rem"
                 margin="2rem"
                 wrap="wrap"
               >
@@ -235,6 +235,7 @@ export default function Rabat() {
                     name="lastName"
                     placeholder="Insert last name"
                     label="Last name"
+                    fontWeight="800"
                     required
                   />
                 </div>
@@ -307,7 +308,7 @@ export default function Rabat() {
             >
               <Flex
                 direction="column"
-                gap="2rem"
+                gap="1rem"
                 padding="2rem"        
                 wrap="wrap"    
 
@@ -443,7 +444,7 @@ export default function Rabat() {
               <Accordion.Container key={key}>
                 <Accordion.Item>
                   <Accordion.Trigger>
-                    <div className="flex flex-row w-full items-center justify-between h-20">
+                    <div className="flex flex-row w-full items-center p-10 justify-between h-30">
                       <div>
                         <p className="text-gray-400 font-sm">{value.patientId}</p>
                         <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
