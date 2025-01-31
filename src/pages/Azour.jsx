@@ -279,7 +279,7 @@ export default function Azour() {
                     labelHidden
                     required
                     >
-                    <option value="Sale Cabinent">Sale Cabient</option>
+                    <option value="Sale Cabinent">Azour</option>
                     </SelectField>
                   </div>
                   <div>

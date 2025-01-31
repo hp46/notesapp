@@ -252,7 +252,6 @@ export default function Rabat() {
                     
                   <p className="font-bold text-black">Sex</p>
                     <RadioGroupField
-                      legend="Gender / Sex"
                       labelHidden
                       name="sex"
                       options={['Male', 'Female']}
