@@ -4,19 +4,15 @@ import {
   TextAreaField,
   Button,
   TextField,
-  Heading,
   Flex,
   View,
   SelectField,
   SearchField,
   Grid,
   PhoneNumberField,
-  Table,
   Divider,
-  Card,
   Accordion,
   Link,
-  Image,
   RadioGroupField,
   Radio,
 } from "@aws-amplify/ui-react";
@@ -26,7 +22,6 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../../amplify_outputs.json";
-import pin from "../assets/back.png"
 import {
   BrowserRouter as Router,
   Link as ReactRouterLink,
