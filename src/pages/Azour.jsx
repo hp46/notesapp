@@ -41,7 +41,7 @@ export default function Azour() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [location, setLocation] = useState('Sale Cabinet')
+  const [location, setLocation] = useState('Azour')
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
@@ -492,7 +492,7 @@ export default function Azour() {
           <div className="w-full flex ">
              <h className=" text-2xl text-black">Patient Result</h>
           </div>
-          <div className="w-full h-20 text-black bg-gray-400 rounded">
+          <div className="w-full h-20 text-black rounded">
             {azour.filter((value)=>{
               if(value===""){
                 return value
