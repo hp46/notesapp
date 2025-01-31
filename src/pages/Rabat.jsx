@@ -305,7 +305,8 @@ export default function Rabat() {
                     <RadioGroupField
                     legend="Smoking"
                     name="smoking"
-                    labelHidden
+                    fontWeight="700"
+                    variation="outlined"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -317,7 +318,8 @@ export default function Rabat() {
                     <RadioGroupField
                     legend="Diabetes"
                     name="diabetes"
-                    labelHidden
+                    fontWeight="700"
+                    variation="outlined"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -329,7 +331,8 @@ export default function Rabat() {
                     <RadioGroupField
                     legend="Blood Pressure Pill"
                     name="bloodPressurePill"
-                    labelHidden
+                    variation="outlined"
+                    fontWeight="700"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -497,7 +500,7 @@ export default function Rabat() {
           <div className="w-full flex ">
              <h className=" text-2xl text-black">Patient Result</h>
           </div>
-          <div className="w-full h-20 text-black bg-gray-400 rounded">
+          <div className="w-full h-20 text-black rounded">
             {rabat.filter((value)=>{
               if(value===""){
                 return value
