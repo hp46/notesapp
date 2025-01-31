@@ -303,8 +303,6 @@ export default function Rabat() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
-                    fontWeight="700"
-                    variation="outlined"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -315,8 +313,6 @@ export default function Rabat() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
-                    fontWeight="700"
-                    variation="outlined"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -327,8 +323,6 @@ export default function Rabat() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
-                    variation="outlined"
-                    fontWeight="700"
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
