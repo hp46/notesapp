@@ -3,9 +3,7 @@ import {
   Authenticator,
   TextAreaField,
   Button,
-  Text,
   TextField,
-  Heading,
   Flex,
   View,
   SelectField,
@@ -13,13 +11,8 @@ import {
   Grid,
   PhoneNumberField,
   Divider,
-  Table,
-  TableCell,
-  TableBody,
-  TableHead,
+  Accordion,
   Link,
-  Image,
-  TableRow,
   RadioGroupField,
   Radio,
 } from "@aws-amplify/ui-react";
@@ -29,11 +22,11 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../../amplify_outputs.json";
-import pin from "../assets/back.png"
 import {
   BrowserRouter as Router,
   Link as ReactRouterLink,
 } from 'react-router-dom';
+import { v4 as uuidv4 } from "uuid";
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -44,10 +37,11 @@ const client = generateClient({
 });
 
 export default function Khemisset() {
-  const [khemisset, setKhemisset] = useState([]);
+  const [khemisset, setkhemisset] = useState([]);
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
+  const [location, setLocation] = useState('Khemisset')
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
@@ -57,6 +51,20 @@ export default function Khemisset() {
     });
   }
   
+  const primaryIdGenerator = () => {
+    return new Promise((resolve) => {
+      const uniqueId = uuidv4();
+      const charcater = "_";
+      const string = location.replaceAll(" ", "");
+      const finalString = string.concat(charcater);
+      console.log(finalString);
+      const primaryId = finalString.toUpperCase().concat(uniqueId.substring(0,4));
+      console.log(primaryId)
+      resolve(primaryId)
+    });
+  }
+
+
 
   const onChange = (event) => {
     setSearch(event.target.value);
@@ -85,23 +93,27 @@ export default function Khemisset() {
       })
     );
     console.log(khemisset);
-    setKhemisset(khemisset);
+    setkhemisset(khemisset);
   }
   async function createNote(event) {
     event.preventDefault();
     const bmi = await BmiCalculator();
+    const primaryid = await primaryIdGenerator();
     console.log("bmi is at create", bmi);
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
     const { data: newKhemisset } = await client.models.Khemisset.create({
+      patientId: primaryid,
       description: form.get("description"),
       image: form.get("image").name,
       firstName: form.get("firstName"),
       lastName: form.get("lastName"),
       sex: form.get("sex"),
       age: form.get("age"),
-      location: form.get("location"),
+      diabetes: form.get("diabetes"),
+      bloodPressurePill: form.get("bloodPressurePill"),
+      location: location,
       phoneNumber: form.get("phoneNumber"),
       smoking: form.get("smoking"),
       bloodSugarLevel: form.get("bloodSugarLevel"),
@@ -130,254 +142,350 @@ export default function Khemisset() {
     event.target.reset();
   }
 
-  async function deleteKhemisset({ id }) {
-    const tobeDeletedKhemisset = {
-      id: id,
-    };
+  // async function deletekhemisset({ primaryId }) {
+  //   const tobeDeletedkhemisset = {
+  //     id: primaryId,
+  //   };
 
-    const { data: deleteKhemisset } = await client.models.Khemisset.delete(
-        tobeDeletedKhemisset
-    );
-    console.log(deleteKhemisset);
+  //   const { data: deletedkhemisset } = await client.models.khemisset.delete(
+  //       tobeDeletedkhemisset
+  //   );
+  //   console.log(deletedkhemisset);
 
-    fetchKhemisset();
-  }
+  //   fetchKhemisset();
+  // }
 
   return (
     <Authenticator>
       {({ signOut }) => (
-        
         <Flex
-          className="App"
-          justifyContent="center"
           alignItems="center"
-          direction="column"
           width="100vw"
-          margin="0 auto"
+          direction="column"
+          backgroundColor="#9c9a9a"
+          gap='0rem'
         >
-          <ReactRouterLink to="/" component={Link}>
-            <div className="absolute top-10 left-10 w-10 h-10 grayscale hover:grayscale-0">
-            <Image
-              alt="pin"
-              src={pin}
-              width="2.5rem"
-              backgroundColor="initial"
-              opacity="100%"
-              objectFit="cover"
-              >
-              </Image>
-            </div>
-          </ReactRouterLink>
-          <View as="form" onSubmit={createNote}>
-          <Grid
-            columnGap="0.5rem"
-            rowGap="0.5rem"
+          <Flex
             width="100vw"
-            templateColumns=".5fr 2fr"
-            templateRows="auto auto auto"
+            height="80px"
+            backgroundColor="#f05829"
+            justifyContent="space-between"
+            alignContent="center"
+            alignItems="center"
+            marginBottom="20px"
+            gap='0rem'
           >
-            <Flex
-              rowSpan={3}
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
+            <ReactRouterLink to="/" component={Link}>
+              <div className="w-10 h-10 grayscale-10 hover:grayscale-0 pl-20">
+                <p>Home</p>
+              </div>
+            </ReactRouterLink>
+            <div className="pr-10">
+            <Button onClick={signOut}>Sign Out</Button>
+            </div>
+          </Flex>
+          <View 
+          as="form" 
+          onSubmit={createNote}
+          width="80vw"
+          backgroundColor="#ffffff"
+          marginBottom="20px"
+          fontWeight="400"
+          >
+            <Grid
+            width="100%"
+            height="auto"
+            templateColumns="auto auto "
+            templateRows="auto auto auto"
+            margin="20px"
             >
-              <Heading level={2}>Add Patients</Heading>
-            </Flex>
-            <View
+              <Flex
+              width="100%"
+              columnSpan={2}
+              height="1/2"
+              marginLeft="2rem"
+              >
+              <h className="text-4xl uppercase text-black" >Add Patients</h>
+              <Divider />
+              </Flex>
+              <View
             >
               <Flex
                 height="auto"
-                direction="row"
-                gap="2rem"
-                padding="2rem"
+                direction="column"
+                gap="1rem"
+                margin="2rem"
                 wrap="wrap"
               >
-                <TextField
-                  width="200px"
-                  name="firstName"
-                  placeholder="Insert first name"
-                  label="First name"
-                  required
-                />
-                <TextField
-                  width="200px"
-                  name="lastName"
-                  placeholder="Insert last name"
-                  label="Last name"
-                  required
-                />
-                <RadioGroupField
-                  legend="Gender / Sex"
-                  name="sex"
-                  options={['Male', 'Female']}
-                  direction="column">
-                  <Radio value="Male">Male</Radio>
-                  <Radio value="Female">Female</Radio>
-                </RadioGroupField>
-                <SelectField
-                  width="200px"
-                  label="Location"
-                  name="location"
-                  options={['Khemisset']}
-                  required
-                  >
-                </SelectField>
-                <TextField
-                  width="200px"
-                  name="age"
-                  placeholder="Insert Age"
-                  label="Age"
-                  required
-                />
-                <PhoneNumberField
-                  defaultDialCode="+212"
-                  label="Phone number"
-                  placeholder="xxx-xxx-xxx"
-                  name="phoneNumber"
-                />
-                <RadioGroupField
-                  legend="Smoking"
-                  name="smoking"
-                  options={['Yes', 'No']}
-                  direction="column">
-                  <Radio value="Yes">Yes</Radio>
-                  <Radio value="No">No</Radio>
-                </RadioGroupField>
+                <h className="text-black text-2xl">Patient Information</h>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <div>
+                    <p className="font-bold text-black">First name</p>
+                    <TextField
+                      width="200px"
+                      name="firstName"
+                      placeholder="Insert first name"
+                      label="First name"
+                      required
+                      labelHidden
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Last name</p>
+                    <TextField
+                      width="200px"
+                      name="lastName"
+                      placeholder="Insert last name"
+                      label="Last name"
+                      labelHidden
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <div>
+                    
+                  <p className="font-bold text-black">Sex</p>
+                    <RadioGroupField
+                      labelHidden
+                      name="sex"
+                      options={['Male', 'Female']}
+                      direction="column">
+                      <Radio value="Male">Male</Radio>
+                      <Radio value="Female">Female</Radio>
+                    </RadioGroupField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Age</p>
+                    <TextField
+                      width="200px"
+                      name="age"
+                      placeholder="Insert Age"
+                      label="Age"
+                      required
+                      labelHidden
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <div>
+                    <p className="font-bold text-black">Location</p>
+                    <SelectField
+                    width="200px"
+                    label="Location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    labelHidden
+                    required
+                    >
+                    <option value="Khemisset">Khemisset</option>
+                    </SelectField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Phone Number</p>
+                    <PhoneNumberField
+                    width="200px"
+                    defaultDialCode="+212"
+                    label="Phone number"
+                    labelHidden
+                    placeholder="xxx-xxx-xxx"
+                    name="phoneNumber"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row w-[450px] justify-between">
+                  <div>
+                    <p className="font-bold text-black">Smoking</p>
+                    <RadioGroupField
+                    name="smoking"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                    </RadioGroupField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Diabetes</p>
+                    <RadioGroupField
+                    name="diabetes"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                    </RadioGroupField>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">Blood Pressure Pill</p>
+                    <RadioGroupField
+                    name="bloodPressurePill"
+                    options={['Yes', 'No']}
+                    direction="column">
+                    <Radio value="Yes">Yes</Radio>
+                    <Radio value="No">No</Radio>
+                    </RadioGroupField>
+                  </div>
+                </div>
               </Flex>
             </View>
             <View
             >
               <Flex
-                direction="row"
-                gap="2rem"
+                direction="column"
+                gap="1rem"
                 padding="2rem"        
-                wrap="wrap"                    
+                wrap="wrap"    
+
               >
-              <TextField
-                width="200px"
-                name="bloodSugarLevel"
-                placeholder="Enter Blood Sugar level"
-                label="Enter Blood Sugar level"
-                required
-              />
-              <TextField
-                width="200px"
-                name="hba1c"
-                placeholder="Insert hba1c"
-                label="hba1c"
-                required
-              />
-              <TextField
-                width="200px"
-                // name="weight"
-                placeholder="weight"
-                label="weight"
-                value={weight}
-                onChange={(e) => setWeight(e.target.value)}
-                required
-              />
-              <TextField
-                width="200px"
-                // name="height"
-                placeholder="height"
-                label="height"
-                value={height}
-                onChange={(e) => setHeight(e.target.value)}
-                required
-              />
-              <TextField
-                width="200px"
-                name="cholesterol"
-                placeholder="Insert cholesterol"
-                label="cholesterol"
-                required
-              />
-                            <TextField
-                width="200px"
-                name="hemoglobin"
-                placeholder="Insert Hemoglobin level"
-                label="Hemoglobin level"
-                required
-              />
-              <TextField
-                width="200px"
-                name="systolicBloodPressure"
-                placeholder="Insert Systolic Blood Pressure"
-                label="Systolic Blood Pressure"
-                required
-              />
-              <TextField
-                width="200px"
-                name="diastolicBloodPressure"
-                placeholder="Insert Diastolic Blood Pressure"
-                label="Diastolic Blood Pressure"
-                required
-              />
-              </Flex>
-            </View>            
-          <Flex
-            direction="row"
-            gap="2rem"
-            padding="2rem"
-            alignItems="center"
-            wrap="wrap"
-        
-          >
-            <Flex
-              direction="column"
-              gap="2rem"
-            >
-              <TextAreaField
+              <h className=" text-black text-2xl" >Medical Information</h>
+              <div className="flex flex-row w-[450px] justify-between">
+                <div>
+                  <p className="font-bold text-black">Blood Sugar Level</p>
+                  <TextField
                   width="200px"
-                  name="description"
-                  placeholder="Note Description"
-                  label="Note Description"
+                  name="bloodSugarLevel"
+                  placeholder="Enter Blood Sugar level"
+                  label="Enter Blood Sugar level"
+                  labelHidden
+                  required
                 />
-              <View
-                  name="image"
-                  as="input"
-                  type="file"
-                  alignSelf={"end"}
-                  accept="image/png, image/jpeg"
+                </div>
+                <div>
+                  <p className="font-bold text-black">HBA1C</p>
+                  <TextField
+                  width="200px"
+                  name="hba1c"
+                  placeholder="Insert hba1c"
+                  labelHidden
+                  label="hba1c"
+                  required
                 />
-            </Flex>
-            <Button type="submit" variation="primary" height="100px">
-                Create Note
-            </Button>
-            </Flex>
+                </div>
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+                <div>
+                    <p className="font-bold text-black">Weight</p>
+                    <TextField
+                      width="200px"
+                      // name="weight"
+                      placeholder="weight"
+                      labelHidden
+                      label="weight"
+                      value={weight}
+                      onChange={(e) => setWeight(e.target.value)}
+                      required
+                    />
+                </div>
+                <div>
+                  <p className="font-bold text-black">Height</p>
+                  <TextField
+                  width="200px"
+                  // name="height"
+                  placeholder="height"
+                  labelHidden
+                  label="height"
+                  value={height}
+                  onChange={(e) => setHeight(e.target.value)}
+                  required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+                <div>
+                  <p className="font-bold text-black">Chlesterol</p>
+                  <TextField
+                  width="200px"
+                  labelHidden
+                  name="cholesterol"
+                  placeholder="Insert cholesterol"
+                  label="cholesterol"
+                  required
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-black">Hemoblogin</p>
+                  <TextField
+                  width="200px"
+                  labelHidden
+                  name="hemoglobin"
+                  placeholder="Insert Hemoglobin level"
+                  label="Hemoglobin level"
+                  required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row w-[450px] justify-between">
+                <div>
+                    <p className="font-bold text-black">Systolic Blood Pressure</p>
+                    <TextField
+                    width="200px"
+                    labelHidden
+                    name="systolicBloodPressure"
+                    placeholder="Insert Systolic Blood Pressure"
+                    label="Systolic Blood Pressure"
+                    required
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-black">Diastolic Blood Pressure</p>
+                  <TextField
+                    width="200px"
+                    name="diastolicBloodPressure"
+                    labelHidden
+                    placeholder="Insert Diastolic Blood Pressure"
+                    label="Diastolic Blood Pressure"
+                    required
+                  />
+                </div>
+              </div>
+              </Flex>
+            </View>        
+            <Flex
+              width="100%"
+              columnSpan={2}
+              height="1/2"
+            >
+              <div className="flex flex-row w-full justify-center items-center">
+                    <div>
+                      <TextAreaField
+                            width="400px"
+                            name="description"
+                            placeholder="Note Description"
+                            label="Note Description"
+                          />
+                        <View
+                            name="image"
+                            as="input"
+                            type="file"
+                            alignSelf={"end"}
+                            accept="image/png, image/jpeg"
+                          />
+                    </div>
+                    <button 
+                      type="submit"
+                      className="py-2 ml-10 px-4 h-1/2 rounded bg-[#f05829] hover:bg-[#467380]"
+                    >
+                        Create Note
+                    </button>
+                </div>
+            </Flex>   
             </Grid>
           </View>
-          <Divider />
-        <SearchField
-          label="Search"
-          placeholder="Search here..."
-          onChange={onChange}
-          onClear={onClear}
-          value={search}
-        /> 
-        <Table
-          highlightOnHover={true}
-          variation="striped"
-          width="90vw"
-        >
-          <TableHead>
-            <TableCell as="th">Name</TableCell>
-            <TableCell as="th">Sex</TableCell>
-            <TableCell as="th">Smoke</TableCell>
-            <TableCell as="th">Location</TableCell>
-            <TableCell as="th">Phone Number</TableCell>
-            <TableCell as="th">Weight</TableCell>
-            <TableCell as="th">Height</TableCell>
-            <TableCell as="th">BMI</TableCell>
-            <TableCell as="th">B.S.L Glucose</TableCell>
-            <TableCell as="th">HBA1C</TableCell>
-            <TableCell as="th">Hemoglobin</TableCell>
-            <TableCell as="th">Cholesterol</TableCell>
-            <TableCell as="th">Blood Pressure</TableCell>
-            <TableCell as="th"></TableCell>
-          </TableHead>
-          <TableBody>
+          <div className="flex justify-center items-center item text-black w-full h-20 bg-[#467380]">
+            <SearchField
+              width="50%"
+              backgroundColor="#ffffff"
+              label="Search"
+              placeholder="Search here..."
+              onChange={onChange}
+              onClear={onClear}
+              value={search}
+            /> 
+          </div>
+          <section className="w-full flex flex-col justify-center p-10 items-center bg-white">
+          <div className="w-full flex ">
+             <h className=" text-2xl text-black">Patient Result</h>
+          </div>
+          <div className="w-full h-20 text-black rounded">
             {khemisset.filter((value)=>{
               if(value===""){
                 return value
@@ -388,37 +496,94 @@ export default function Khemisset() {
             })
             .map((value, key) => {
             return(
-              <TableRow key={key}>
-                <TableCell> <Text fontWeight={500} fontSize="1em">{value.firstName} {value.lastName}</Text></TableCell>
-                <TableCell>{value.sex}</TableCell>
-                <TableCell>{value.smoking}</TableCell>
-                <TableCell>{value.location}</TableCell>
-                <TableCell>+{value.phoneNumber}</TableCell>
-                <TableCell>{value.weight} <span className="italic"> kg</span></TableCell>
-                <TableCell>{value.height} <span className="italic"> cm</span></TableCell>
-                <TableCell>{value.bmi} <span className="italic"></span></TableCell>
-                <TableCell>{value.bloodSugarLevel} <span className="italic">mg/dL</span></TableCell>
-                <TableCell>{value.hba1c} <span className="italic"> mmol/mol</span></TableCell>
-                <TableCell>{value.hemoglobin}<span className="italic"> g/dL</span></TableCell>
-                <TableCell>{value.cholesterol}<span className="italic"> mg/dL</span></TableCell>
-                <TableCell>{value.systolicBloodPressure} /{value.diastolicBloodPressure}<span className="italic"> mmHg</span></TableCell>
-                <TableCell>
-                  <Button
-                    width="40px"
-                    variation="destructive"
-                    onClick={() => deleteKhemisset(value)}
-                  >
-                    Delete 
-                  </Button>
-                </TableCell>
-              </TableRow>
+              <Accordion.Container key={key}>
+                <Accordion.Item>
+                  <Accordion.Trigger>
+                    <div className="flex flex-row w-full items-center p-10 justify-between h-20">
+                      <div>
+                        <p className="text-gray-400 font-sm">{value.patientId}</p>
+                        <h1 className="font-black font-3xl uppercase">{value.firstName} {value.lastName}</h1>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 font-light italics">Sex</p>
+                        <p>{value.sex} </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 font-light italics">Age</p>
+                        <p>{value.age}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 font-light italics">Location</p>
+                        <p>{value.location}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 font-light">Phone Number</p>
+                        <p>+{value.phoneNumber}</p>
+                      </div>
+                    </div>
+                    <Accordion.Icon />
+                  </Accordion.Trigger>
+                  <Accordion.Content>
+                    <div className="flex flex-row w-full items-center justify-between p-10">
+                      <div>
+                        <div>
+                          <p className="font-light">Weight</p>
+                          <p>{value.weight}kg</p>
+                        </div>
+                        <div>
+                          <p className="font-light">height</p>
+                          <p>{value.height}cm</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Bmi</p>
+                          <p>{value.bmi} </p>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <p className="font-light">Smoke</p>
+                          <p>{value.smoking} </p>
+                        </div>
+                        <div>
+                          <p className="font-light">Diabetes</p>
+                          <p>{value.diabetes} </p>
+                        </div>
+                        <div>
+                          <p className="font-light">Blood Pressure Pill</p>
+                          <p>{value.bloodPressurePill} </p>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <p className="font-light">Blood Sugar Level</p>
+                          <p>{value.bloodSugarLevel}mg/dL</p>
+                        </div>
+                        <div>
+                          <p className="font-light">HBA1C</p>
+                          <p>{value.hba1c}mmol/mol</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Choleresterol</p>
+                          <p>{value.cholesterol}mg/dL</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Hemoglobin</p>
+                          <p>{value.hemoglobin}g/dL</p>
+                        </div>
+                        <div>
+                          <p className="font-light">Blood Pressure</p>
+                          <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Accordion.Content>
+                </Accordion.Item>
+              </Accordion.Container>
             )
             })}
-          </TableBody>
-        </Table>
-          <Button onClick={signOut}>Sign Out</Button>
+          </div>
+        </section>
         </Flex>
-        
       )}
     </Authenticator>
   );

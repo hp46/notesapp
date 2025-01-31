@@ -41,7 +41,7 @@ export default function AlHaouz() {
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [location, setLocation] = useState('Sale Cabinet')
+  const [location, setLocation] = useState('Al Haouz')
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
@@ -278,7 +278,7 @@ export default function AlHaouz() {
                     labelHidden
                     required
                     >
-                    <option value="Sale Cabinent">Sale Cabient</option>
+                    <option value="Al Haouz">Al Haouz</option>
                     </SelectField>
                   </div>
                   <div>
