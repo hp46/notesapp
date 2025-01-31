@@ -203,10 +203,12 @@ export default function AlHaouz() {
               width="100%"
               columnSpan={2}
               height="1/2"
+              direction="column"
               marginLeft="2rem"
               >
               <h className="text-4xl uppercase text-black" >Add Patients</h>
-              <Divider />
+              <Divider
+              width="80%" />
               </Flex>
               <View
             >
