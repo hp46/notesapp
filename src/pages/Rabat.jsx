@@ -303,7 +303,6 @@ export default function Rabat() {
                   <div>
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
-                    legend="Smoking"
                     name="smoking"
                     fontWeight="700"
                     variation="outlined"
@@ -316,7 +315,6 @@ export default function Rabat() {
                   <div>
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
-                    legend="Diabetes"
                     name="diabetes"
                     fontWeight="700"
                     variation="outlined"
@@ -329,7 +327,6 @@ export default function Rabat() {
                   <div>
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
-                    legend="Blood Pressure Pill"
                     name="bloodPressurePill"
                     variation="outlined"
                     fontWeight="700"
