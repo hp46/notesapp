@@ -39,6 +39,7 @@ const schema = a.schema({
 
     AlHaouz: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -46,6 +47,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -57,12 +60,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Marrakech: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -70,6 +73,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -81,12 +86,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Temara: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -94,6 +99,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -105,12 +112,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Sale: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -118,6 +125,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -129,12 +138,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Azour: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -142,6 +151,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -153,12 +164,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     ElJadida: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -166,6 +177,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -177,12 +190,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Ouarzazate: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -190,6 +203,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -201,12 +216,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Khemisset: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -214,6 +229,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -225,12 +242,12 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
     Casablanca: a
     .model({
+      patientId: a.id(),
       description: a.string(),
       image: a.string(),
       firstName: a.string(),
@@ -238,6 +255,8 @@ const schema = a.schema({
       sex: a.string(),
       age: a.integer(),
       smoking: a.string(),
+      diabetes: a.string(),
+      bloodPressurePill: a.string(),
       location: a.string(),
       phoneNumber: a.string(),
       bloodSugarLevel: a.float(),
@@ -249,7 +268,6 @@ const schema = a.schema({
       hemoglobin: a.float(),
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
-      
     })
     .authorization((allow) => [allow.owner()]),
 
