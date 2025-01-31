@@ -247,7 +247,6 @@ export default function Azour() {
                     
                   <p className="font-bold text-black">Sex</p>
                     <RadioGroupField
-                      legend="Gender / Sex"
                       labelHidden
                       name="sex"
                       options={['Male', 'Female']}
@@ -279,7 +278,7 @@ export default function Azour() {
                     labelHidden
                     required
                     >
-                    <option value="Sale Cabinent">Azour</option>
+                    <option value="Azour">Azour</option>
                     </SelectField>
                   </div>
                   <div>
@@ -299,7 +298,6 @@ export default function Azour() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
-                    labelHidden
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,7 +308,6 @@ export default function Azour() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
-                    labelHidden
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -321,7 +318,6 @@ export default function Azour() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
-                    labelHidden
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
