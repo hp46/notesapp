@@ -199,15 +199,17 @@ export default function Azour() {
             templateRows="auto auto auto"
             margin="20px"
             >
-              <Flex
+            <Flex
               width="100%"
               columnSpan={2}
               height="1/2"
+              direction="column"
               marginLeft="2rem"
               >
               <h className="text-4xl uppercase text-black" >Add Patients</h>
-              <Divider />
-              </Flex>
+              <Divider
+              width="80%" />
+            </Flex>
               <View
             >
               <Flex
