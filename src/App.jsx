@@ -52,6 +52,7 @@ export default function App() {
               </div>
               <div className="absolute top-40 left-10 border-2 rounded-lg p-10 w-80 border-black text-black">
                 <h1 className="text-2xl uppercase font-black">Choose a City</h1>
+                <h1>Morocco</h1>
                 <ReactRouterLink  className=" flex hover:font-black hover:italic text-xl"  to="/Rabat" component={Link}>  
                   <div>
                     <p>Rabat</p>
@@ -86,6 +87,10 @@ export default function App() {
                 </ReactRouterLink>
                 <ReactRouterLink to="/azour" component={Link}>  
                   <p className="text-xl text-black hover:font-black hover:italic">Azour</p>
+                </ReactRouterLink>
+                <h1>Mauritania</h1>
+                <ReactRouterLink to="/nouakchott" component={Link}>  
+                  <p className="text-xl text-black hover:font-black hover:italic">Nouakchott</p>
                 </ReactRouterLink>
               </div>
               {/* <div className="absolute top-[40%] left-[52%]">

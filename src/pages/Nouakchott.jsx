@@ -36,12 +36,12 @@ const client = generateClient({
   authMode: "userPool",
 });
 
-export default function AlHaouz() {
-  const [alHaouz, setAlHaouz] = useState([]);
+export default function Nouakchott() {
+  const [Nouakchott, setNouakchott] = useState([]);
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [location, setLocation] = useState('Al Haouz')
+  const [location, setLocation] = useState('Nouakchott')
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
@@ -75,25 +75,25 @@ export default function AlHaouz() {
   };
 
   useEffect(() => {
-    fetchAlHaouz();
+    fetchNouakchott();
   }, []);
 
-  async function fetchAlHaouz() {
-    const { data: alHaouz } = await client.models.AlHaouz.list();
+  async function fetchNouakchott() {
+    const { data: Nouakchott } = await client.models.Nouakchott.list();
     await Promise.all(
-      alHaouz.map(async (alhaouzinfo) => {
-        if (alhaouzinfo.image) {
+      Nouakchott.map(async (noaukchottinfo) => {
+        if (noaukchottinfo.image) {
           const linkToStorageFile = await getUrl({
-            path: ({ identityId }) => `media/${identityId}/${alhaouzinfo.image}`,
+            path: ({ identityId }) => `media/${identityId}/${noaukchottinfo.image}`,
           });
           console.log(linkToStorageFile.url);
-          alhaouzinfo.image = linkToStorageFile.url;
+          noaukchottinfo.image = linkToStorageFile.url;
         }
-        return alhaouzinfo;
+        return noaukchottinfo;
       })
     );
-    console.log(alHaouz);
-    setAlHaouz(alHaouz);
+    console.log(Nouakchott);
+    setNouakchott(Nouakchott);
   }
   async function createNote(event) {
     event.preventDefault();
@@ -103,7 +103,7 @@ export default function AlHaouz() {
     const form = new FormData(event.target);
     console.log(form.get("image").name);
 
-    const { data: newAlHaouz } = await client.models.AlHaouz.create({
+    const { data: newNouakchott } = await client.models.Nouakchott.create({
       patientId: primaryid,
       description: form.get("description"),
       image: form.get("image").name,
@@ -129,31 +129,31 @@ export default function AlHaouz() {
 
 
 
-    console.log(newAlHaouz);
-    if (newAlHaouz.image)
-      if (newAlHaouz.image)
+    console.log(newNouakchott);
+    if (newNouakchott.image)
+      if (newNouakchott.image)
         await uploadData({
-          path: ({ identityId }) => `media/${identityId}/${newAlHaouz.image}`,
+          path: ({ identityId }) => `media/${identityId}/${newNouakchott.image}`,
 
           data: form.get("image"),
         }).result;
 
-    fetchAlHaouz();
+    fetchNouakchott();
     event.target.reset();
   }
 
-  async function deletealHaouz({ id }) {
-    const tobeDeletedalHaouz = {
-      primaryId: id,
-    };
+  // async function deleteNouakchott({ primaryId }) {
+  //   const tobeDeletedNouakchott = {
+  //     id: primaryId,
+  //   };
 
-    const { data: deletedalHaouz } = await client.models.AlHaouz.delete(
-        tobeDeletedalHaouz
-    );
-    console.log(deletedalHaouz);
+  //   const { data: deletedNouakchott } = await client.models.Nouakchott.delete(
+  //       tobeDeletedNouakchott
+  //   );
+  //   console.log(deletedNouakchott);
 
-    fetchAlHaouz();
-  }
+  //   fetchNouakchott();
+  // }
 
   return (
     <Authenticator>
@@ -280,7 +280,7 @@ export default function AlHaouz() {
                     labelHidden
                     required
                     >
-                    <option value="Al Haouz">Al Haouz</option>
+                    <option value="Nouakchott">Nouakchott</option>
                     </SelectField>
                   </div>
                   <div>
@@ -488,7 +488,7 @@ export default function AlHaouz() {
              <h className=" text-2xl text-black">Patient Result</h>
           </div>
           <div className="w-full h-20 text-black rounded">
-            {alHaouz.filter((value)=>{
+            {nouakchott.filter((value)=>{
               if(value===""){
                 return value
               }
@@ -576,12 +576,6 @@ export default function AlHaouz() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
-                        <Button
-                          variation="destructive"
-                          onClick={() => deletealHaouz(value)}
-                        >
-                          Delete note
-                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>
