@@ -42,6 +42,7 @@ export default function AlHaouz() {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
   const [location, setLocation] = useState('Al Haouz')
+  const [id, setId] = useState()
   // const [value, setValue] = useState('');
 
   const BmiCalculator = () => {
@@ -60,6 +61,7 @@ export default function AlHaouz() {
       console.log(finalString);
       const primaryId = finalString.toUpperCase().concat(uniqueId.substring(0,4));
       console.log(primaryId)
+      setId(primaryId)
       resolve(primaryId)
     });
   }
@@ -144,8 +146,9 @@ export default function AlHaouz() {
 
   async function deletealHaouz({ primaryId }) {
     console.log("primary Id for deleting is",primaryId)
+    console.log("primary Id for deleting is",id)
     const tobeDeletedalHaouz = {
-      primaryId: primaryId,
+      primaryId: id,
     };
 
     const { data: deletedalHaouz } = await client.models.AlHaouz.delete(
