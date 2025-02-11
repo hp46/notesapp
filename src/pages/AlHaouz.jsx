@@ -145,8 +145,6 @@ export default function AlHaouz() {
   }
 
   async function deletealHaouz({ patientId }) {
-    console.log("primary Id for deleting is",patientId)
-    console.log("primary Id for deleting is",id)
     const tobeDeletedalHaouz = {
       patientId: patientId,
     };
@@ -580,13 +578,13 @@ export default function AlHaouz() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
-                        <Button
+                      </div>
+                      <Button
                           variation="destructive"
                           onClick={() => deletealHaouz(value)}
                         >
                           Delete note
                         </Button>
-                      </div>
                     </div>
                   </Accordion.Content>
                 </Accordion.Item>
