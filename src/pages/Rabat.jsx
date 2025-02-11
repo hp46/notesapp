@@ -142,18 +142,19 @@ export default function Rabat() {
     event.target.reset();
   }
 
-  // async function deleteRabat({ primaryId }) {
-  //   const tobeDeletedRabat = {
-  //     id: primaryId,
-  //   };
+  async function deleteRabat({ primaryId }) {
+    const primaryid = await primaryIdGenerator();
+    const tobeDeletedRabat = {
+      id: primaryId,
+    };
 
-  //   const { data: deletedRabat } = await client.models.Rabat.delete(
-  //       tobeDeletedRabat
-  //   );
-  //   console.log(deletedRabat);
+    const { data: deletedRabat } = await client.models.Rabat.delete(
+        tobeDeletedRabat
+    );
+    console.log(deletedRabat);
 
-  //   fetchRabat();
-  // }
+    fetchRabat();
+  }
 
   return (
     <Authenticator>
