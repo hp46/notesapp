@@ -37,7 +37,7 @@ const client = generateClient({
 });
 
 export default function Nouakchott() {
-  const [Nouakchott, setNouakchott] = useState([]);
+  const [nouakchott, setNouakchott] = useState([]);
   const [search, setSearch] = useState("");
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');

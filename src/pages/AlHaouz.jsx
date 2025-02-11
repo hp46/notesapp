@@ -143,7 +143,7 @@ export default function AlHaouz() {
   }
 
   async function deletealHaouz({ primaryId }) {
-    console.log(primaryId)
+    console.log("primary Id for deleting is",primaryId)
     const tobeDeletedalHaouz = {
       primaryId: primaryId,
     };
