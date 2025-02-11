@@ -144,11 +144,11 @@ export default function AlHaouz() {
     event.target.reset();
   }
 
-  async function deletealHaouz({ primaryId }) {
-    console.log("primary Id for deleting is",primaryId)
+  async function deletealHaouz({ patientId }) {
+    console.log("primary Id for deleting is",patientId)
     console.log("primary Id for deleting is",id)
     const tobeDeletedalHaouz = {
-      primaryId: id,
+      patientId: patientId,
     };
 
     const { data: deletedalHaouz } = await client.models.AlHaouz.delete(
