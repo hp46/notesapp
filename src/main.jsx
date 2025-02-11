@@ -12,6 +12,7 @@ import ElJadida from './pages/ElJadida.jsx'
 import Ouarzazate from './pages/Ouarzazate.jsx'
 import Khemisset from './pages/Khemisset.jsx'
 import Casablanca from './pages/Casablanca.jsx'
+import Nouakchott from './pages/Nouakchott.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
   {path: "/ouarzazate", element: <Ouarzazate />},
   {path: "/khemisset", element: <Khemisset />},
   {path: "/casablanca", element: <Casablanca />},
+  {path: "/nouakchott", element: <Nouakchott />},
   
 ]);
 
