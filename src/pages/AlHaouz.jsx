@@ -253,6 +253,7 @@ export default function AlHaouz() {
                     <RadioGroupField
                       labelHidden
                       name="sex"
+                      required
                       options={['Male', 'Female']}
                       direction="column">
                       <Radio value="Male">Male</Radio>
@@ -302,6 +303,7 @@ export default function AlHaouz() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -312,6 +314,7 @@ export default function AlHaouz() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -322,6 +325,7 @@ export default function AlHaouz() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -578,13 +582,14 @@ export default function AlHaouz() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
-                      </div>
-                      <Button
+                        <Button
+                          marginTop="10px"
                           variation="destructive"
                           onClick={() => deletealHaouz(value)}
                         >
-                          Delete note
+                          Delete
                         </Button>
+                      </div>
                     </div>
                   </Accordion.Content>
                 </Accordion.Item>

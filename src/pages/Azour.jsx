@@ -142,18 +142,18 @@ export default function Azour() {
     event.target.reset();
   }
 
-  // async function deleteazour({ primaryId }) {
-  //   const tobeDeletedazour = {
-  //     id: primaryId,
-  //   };
+  async function deleteAzour({ patientId }) {
+    const tobeDeletedazour = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedazour } = await client.models.azour.delete(
-  //       tobeDeletedazour
-  //   );
-  //   console.log(deletedazour);
+    const { data: deletedazour } = await client.models.Azour.delete(
+        tobeDeletedazour
+    );
+    console.log(deletedazour);
 
-  //   fetchAzour();
-  // }
+    fetchAzour();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function Azour() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function Azour() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +322,7 @@ export default function Azour() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -576,6 +579,13 @@ export default function Azour() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteAzour(value)}
+                        >
+                          Delete
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>
