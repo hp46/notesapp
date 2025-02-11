@@ -142,18 +142,18 @@ export default function Khemisset() {
     event.target.reset();
   }
 
-  // async function deletekhemisset({ primaryId }) {
-  //   const tobeDeletedkhemisset = {
-  //     id: primaryId,
-  //   };
+  async function deleteKhemisset({ patientId }) {
+    const tobeDeletedkhemisset = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedkhemisset } = await client.models.khemisset.delete(
-  //       tobeDeletedkhemisset
-  //   );
-  //   console.log(deletedkhemisset);
+    const { data: deletedkhemisset } = await client.models.Khemisset.delete(
+        tobeDeletedkhemisset
+    );
+    console.log(deletedkhemisset);
 
-  //   fetchKhemisset();
-  // }
+    fetchKhemisset();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function Khemisset() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function Khemisset() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +322,7 @@ export default function Khemisset() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -577,6 +580,13 @@ export default function Khemisset() {
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
                       </div>
+                      <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteKhemisset(value)}
+                        >
+                          Delete note
+                        </Button>
                     </div>
                   </Accordion.Content>
                 </Accordion.Item>

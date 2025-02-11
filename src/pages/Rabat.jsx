@@ -142,10 +142,9 @@ export default function Rabat() {
     event.target.reset();
   }
 
-  async function deleteRabat({ primaryId }) {
-    const primaryid = await primaryIdGenerator();
+  async function deleteRabat({ patientId }) {
     const tobeDeletedRabat = {
-      id: primaryId,
+      patientId: patientId,
     };
 
     const { data: deletedRabat } = await client.models.Rabat.delete(
@@ -288,6 +287,7 @@ export default function Rabat() {
                     <p className="font-bold text-black">Phone Number</p>
                     <PhoneNumberField
                     width="200px"
+                    required
                     defaultDialCode="+212"
                     label="Phone number"
                     labelHidden
@@ -301,6 +301,7 @@ export default function Rabat() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -311,6 +312,7 @@ export default function Rabat() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -321,6 +323,7 @@ export default function Rabat() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -577,6 +580,13 @@ export default function Rabat() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteRabat(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

@@ -142,18 +142,18 @@ export default function Sale() {
     event.target.reset();
   }
 
-  // async function deletesale({ primaryId }) {
-  //   const tobeDeletedsale = {
-  //     id: primaryId,
-  //   };
+  async function deleteSale({ patientId }) {
+    const tobeDeletedsale = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedsale } = await client.models.sale.delete(
-  //       tobeDeletedsale
-  //   );
-  //   console.log(deletedsale);
+    const { data: deletedsale } = await client.models.Sale.delete(
+        tobeDeletedsale
+    );
+    console.log(deletedsale);
 
-  //   fetchSale();
-  // }
+    fetchSale();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function Sale() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function Sale() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +322,7 @@ export default function Sale() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -576,6 +579,13 @@ export default function Sale() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteSale(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

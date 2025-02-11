@@ -142,18 +142,18 @@ export default function Temara() {
     event.target.reset();
   }
 
-  // async function deletetemara({ primaryId }) {
-  //   const tobeDeletedtemara = {
-  //     id: primaryId,
-  //   };
+  async function deleteTemara({ patientId }) {
+    const tobeDeletedtemara = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedtemara } = await client.models.temara.delete(
-  //       tobeDeletedtemara
-  //   );
-  //   console.log(deletedtemara);
+    const { data: deletedtemara } = await client.models.Temara.delete(
+        tobeDeletedtemara
+    );
+    console.log(deletedtemara);
 
-  //   fetchTemara();
-  // }
+    fetchTemara();
+  }
 
   return (
     <Authenticator>
@@ -251,6 +251,7 @@ export default function Temara() {
                     <RadioGroupField
                       labelHidden
                       name="sex"
+                      required
                       options={['Male', 'Female']}
                       direction="column">
                       <Radio value="Male">Male</Radio>
@@ -301,6 +302,7 @@ export default function Temara() {
                     <RadioGroupField
                     name="smoking"
                     options={['Yes', 'No']}
+                    required
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
                     <Radio value="No">No</Radio>
@@ -310,6 +312,7 @@ export default function Temara() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -321,6 +324,7 @@ export default function Temara() {
                     <RadioGroupField
                     name="bloodPressurePill"
                     options={['Yes', 'No']}
+                    required
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
                     <Radio value="No">No</Radio>
@@ -576,6 +580,13 @@ export default function Temara() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteTemara(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

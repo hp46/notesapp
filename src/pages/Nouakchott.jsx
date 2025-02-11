@@ -142,18 +142,18 @@ export default function Nouakchott() {
     event.target.reset();
   }
 
-  // async function deleteNouakchott({ primaryId }) {
-  //   const tobeDeletedNouakchott = {
-  //     id: primaryId,
-  //   };
+  async function deleteNouakchott({ patientId }) {
+    const tobeDeletedNouakchott = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedNouakchott } = await client.models.Nouakchott.delete(
-  //       tobeDeletedNouakchott
-  //   );
-  //   console.log(deletedNouakchott);
+    const { data: deletedNouakchott } = await client.models.Nouakchott.delete(
+        tobeDeletedNouakchott
+    );
+    console.log(deletedNouakchott);
 
-  //   fetchNouakchott();
-  // }
+    fetchNouakchott();
+  }
 
   return (
     <Authenticator>
@@ -251,6 +251,7 @@ export default function Nouakchott() {
                     <RadioGroupField
                       labelHidden
                       name="sex"
+                      required
                       options={['Male', 'Female']}
                       direction="column">
                       <Radio value="Male">Male</Radio>
@@ -299,6 +300,7 @@ export default function Nouakchott() {
                   <div>
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
+                    required
                     name="smoking"
                     options={['Yes', 'No']}
                     direction="column">
@@ -310,6 +312,7 @@ export default function Nouakchott() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +323,7 @@ export default function Nouakchott() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -576,6 +580,13 @@ export default function Nouakchott() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteNouakchott(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

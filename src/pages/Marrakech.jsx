@@ -142,18 +142,18 @@ export default function Marrakech() {
     event.target.reset();
   }
 
-  // async function deletemarrakech({ primaryId }) {
-  //   const tobeDeletedmarrakech = {
-  //     id: primaryId,
-  //   };
+  async function deleteMarrakech({ patientId }) {
+    const tobeDeletedmarrakech = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedmarrakech } = await client.models.marrakech.delete(
-  //       tobeDeletedmarrakech
-  //   );
-  //   console.log(deletedmarrakech);
+    const { data: deletedmarrakech } = await client.models.Marrakech.delete(
+        tobeDeletedmarrakech
+    );
+    console.log(deletedmarrakech);
 
-  //   fetchMarrakech();
-  // }
+    fetchMarrakech();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function Marrakech() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function Marrakech() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -319,6 +321,7 @@ export default function Marrakech() {
                   <div>
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
+                    required
                     name="bloodPressurePill"
                     options={['Yes', 'No']}
                     direction="column">
@@ -576,6 +579,13 @@ export default function Marrakech() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteMarrakech(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

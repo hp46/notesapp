@@ -142,18 +142,18 @@ export default function Casablanca() {
     event.target.reset();
   }
 
-  // async function deletecasablanca({ primaryId }) {
-  //   const tobeDeletedcasablanca = {
-  //     id: primaryId,
-  //   };
+  async function deleteCasablanca({ patientId }) {
+    const tobeDeletedcasablanca = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedcasablanca } = await client.models.casablanca.delete(
-  //       tobeDeletedcasablanca
-  //   );
-  //   console.log(deletedcasablanca);
+    const { data: deletedcasablanca } = await client.models.Casablanca.delete(
+        tobeDeletedcasablanca
+    );
+    console.log(deletedcasablanca);
 
-  //   fetchCasablanca();
-  // }
+    fetchCasablanca();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function Casablanca() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function Casablanca() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +322,7 @@ export default function Casablanca() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -576,6 +579,13 @@ export default function Casablanca() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteCasablanca(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

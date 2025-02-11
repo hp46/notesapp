@@ -142,18 +142,18 @@ export default function ElJadida() {
     event.target.reset();
   }
 
-  // async function deleteelJadida({ primaryId }) {
-  //   const tobeDeletedelJadida = {
-  //     id: primaryId,
-  //   };
+  async function deleteElJadida({ patientId }) {
+    const tobeDeletedelJadida = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedelJadida } = await client.models.elJadida.delete(
-  //       tobeDeletedelJadida
-  //   );
-  //   console.log(deletedelJadida);
+    const { data: deletedelJadida } = await client.models.ElJadida.delete(
+        tobeDeletedelJadida
+    );
+    console.log(deletedelJadida);
 
-  //   fetchElJadida();
-  // }
+    fetchElJadida();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function ElJadida() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function ElJadida() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +322,7 @@ export default function ElJadida() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -576,6 +579,13 @@ export default function ElJadida() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteElJadida(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>

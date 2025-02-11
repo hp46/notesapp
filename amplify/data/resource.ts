@@ -88,6 +88,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Temara: a
@@ -114,6 +115,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Sale: a
@@ -140,6 +142,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Azour: a
@@ -166,6 +169,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     ElJadida: a
@@ -192,6 +196,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Ouarzazate: a
@@ -218,6 +223,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Khemisset: a
@@ -244,6 +250,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Casablanca: a
@@ -270,6 +277,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     Nouakchott: a
@@ -296,6 +304,7 @@ const schema = a.schema({
       systolicBloodPressure: a.float(),
       diastolicBloodPressure: a.float(),
     })
+    .identifier(["patientId"])
     .authorization((allow) => [allow.owner()]),
 
     

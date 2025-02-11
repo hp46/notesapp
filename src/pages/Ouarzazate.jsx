@@ -142,18 +142,18 @@ export default function Ouarzazate() {
     event.target.reset();
   }
 
-  // async function deleteouarzazate({ primaryId }) {
-  //   const tobeDeletedouarzazate = {
-  //     id: primaryId,
-  //   };
+  async function deleteOuarzazate({ patientId }) {
+    const tobeDeletedouarzazate = {
+      patientId: patientId,
+    };
 
-  //   const { data: deletedouarzazate } = await client.models.ouarzazate.delete(
-  //       tobeDeletedouarzazate
-  //   );
-  //   console.log(deletedouarzazate);
+    const { data: deletedouarzazate } = await client.models.Ouarzazate.delete(
+        tobeDeletedouarzazate
+    );
+    console.log(deletedouarzazate);
 
-  //   fetchOuarzazate();
-  // }
+    fetchOuarzazate();
+  }
 
   return (
     <Authenticator>
@@ -300,6 +300,7 @@ export default function Ouarzazate() {
                     <p className="font-bold text-black">Smoking</p>
                     <RadioGroupField
                     name="smoking"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -310,6 +311,7 @@ export default function Ouarzazate() {
                     <p className="font-bold text-black">Diabetes</p>
                     <RadioGroupField
                     name="diabetes"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -320,6 +322,7 @@ export default function Ouarzazate() {
                     <p className="font-bold text-black">Blood Pressure Pill</p>
                     <RadioGroupField
                     name="bloodPressurePill"
+                    required
                     options={['Yes', 'No']}
                     direction="column">
                     <Radio value="Yes">Yes</Radio>
@@ -576,6 +579,13 @@ export default function Ouarzazate() {
                           <p className="font-light">Blood Pressure</p>
                           <p>{value.systolicBloodPressure} /{value.diastolicBloodPressure}</p>
                         </div>
+                        <Button
+                          marginTop="10px"
+                          variation="destructive"
+                          onClick={() => deleteOuarzazate(value)}
+                        >
+                          Delete note
+                        </Button>
                       </div>
                     </div>
                   </Accordion.Content>
